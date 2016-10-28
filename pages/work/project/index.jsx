@@ -3,12 +3,14 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
-import Fullscreen from 'components/fullscreen'
-import Panel from 'components/panel'
 import Wrapper from 'components/wrapper'
+
+import { projects } from '../data.json';
 
 export default class Project extends Component {
   render() {
+    const project = projects.find(project => project.slug === "life-with-bird");
+
     return (
       <div>
         <Helmet
@@ -19,8 +21,8 @@ export default class Project extends Component {
           ]}
         />
         <Wrapper>
-          <h1>Project</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h1>{project.title}</h1>
+          <p>{project.description}</p>
         </Wrapper>
       </div>
     )
