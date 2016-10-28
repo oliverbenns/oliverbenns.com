@@ -4,3 +4,22 @@
   width: calc(6 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
 }
+
+.mrRed {
+  background: #008cfb;
+  color: #fff;
+}
+
+.ahm {
+  background: #000;
+  color: #fff;
+}
+
+.lifeWithBird {
+  background: #eaeae2;
+}
+
+.chadstone {
+  background: #a77e60;
+  color: #fff;
+}

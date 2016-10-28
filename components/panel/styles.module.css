@@ -4,9 +4,3 @@
   align-items: center;
   justify-content: center;
 }
-
-/* Temp */
-.panel:nth-child(odd) {
-  background: black;
-  color: white;
-}
