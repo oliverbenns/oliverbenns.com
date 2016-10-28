@@ -3,7 +3,10 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
+import Fullscreen from 'components/fullscreen'
 import Wrapper from 'components/wrapper'
+
+import styles from './styles.module.css'
 
 export default class Index extends Component {
   render() {
@@ -16,10 +19,15 @@ export default class Index extends Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-
-        <Wrapper>
-          <h1>Home</h1>
-        </Wrapper>
+        <Fullscreen className={styles.intro}>
+          <Wrapper>
+            <h1>
+              Hello. I’m Oliver Benns.
+              <br />
+              I’m a freelance web developer.
+            </h1>
+          </Wrapper>
+        </Fullscreen>
       </div>
     )
   }
