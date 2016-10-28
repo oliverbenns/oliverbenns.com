@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "className": "mrRed",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "slug": "mr-red",
+      "title": "Mr. Red"
+    },
+    {
+      "className": "ahm",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "slug": "ahm",
+      "title": "Ahm"
+    },
+    {
+      "className": "lifeWithBird",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "slug": "life-with-bird",
+      "title": "Life with Bird"
+    },
+    {
+      "className": "chadstone",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "slug": "chadstone",
+      "title": "Chadstone"
+    }
+  ]
+}

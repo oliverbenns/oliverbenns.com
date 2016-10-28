@@ -8,6 +8,8 @@ import Fullscreen from 'components/fullscreen'
 import Panel from 'components/panel'
 import Wrapper from 'components/wrapper'
 
+import { projects } from './data.json';
+
 import styles from './styles.module.css'
 
 export default class Work extends Component {
@@ -24,23 +26,17 @@ export default class Work extends Component {
         <Wrapper>
           <h1>Work</h1>
         </Wrapper>
-        <Panel to={prefixLink('/work/project/')}>
-          <h2>Mr. Red</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        </Panel>
-        <Panel to={prefixLink('/work/project/')}>
-          <h2>Ahm</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        </Panel>
-        <Panel to={prefixLink('/work/project/')}>
-          <h2>Life with Bird</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        </Panel>
-        <Panel to={prefixLink('/work/project/')}>
-          <h2>Chadstone</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        </Panel>
-        <Contact title="Your project could be here." />
+        {projects.map(project => (
+          <Panel to={prefixLink('/work/project/')}>
+            <div className={styles.panelContent}>
+              <h2>{project.title}</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </Panel>
+        ))}
+        <Wrapper>
+          <Contact title="Your project could be here." />
+        </Wrapper>
       </div>
     )
   }
