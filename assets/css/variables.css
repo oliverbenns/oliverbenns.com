@@ -2,4 +2,8 @@
   /* Layout */
   --wrapperWidth: 1200px;
   --headerHeight: 48px;
+
+  /* Colors */
+  --colorBlack: #000;
+  --colorWhite: #fff;
 }
