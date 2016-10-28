@@ -13,7 +13,7 @@ export default class Panel extends Component {
 
   render() {
     return (
-      <Link to={this.props.to} className={styles.panel}>
+      <Link to={this.props.to} className={`${styles.panel} ${this.props.className}`}>
         <Wrapper>
           {this.props.children}
         </Wrapper>
