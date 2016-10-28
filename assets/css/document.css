@@ -1,0 +1,11 @@
+/* Opinionated resets */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  display: block;
+}
