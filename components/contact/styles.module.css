@@ -4,8 +4,14 @@
   height: 3px;
   width: 100px;
   background: var(--colorBlack);
+  margin: calc(var(--gutter) * 2.5) 0;
+}
+
+.email {
+  font-size: 1.333rem;
 }
 
 .social li {
   display: inline-block;
+  margin-right: calc(var(--gutter) * 1.5);
 }

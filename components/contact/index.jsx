@@ -11,7 +11,7 @@ export default class Contact extends Component {
     return (
       <div>
         <h1>{this.props.title || 'I like messages.'}</h1>
-        <p>
+        <p className={styles.email}>
           Say hello and send an email:<br />
           <a href="mailto:a@a.com?subject=Hello%20Oliver!">a@a.com</a>
         </p>
