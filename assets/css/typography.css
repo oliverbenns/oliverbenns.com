@@ -1,9 +1,33 @@
+@font-face {
+    font-family: 'Book';
+    src: url('../font/lt-book.woff2') format('woff2'),
+         url('../font/lt-book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../font/lt-regular.woff2') format('woff2'),
+         url('../font/lt-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  font-family: Arial;
+  font-family: Book, Arial, Helvetica, sans-serif;
   color: #000;
   font-size: 16px;
   line-height: 1.375;
   text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Regular, Arial, Helvetica, sans-serif;
 }
 
 h1 {
