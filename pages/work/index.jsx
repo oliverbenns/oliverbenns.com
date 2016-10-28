@@ -26,14 +26,16 @@ export default class Work extends Component {
         <Wrapper>
           <h1>Work</h1>
         </Wrapper>
+
         {projects.map(project => (
-          <Panel to={prefixLink('/work/project/')}>
+          <Panel to={prefixLink(`/work/${project.slug}/`)} key={project.slug} className={styles[project.className]}>
             <div className={styles.panelContent}>
               <h2>{project.title}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p>{project.description}</p>
             </div>
           </Panel>
         ))}
+
         <Wrapper>
           <Contact title="Your project could be here." />
         </Wrapper>
