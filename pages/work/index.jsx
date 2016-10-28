@@ -23,19 +23,19 @@ export default class Work extends Component {
         <Wrapper>
           <h1>Work</h1>
         </Wrapper>
-        <Panel>
+        <Panel to={prefixLink('/work/project/')}>
           <h2>Mr. Red</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </Panel>
-        <Panel>
+        <Panel to={prefixLink('/work/project/')}>
           <h2>Ahm</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </Panel>
-        <Panel>
+        <Panel to={prefixLink('/work/project/')}>
           <h2>Life with Bird</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </Panel>
-        <Panel>
+        <Panel to={prefixLink('/work/project/')}>
           <h2>Chadstone</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </Panel>
