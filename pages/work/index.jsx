@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
+import Contact from 'components/contact'
 import Fullscreen from 'components/fullscreen'
 import Panel from 'components/panel'
 import Wrapper from 'components/wrapper'
@@ -39,6 +40,7 @@ export default class Work extends Component {
           <h2>Chadstone</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </Panel>
+        <Contact title="Your project could be here." />
       </div>
     )
   }
