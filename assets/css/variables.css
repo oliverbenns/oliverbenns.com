@@ -1,3 +1,5 @@
 :root {
+  /* Layout */
   --wrapperWidth: 1200px;
+  --headerHeight: 48px;
 }

@@ -1,9 +1,13 @@
+@import '../../assets/css/variables.css';
+
 .header {
   background: orange;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
+  height: var(--headerHeight);
+  line-height: var(--headerHeight);
 }
 
 .item {
