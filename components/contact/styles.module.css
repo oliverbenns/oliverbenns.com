@@ -1,0 +1,7 @@
+@import '../../assets/css/variables.css';
+
+.lineBreak {
+  height: 3px;
+  width: 100px;
+  background: var(--colorBlack);
+}
