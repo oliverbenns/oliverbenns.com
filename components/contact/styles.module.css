@@ -5,3 +5,7 @@
   width: 100px;
   background: var(--colorBlack);
 }
+
+.social li {
+  display: inline-block;
+}

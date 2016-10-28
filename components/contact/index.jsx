@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Wrapper from 'components/wrapper'
+import Icon from 'components/icon'
 
 import styles from './styles.module.css'
 
@@ -15,15 +16,21 @@ export default class Contact extends Component {
           <a href="mailto:a@a.com?subject=Hello%20Oliver!">a@a.com</a>
         </p>
         <div className={styles.lineBreak} />
-        <ul>
+        <ul  className={styles.social}>
           <li>
-            <a href="https://github.com/oliverbenns/" target="_blank">Github</a>
+            <a href="https://github.com/oliverbenns/" target="_blank">
+              <Icon name="github" />
+            </a>
           </li>
           <li>
-            <a href="https://twitter.com/oliverbenns/" target="_blank">Twitter</a>
+            <a href="https://twitter.com/oliverbenns/" target="_blank">
+              <Icon name="twitter" />
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/oliverbenns" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/oliverbenns" target="_blank">
+              <Icon name="instagram"  />
+            </a>
           </li>
         </ul>
       </div>
