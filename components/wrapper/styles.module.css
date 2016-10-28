@@ -1,0 +1,6 @@
+@import '../../assets/css/variables.css';
+
+.wrapper {
+  max-width: var(--wrapperWidth);
+  margin: 0 auto;
+}
