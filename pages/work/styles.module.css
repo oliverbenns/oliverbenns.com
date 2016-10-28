@@ -1,3 +1,6 @@
-.title {
-  color: blue;
+@import '../../assets/css/variables.css';
+
+.panelContent {
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
 }
