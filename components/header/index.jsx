@@ -20,6 +20,9 @@ export default class Header extends Component {
               <li className={styles.item}>
                 <Link to={prefixLink('/work/')}>Work</Link>
               </li>
+              <li className={styles.item}>
+                <Link to={prefixLink('/contact/')}>Contact</Link>
+              </li>
           </ul>
         </Wrapper>
       </header>
