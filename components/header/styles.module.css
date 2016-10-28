@@ -14,3 +14,7 @@
 .item {
   display: inline-block;
 }
+
+.nav, .github {
+  display: inline-block;
+}

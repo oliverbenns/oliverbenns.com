@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <header className={styles.header}>
         <Wrapper>
-          <ul>
+          <ul className={styles.nav}>
               <li className={styles.item}>
                 <Link to={prefixLink('/')}>Home</Link>
               </li>
@@ -24,6 +24,9 @@ export default class Header extends Component {
                 <Link to={prefixLink('/contact/')}>Contact</Link>
               </li>
           </ul>
+          <div className={styles.github}>
+            <a className="github-button" href="https://github.com/oliverbenns/oliverbenns.com" data-icon="octicon-star" data-count-href="/oliverbenns/oliverbenns.com/stargazers" data-count-api="/repos/oliverbenns/oliverbenns.com#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star oliverbenns/oliverbenns.com on GitHub">Star</a>
+          </div>
         </Wrapper>
       </header>
     )
