@@ -24,6 +24,8 @@ export default class Index extends Component {
             <h1>
               Hello. I’m Oliver Benns.
               <br />
+              <br />
+              <br />
               I’m a freelance web developer.
             </h1>
           </Wrapper>
