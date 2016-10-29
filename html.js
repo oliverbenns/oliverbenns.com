@@ -34,10 +34,6 @@ export default class Html extends Component {
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
-          {/*
-            @TODO: Fix React issue here on build.
-            <script async defer src="https://buttons.github.io/buttons.js"></script>
-          */}
         </body>
       </html>
     )
