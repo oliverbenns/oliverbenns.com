@@ -29,7 +29,7 @@ export default class Header extends Component {
           <div className={styles.github}>
             <a className="github-button" href="https://github.com/oliverbenns/oliverbenns.com" data-icon="octicon-star" data-count-href="/oliverbenns/oliverbenns.com/stargazers" data-count-api="/repos/oliverbenns/oliverbenns.com#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star oliverbenns/oliverbenns.com on GitHub">Star</a>
           </div>
-          <Hamburger className={styles.hamburger}/>
+          <Hamburger />
           </div>
         </Wrapper>
       </header>
