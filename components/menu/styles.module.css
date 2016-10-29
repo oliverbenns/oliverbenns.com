@@ -1,0 +1,21 @@
+@import '../../assets/css/variables.css';
+
+.menu {
+  background: var(--colorBlack);
+  color: var(--colorWhite);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--zIndexMenu);
+}
+
+.disable {
+  composes: menu;
+  display: none;
+}
+
+.item {
+  font-family: Regular, Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  line-height: 2.1;
+}

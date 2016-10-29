@@ -8,4 +8,8 @@
   /* Colors */
   --colorBlack: #000;
   --colorWhite: #fff;
+
+  /* Z Index Scale */
+  --zIndexMenu: 2;
+  --zIndexHamburger: 3;
 }
