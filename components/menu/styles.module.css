@@ -19,3 +19,7 @@
   font-size: 3rem;
   line-height: 2.1;
 }
+
+.active {
+  border-bottom: 3px solid var(--colorWhite);
+}
