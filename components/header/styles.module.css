@@ -8,16 +8,21 @@
   left: 0;
   width: 100vw;
   height: var(--headerHeight);
-  line-height: var(--headerHeight);
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: var(--headerHeight);
 }
 
 .hamburger {
   position: relative;
   z-index: var(--zIndexHamburger);
+}
+
+.title {
+  font-family: Regular, Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
 }
