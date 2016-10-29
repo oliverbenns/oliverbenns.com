@@ -5055,6 +5055,10 @@ react-document-title@^2.0.1:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
+react-github-button:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/react-github-button/-/react-github-button-0.1.10.tgz#0228c06ad918f6898f92350e4a0567aaaa79349c"
+
 react-helmet@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-3.1.0.tgz#63486194682f33004826f3687dc49a138b557050"
