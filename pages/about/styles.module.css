@@ -5,3 +5,17 @@
   padding-right: var(--gutter);
   font-size: 1.3125rem;
 }
+
+@media (--medium) {
+  .intro {
+    width: calc(10 / var(--columnCount) * 100%);
+  }
+}
+
+@media (--small) {
+  .intro {
+    width: calc(12 / var(--columnCount) * 100%);
+    padding-right: 0;
+  }
+}
+
