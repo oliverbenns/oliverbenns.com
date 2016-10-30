@@ -9,8 +9,6 @@ import Wrapper from 'components/wrapper'
 
 import { projects } from 'data/projects.json';
 
-import styles from './styles.module.css'
-
 export default class Work extends Component {
   render() {
     return (
@@ -22,11 +20,6 @@ export default class Work extends Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <Wrapper>
-        <div className={styles.intro}>
-          <h1>Work</h1>
-        </div>
-        </Wrapper>
 
         {projects.map(project => <ProjectPanel project={project} key={project.slug} />)}
 
