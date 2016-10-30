@@ -1,20 +1,20 @@
-import dispatcher from './dispatcher'
-import { EventEmitter } from 'events'
-import constants from './constants'
+import constants from './constants';
+import dispatcher from './dispatcher';
+import { EventEmitter } from 'events';
 
 const emitter = new EventEmitter();
 const CHANGE_EVENT = 'change';
 
 const store = {
-  emit: function() {
+  emit() {
     emitter.emit(CHANGE_EVENT);
   },
 
-  subscribe: function(callback) {
+  subscribe(callback) {
     emitter.on(CHANGE_EVENT, callback);
   },
 
-  unsubscribe: function(callback) {
+  unsubscribe(callback) {
     emitter.off(CHANGE_EVENT, callback);
   },
 
@@ -24,13 +24,15 @@ const store = {
 
   toggleMenu(active) {
     this.data.menuActive = active === undefined ? !this.data.menuActive : active;
-  }
+  },
 };
 
 dispatcher.register(({ action }) => {
-  switch(action.actionType) {
+  switch (action.actionType) {
     case constants.actions.TOGGLE_MENU:
       store.toggleMenu(action.action.active);
+      break;
+    default:
       break;
   }
 

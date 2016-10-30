@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Wrapper from 'components/wrapper'
-import Icon from 'components/icon'
+import React, { Component, PropTypes } from 'react';
 
-import styles from './styles.module.css'
+import Icon from 'components/icon';
+
+import styles from './styles.module.css';
 
 export default class Contact extends Component {
+  static propTypes = {
+    title: PropTypes.string,
+  }
+
   render() {
     return (
       <div>
@@ -16,28 +18,24 @@ export default class Contact extends Component {
           <a href="mailto:a@a.com?subject=Hello%20Oliver!">a@a.com</a>
         </p>
         <div className={styles.lineBreak} />
-        <ul  className={styles.social}>
+        <ul className={styles.social}>
           <li>
-            <a href="https://github.com/oliverbenns/" target="_blank">
+            <a href="https://github.com/oliverbenns/" target="_blank" rel="noopener noreferrer">
               <Icon name="github" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/oliverbenns/" target="_blank">
+            <a href="https://twitter.com/oliverbenns/" target="_blank" rel="noopener noreferrer">
               <Icon name="twitter" />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/oliverbenns" target="_blank">
-              <Icon name="instagram"  />
+            <a href="https://www.instagram.com/oliverbenns" target="_blank" rel="noopener noreferrer">
+              <Icon name="instagram" />
             </a>
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }
-
-
-
-

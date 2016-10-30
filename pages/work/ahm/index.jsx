@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import { ProjectPage } from 'components/project'
-import Wrapper from 'components/wrapper'
-
+import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
-import styles from '../project/styles.module.css'
+import Wrapper from 'components/wrapper';
+import { ProjectPage } from 'components/project';
+
+import styles from '../project/styles.module.css';
 
 export default class Ahm extends Component {
   render() {
-    const project = projects.find(project => project.slug === "ahm");
+    const project = projects.find(_project => _project.slug === 'ahm');
 
     return (
       <ProjectPage project={project}>
@@ -19,6 +19,6 @@ export default class Ahm extends Component {
           </div>
         </Wrapper>
       </ProjectPage>
-    )
+    );
   }
 }

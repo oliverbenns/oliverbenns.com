@@ -2,10 +2,10 @@ import { Dispatcher } from 'flux';
 
 const dispatcher = new Dispatcher();
 
-dispatcher.handleAction = function(action) {
+dispatcher.handleAction = function handleAction(action) {
   this.dispatch({
-    action: action
+    action,
   });
-}
+};
 
 export default dispatcher;

@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Helmet from 'react-helmet'
-import { config } from 'config'
-import Contact from 'components/contact'
-import { ProjectPanel } from 'components/project'
-import Wrapper from 'components/wrapper'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import { config } from 'config';
+import Contact from 'components/contact';
+import { ProjectPanel } from 'components/project';
+import Wrapper from 'components/wrapper';
 
 import { projects } from 'data/projects.json';
 
@@ -16,8 +14,8 @@ export default class Work extends Component {
         <Helmet
           title={`Work | ${config.siteTitle}`}
           meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
           ]}
         />
 
@@ -27,6 +25,6 @@ export default class Work extends Component {
           <Contact title="Your project could be here." />
         </Wrapper>
       </div>
-    )
+    );
   }
 }

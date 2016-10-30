@@ -1,19 +1,21 @@
-import React, { Component, PropTypes } from 'react';
-import { IndexLink, Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Fullscreen from 'components/fullscreen'
-import Wrapper from 'components/wrapper'
-
+import React, { Component } from 'react';
 import actions from 'assets/js/actions';
 import store from 'assets/js/store';
+import { prefixLink } from 'gatsby-helpers';
 
-import styles from './styles.module.css'
+
+import Fullscreen from 'components/fullscreen';
+import Wrapper from 'components/wrapper';
+import { IndexLink, Link } from 'react-router';
+
+import styles from './styles.module.css';
 
 export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = store.data;
-    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.close = actions.toggleMenu.bind(this, { active: false });
   }
 
   componentDidMount() {
@@ -36,15 +38,10 @@ export default class Menu extends Component {
     this.setState(store.data);
   }
 
-  close() {
-    actions.toggleMenu({ active: false });
-  }
-
   render() {
-
     const linkProps = {
       onClick: this.close,
-      activeClassName: styles.active
+      activeClassName: styles.active,
     };
 
     return (

@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Helmet from 'react-helmet'
-import { config } from 'config'
-import ContentPage from 'components/content-page'
-import Wrapper from 'components/wrapper'
+import React, { Component } from 'react';
+import { config } from 'config';
 
-import styles from './styles.module.css'
+import ContentPage from 'components/content-page';
+import Helmet from 'react-helmet';
+import Wrapper from 'components/wrapper';
+
+import styles from './styles.module.css';
 
 export default class About extends Component {
   render() {
@@ -15,8 +14,8 @@ export default class About extends Component {
         <Helmet
           title={`About | ${config.siteTitle}`}
           meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
           ]}
         />
         <Wrapper>
@@ -27,6 +26,6 @@ export default class About extends Component {
           </div>
         </Wrapper>
       </ContentPage>
-    )
+    );
   }
 }

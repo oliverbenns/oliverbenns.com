@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react'
-import Header from 'components/header'
+import React, { Component, PropTypes } from 'react';
 
-import 'assets/css/reset.css'
-import 'assets/css/document.css'
-import 'assets/css/typography.css'
+import Header from 'components/header';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import 'assets/css/reset.css';
+import 'assets/css/document.css';
+import 'assets/css/typography.css';
 
 export default class Template extends Component {
   static propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.node,
   };
 
   render() {
@@ -20,6 +20,6 @@ export default class Template extends Component {
           {this.props.children}
         </div>
       </div>
-    )
+    );
   }
 }

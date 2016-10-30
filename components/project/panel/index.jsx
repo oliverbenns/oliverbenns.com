@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Wrapper from 'components/wrapper'
+import React, { Component, PropTypes } from 'react';
+import { prefixLink } from 'gatsby-helpers';
 
-import styles from './styles.module.css'
+import Wrapper from 'components/wrapper';
+import { Link } from 'react-router';
+
+import styles from './styles.module.css';
 
 export default class ProjectPanel extends Component {
   static propTypes = {
-    children: PropTypes.any,
     project: PropTypes.object,
   };
 
@@ -23,6 +23,6 @@ export default class ProjectPanel extends Component {
           </div>
         </Wrapper>
       </Link>
-    )
+    );
   }
 }
