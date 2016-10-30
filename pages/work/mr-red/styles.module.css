@@ -1,0 +1,7 @@
+@import '../../../assets/css/variables.css';
+
+.intro {
+  padding-top: 100px;
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
+}
