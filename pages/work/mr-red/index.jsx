@@ -4,7 +4,7 @@ import Wrapper from 'components/wrapper'
 
 import { projects } from 'data/projects.json';
 
-import styles from './styles.module.css'
+import styles from '../project/styles.module.css'
 
 export default class MrRed extends Component {
   render() {

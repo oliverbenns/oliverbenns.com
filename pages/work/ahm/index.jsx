@@ -4,9 +4,9 @@ import Wrapper from 'components/wrapper'
 
 import { projects } from 'data/projects.json';
 
-import styles from './styles.module.css'
+import styles from '../project/styles.module.css'
 
-export default class LifeWithBird extends Component {
+export default class Ahm extends Component {
   render() {
     const project = projects.find(project => project.slug === "ahm");
 
