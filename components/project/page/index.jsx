@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { config } from 'config'
 import Helmet from 'react-helmet'
+import ContentPage from 'components/content-page'
 import Wrapper from 'components/wrapper'
 
 import styles from './styles.module.css'
@@ -15,7 +16,7 @@ export default class ProjectPage extends Component {
     const { project } = this.props;
 
     return (
-      <div className={styles[project.className]}>
+      <ContentPage className={styles[project.className]}>
         <Helmet
             title={`${project.title} | ${config.siteTitle}`}
             meta={[
@@ -26,7 +27,7 @@ export default class ProjectPage extends Component {
         <Wrapper>
           {this.props.children}
         </Wrapper>
-      </div>
+      </ContentPage>
     )
   }
 }
