@@ -1,3 +1,5 @@
+@import './variables.css';
+
 @font-face {
     font-family: 'Book';
     src: url('../font/lt-book.woff2') format('woff2'),
@@ -14,6 +16,7 @@
     font-style: normal;
 }
 
+/*@TODO: Stop having 2 font-sizes here. They should be consistent.*/
 html {
   font-size: 16px;
 }
@@ -26,6 +29,17 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
+@media (--small) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
+
 
 h1,
 h2,
