@@ -1,0 +1,13 @@
+@import '../../assets/css/variables.css';
+
+.content {
+  padding: 25vh 0;
+  min-height: 100vh;
+  margin-top: calc(var(--headerHeight) * -1); /*@TODO: is this required if main .page is changed ?*/
+}
+
+@media (--medium) {
+  .content {
+    padding: 10vh 0;
+  }
+}
