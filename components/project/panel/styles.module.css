@@ -1,7 +1,8 @@
 @import '../../../assets/css/variables.css';
 
 .panel {
-  height: 33vh;
+  height: 25vh;
+  min-height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,9 +10,29 @@
   background-size: contain;
 }
 
+@media (--medium) {
+  .panel {
+    background-image: none !important;
+  }
+}
+
 .content {
   width: calc(6 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
+}
+
+@media (--medium) {
+  .content {
+    width: calc(10 / var(--columnCount) * 100%);
+  }
+}
+
+@media (--small) {
+  .content {
+    width: calc(12 / var(--columnCount) * 100%);
+    padding-right: 0;
+    height: auto;
+  }
 }
 
 .mrRed {
