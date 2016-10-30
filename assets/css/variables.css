@@ -13,3 +13,6 @@
   --zIndexMenu: 2;
   --zIndexHamburger: 3;
 }
+
+@custom-media --small (max-width: 768px);
+@custom-media --medium (max-width: 1024px);
