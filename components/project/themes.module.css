@@ -1,0 +1,29 @@
+@import '../../assets/css/variables.css';
+
+.light {
+  color: var(--colorBlack);
+}
+
+.dark {
+  color: var(--colorWhite);
+}
+
+.mrRed {
+  composes: dark;
+  background-color: #008cfb;
+}
+
+.ahm {
+  composes: dark;
+  background-color: #000;
+}
+
+.lifeWithBird {
+  composes: light;
+  background-color: #eaeae2;
+}
+
+.chadstone {
+  composes: dark;
+  background-color: #a77e60;
+}

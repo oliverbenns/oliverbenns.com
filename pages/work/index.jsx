@@ -4,11 +4,10 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 import Contact from 'components/contact'
-import Fullscreen from 'components/fullscreen'
-import Panel from 'components/panel'
+import { ProjectPanel } from 'components/project'
 import Wrapper from 'components/wrapper'
 
-import { projects } from './data.json';
+import { projects } from 'data/projects.json';
 
 import styles from './styles.module.css'
 
@@ -24,17 +23,12 @@ export default class Work extends Component {
           ]}
         />
         <Wrapper>
+        <div className={styles.intro}>
           <h1>Work</h1>
+        </div>
         </Wrapper>
 
-        {projects.map(project => (
-          <Panel to={prefixLink(`/work/${project.slug}/`)} key={project.slug} className={styles[project.className]}>
-            <div className={styles.panelContent}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-            </div>
-          </Panel>
-        ))}
+        {projects.map(project => <ProjectPanel project={project} key={project.slug} />)}
 
         <Wrapper>
           <Contact title="Your project could be here." />

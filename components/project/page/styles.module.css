@@ -1,0 +1,30 @@
+.panel {
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.mrRed {
+  composes: mrRed from "../themes.module.css";
+  composes: page;
+}
+
+.ahm {
+  composes: ahm from "../themes.module.css";
+  composes: page;
+}
+
+.lifeWithBird {
+  composes: lifeWithBird from "../themes.module.css";
+  composes: page;
+}
+
+.chadstone {
+  composes: chadstone from "../themes.module.css";
+  composes: page;
+}

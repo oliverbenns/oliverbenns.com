@@ -5,17 +5,22 @@ import Wrapper from 'components/wrapper'
 
 import styles from './styles.module.css'
 
-export default class Panel extends Component {
+export default class ProjectPanel extends Component {
   static propTypes = {
     children: PropTypes.any,
-    to: PropTypes.string,
+    project: PropTypes.object,
   };
 
   render() {
+    const { project } = this.props;
+
     return (
-      <Link to={this.props.to} className={`${styles.panel} ${this.props.className}`}>
+      <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
         <Wrapper>
-          {this.props.children}
+          <div className={styles.content}>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+          </div>
         </Wrapper>
       </Link>
     )

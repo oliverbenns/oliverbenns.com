@@ -1,0 +1,42 @@
+@import '../../../assets/css/variables.css';
+
+.panel {
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content {
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
+}
+
+.mrRed {
+  composes: panel;
+  composes: mrRed from "../themes.module.css";
+}
+
+.ahm {
+  composes: panel;
+  composes: ahm from "../themes.module.css";
+  background-image: url('../img/ahm.jpg');
+  background-position: 80% center;
+
+}
+
+.lifeWithBird {
+  composes: panel;
+  composes: lifeWithBird from "../themes.module.css";
+  background-image: url('../img/life-with-bird.jpg');
+  background-position: 80% center;
+}
+
+.chadstone {
+  composes: panel;
+  composes: chadstone from "../themes.module.css";
+  background-image: url('../img/chadstone.jpg');
+  background-position: 65% center;
+}
