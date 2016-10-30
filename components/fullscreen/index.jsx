@@ -4,13 +4,14 @@ import styles from './styles.module.css'
 
 export default class Fullscreen extends Component {
   static propTypes = {
+    firstItem: PropTypes.bool,
     children: PropTypes.any,
     className: PropTypes.string,
   };
 
   render() {
     return (
-      <div className={`${styles.fullscreen} ${this.props.className}`}>
+      <div className={`${this.props.firstItem ? styles.first : styles.fullscreen} ${this.props.className}`}>
         {this.props.children}
       </div>
     );

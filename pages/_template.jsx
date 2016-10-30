@@ -5,6 +5,8 @@ import 'assets/css/reset.css'
 import 'assets/css/document.css'
 import 'assets/css/typography.css'
 
+import styles from './styles.module.css'
+
 export default class Template extends Component {
   static propTypes = {
     children: PropTypes.any,
@@ -14,7 +16,7 @@ export default class Template extends Component {
     return (
       <div>
         <Header />
-        <div>
+        <div className={styles.page}>
           {this.props.children}
         </div>
       </div>

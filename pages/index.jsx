@@ -19,7 +19,7 @@ export default class Index extends Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <Fullscreen className={styles.intro}>
+        <Fullscreen className={styles.intro} firstItem>
           <Wrapper>
             <h1>
               Hello. I’m Oliver Benns.
