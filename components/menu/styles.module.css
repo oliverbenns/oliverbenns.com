@@ -15,11 +15,11 @@
 }
 
 .item {
-  font-family: Regular, Arial, Helvetica, sans-serif;
+  font-family: Medium, Arial, Helvetica, sans-serif;
   font-size: 3rem;
   line-height: 2.1;
 }
 
 .active {
-  border-bottom: 3px solid var(--colorWhite);
+  border-bottom: 4px solid var(--colorWhite);
 }
