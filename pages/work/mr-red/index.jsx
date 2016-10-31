@@ -5,7 +5,6 @@ import Wrapper from 'components/wrapper';
 import { ProjectIntro, ProjectPage } from 'components/project';
 
 import downloadImageSrc from './img/download-app-store.svg';
-import styles from '../project/styles.module.css';
 
 export default class MrRed extends Component {
   render() {

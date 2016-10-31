@@ -1,8 +1,0 @@
-@import '../../../assets/css/variables.css';
-
-/*Shared styles amongst the project pages.*/
-
-.intro {
-  width: calc(6 / var(--columnCount) * 100%);
-  padding-right: var(--gutter);
-}
