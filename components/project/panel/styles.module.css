@@ -39,7 +39,7 @@
   composes: panel;
   composes: mrRed from "../themes.module.css";
   background-image: url('../img/mr-red.png');
-  background-position: 80% center;
+  background-position: 75% center;
   background-size: auto 50%;
 }
 
@@ -47,7 +47,7 @@
   composes: panel;
   composes: ahm from "../themes.module.css";
   background-image: url('../img/ahm.png');
-  background-position: 80% center;
+  background-position: 75% center;
   background-size: auto 50%;
 }
 
@@ -55,7 +55,7 @@
   composes: panel;
   composes: lifeWithBird from "../themes.module.css";
   background-image: url('../img/life-with-bird.jpg');
-  background-position: 80% center;
+  background-position: 75% center;
 }
 
 .chadstone {
