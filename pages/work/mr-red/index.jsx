@@ -4,7 +4,9 @@ import { projects } from 'data/projects.json';
 import Wrapper from 'components/wrapper';
 import { ProjectIntro, ProjectPage } from 'components/project';
 
+import avatarImageSrc from 'components/project/img/mr-red.png';
 import downloadImageSrc from './img/download-app-store.svg';
+import styles from './styles.module.css';
 
 export default class MrRed extends Component {
   render() {
@@ -16,9 +18,15 @@ export default class MrRed extends Component {
       </a>
     );
 
+    const image = (
+      <div className={styles.avatar}>
+        <img src={avatarImageSrc} />
+      </div>
+    );
+
     return (
       <ProjectPage project={project}>
-        <ProjectIntro project={project} cta={cta} />
+        <ProjectIntro project={project} cta={cta} image={image} />
       </ProjectPage>
     );
   }
