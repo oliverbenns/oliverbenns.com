@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers';
 
 import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
 
 import styles from './styles.module.css';
 

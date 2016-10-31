@@ -2,11 +2,13 @@
 
 .cover {
   display: flex;
+  margin-bottom: 20vh;
 }
 
 @media (--small) {
   .cover {
     flex-direction: column-reverse;
+    margin-bottom: 10vh;
   }
 }
 

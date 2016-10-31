@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
 import Wrapper from 'components/wrapper';
-import { ProjectIntro, ProjectPage } from 'components/project';
+import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
 import avatarImageSrc from 'components/project/img/mr-red.png';
 import downloadImageSrc from './img/download-app-store.svg';
@@ -27,6 +27,13 @@ export default class MrRed extends Component {
     return (
       <ProjectPage project={project}>
         <ProjectIntro project={project} cta={cta} image={image} />
+        <ProjectDescription>
+          <h3>Project</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+
+          <h3>Role</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </ProjectDescription>
       </ProjectPage>
     );
   }
