@@ -3,6 +3,10 @@
     {
       "className": "mrRed",
       "description": "An iOS game built using the Unity 3D game engine. A personal project to challenge and inspire oneself.",
+      "cta": {
+        "link": "https://itunes.apple.com/app/id1165442603",
+        "text": "Download on App Store"
+      },
       "slug": "mr-red",
       "title": "Mr. Red"
     },
@@ -10,6 +14,10 @@
       "className": "ahm",
       "description": "A complete overhaul of the Australian health insurer's website to provide an enhanced user experience.",
       "clientDescription":"Ahm (Australian Health Management) is a subsidiary of one of Australia’s largest health insurers. The company now handles health cover for over 370,000 people.",
+      "cta": {
+        "link": "https://ahm.com.au",
+        "text": "View website"
+      },
       "slug": "ahm",
       "title": "Ahm"
     },
@@ -17,6 +25,10 @@
       "className": "lifeWithBird",
       "description": "A minimal and clean e-commerce website built for the contemporary clothing brand based in Melbourne.",
       "clientDescription":"Life with Bird was established in 2002 with a desire to create high quality, beautifully crafted contemporary clothing. Since opening their first boutique in Melbourne, the company has grown to include 6 stores and continues to expand its global following.",
+      "cta": {
+        "link": "https://lifewithbird.com",
+        "text": "View website"
+      },
       "slug": "life-with-bird",
       "title": "Life with Bird"
     },
@@ -24,6 +36,10 @@
       "className": "chadstone",
       "description": "A rebuild of the existing website in line with the unveiling of the mall's new shopping, dining & entertainment precincts.",
       "clientDescription":"Chadstone Shopping Centre is a shopping centre located in the city of Melbourne, Australia. Since opening in 1960, it is now the biggest shopping centre in the country with over 500 stores.",
+      "cta": {
+        "link": "https://www.chadstone.com.au",
+        "text": "View website"
+      },
       "slug": "chadstone",
       "title": "Chadstone"
     }
