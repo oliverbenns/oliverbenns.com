@@ -10,8 +10,9 @@
   --colorWhite: #fff;
 
   /* Z Index Scale */
-  --zIndexMenu: 2;
-  --zIndexHamburger: 3;
+  --zIndexHeader: 2;
+  --zIndexMenu: 3;
+  --zIndexHamburger: 4;
 }
 
 @custom-media --small (max-width: 768px);

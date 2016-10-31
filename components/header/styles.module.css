@@ -8,6 +8,7 @@
   left: 0;
   width: 100vw;
   height: var(--headerHeight);
+  z-index: var(--zIndexHeader);
 }
 
 .inner {
