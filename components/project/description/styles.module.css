@@ -1,0 +1,35 @@
+@import '../../../assets/css/variables.css';
+
+.content {
+  display: flex;
+}
+
+@media (--small) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+.information,
+.image {
+  flex: 0 0 auto;
+}
+
+.image {
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
+}
+
+.information {
+  width: calc(5 / var(--columnCount) * 100%);
+  margin-left: calc(1 / var(--columnCount) * 100%);
+}
+
+@media (--small) {
+  .information,
+  .image {
+    width: 100%;
+    padding-right: 0;
+    margin-left: 0;
+  }
+}
