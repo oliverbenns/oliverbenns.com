@@ -38,6 +38,9 @@
 .mrRed {
   composes: panel;
   composes: mrRed from "../themes.module.css";
+  background-image: url('../img/mr-red.png');
+  background-position: 80% center;
+  background-size: auto 50%;
 }
 
 .ahm {
@@ -46,7 +49,6 @@
   background-image: url('../img/ahm.png');
   background-position: 80% center;
   background-size: auto 50%;
-
 }
 
 .lifeWithBird {
