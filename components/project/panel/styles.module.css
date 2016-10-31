@@ -43,8 +43,9 @@
 .ahm {
   composes: panel;
   composes: ahm from "../themes.module.css";
-  background-image: url('../img/ahm.jpg');
+  background-image: url('../img/ahm.png');
   background-position: 80% center;
+  background-size: auto 50%;
 
 }
 
