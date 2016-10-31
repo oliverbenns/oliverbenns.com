@@ -2,25 +2,28 @@
   "projects": [
     {
       "className": "mrRed",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "description": "An iOS game built using the Unity 3D game engine. A personal project to challenge and inspire oneself.",
       "slug": "mr-red",
       "title": "Mr. Red"
     },
     {
       "className": "ahm",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "description": "A complete overhaul of the Australian health insurer's website to provide an enhanced user experience.",
+      "clientDescription":"Ahm (Australian Health Management) is a subsidiary of one of Australia’s largest health insurers. The company now handles health cover for over 370,000 people.",
       "slug": "ahm",
       "title": "Ahm"
     },
     {
       "className": "lifeWithBird",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "description": "A minimal and clean e-commerce website built for the contemporary clothing brand based in Melbourne.",
+      "clientDescription":"Life with Bird was established in 2002 with a desire to create high quality, beautifully crafted contemporary clothing. Since opening their first boutique in Melbourne, the company has grown to include 6 stores and continues to expand its global following.",
       "slug": "life-with-bird",
       "title": "Life with Bird"
     },
     {
       "className": "chadstone",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "description": "A rebuild of the existing website in line with the unveiling of the mall's new shopping, dining & entertainment precincts.",
+      "clientDescription":"Chadstone Shopping Centre is a shopping centre located in the city of Melbourne, Australia. Since opening in 1960, it is now the biggest shopping centre in the country with over 500 stores.",
       "slug": "chadstone",
       "title": "Chadstone"
     }

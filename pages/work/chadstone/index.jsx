@@ -15,7 +15,7 @@ export default class Chadstone extends Component {
         <Wrapper>
           <div className={styles.intro}>
             <h1>{project.title}</h1>
-            <p>{project.description}</p>
+            <p>{project.clientDescription || project.description}</p>
           </div>
         </Wrapper>
       </ProjectPage>
