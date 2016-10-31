@@ -1,0 +1,36 @@
+@import '../../../assets/css/variables.css';
+
+.cover {
+  display: flex;
+}
+
+@media (--small) {
+  .cover {
+    flex-direction: column-reverse;
+  }
+}
+
+.intro,
+.image {
+  width: calc(6 / var(--columnCount) * 100%);
+  flex: 0 0 auto;
+}
+
+.intro {
+  padding-right: var(--gutter);
+}
+
+@media (--small) {
+  .intro {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (--small) {
+  .image {
+    margin: 0 auto 5vh auto;
+    width: auto;
+  }
+}
+

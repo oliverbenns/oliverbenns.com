@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
 import Wrapper from 'components/wrapper';
-import { ProjectPage } from 'components/project';
 
 import styles from '../project/styles.module.css';
+import { ProjectIntro, ProjectPage } from 'components/project';
 
 export default class Ahm extends Component {
   render() {
@@ -12,14 +12,7 @@ export default class Ahm extends Component {
 
     return (
       <ProjectPage project={project}>
-        <Wrapper>
-          <div className={styles.intro}>
-            <h1>{project.title}</h1>
-            <p>{project.clientDescription || project.description}</p>
-
-            <a href={project.cta.link} target="_blank" rel="noopener noreferrer">{project.cta.text}</a>
-          </div>
-        </Wrapper>
+        <ProjectIntro project={project} />
       </ProjectPage>
     );
   }
