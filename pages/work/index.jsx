@@ -7,6 +7,8 @@ import Wrapper from 'components/wrapper';
 
 import { projects } from 'data/projects.json';
 
+import styles from './styles.module.css';
+
 export default class Work extends Component {
   render() {
     return (
@@ -21,9 +23,11 @@ export default class Work extends Component {
 
         {projects.map(project => <ProjectPanel project={project} key={project.slug} />)}
 
-        <Wrapper>
-          <Contact title="Your project could be here." />
-        </Wrapper>
+        <div className={styles.contact}>
+          <Wrapper>
+            <Contact title="Your project could be here." />
+          </Wrapper>
+        </div>
       </div>
     );
   }
