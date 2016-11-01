@@ -13,4 +13,5 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  outline: 0;
 }
