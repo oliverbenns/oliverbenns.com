@@ -1,0 +1,54 @@
+@import '../../assets/css/variables.css';
+
+.macbook {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: absolute;
+  width: 64.7%;
+  top: 5.6%;
+  margin: 0 auto;
+  max-height: 77.8%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.content > img {
+  float: left;
+  display: none;
+}
+
+.button {
+  width: 3%;
+  min-width: 24px;
+  background: var(--colorBlack);
+  position: absolute;
+  bottom: 5px;
+}
+
+.content:hover .button {
+  animation: flash 0.8s ease;
+}
+
+.active {
+  display: block !important;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
