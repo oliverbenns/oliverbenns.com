@@ -2,6 +2,7 @@
 
 .content {
   display: flex;
+  margin-bottom: 10vh;
 }
 
 @media (--small) {
