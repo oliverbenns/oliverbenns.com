@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 export default class ProjectDescription extends Component {
   static propTypes = {
-    cta: PropTypes.node,
+    children: PropTypes.node,
     image: PropTypes.node,
   };
 
@@ -20,7 +20,7 @@ export default class ProjectDescription extends Component {
         </div>
 
         <div className={styles.information}>
-          {this.props.children}
+          {children}
         </div>
       </Wrapper>
     );

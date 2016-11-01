@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
-import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
 import avatarImageSrc from 'components/project/img/mr-red.png';
@@ -20,7 +19,7 @@ export default class MrRed extends Component {
 
     const image = (
       <div className={styles.avatar}>
-        <img src={avatarImageSrc} />
+        <img src={avatarImageSrc} alt="Cover" />
       </div>
     );
 

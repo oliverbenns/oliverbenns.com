@@ -37,7 +37,7 @@ export default class LifeWithBird extends Component {
 
     const image = (
       <div className={styles.image}>
-        <img src={coverImage} />
+        <img src={coverImage} alt="Cover" />
       </div>
     );
 

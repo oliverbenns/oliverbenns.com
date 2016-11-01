@@ -14,6 +14,7 @@ export default class Macbook extends Component {
     this.state = {
       activeSlideIndex: 0,
     };
+    this.changeSlide = this.changeSlide.bind(this);
   }
 
   changeSlide() {
@@ -26,7 +27,7 @@ export default class Macbook extends Component {
     return (
       <div className={styles.macbook}>
         <img src={macbookImageSrc} alt="Macbook Frame" />
-        <div className={styles.content} onClick={this.changeSlide.bind(this)}>
+        <a className={styles.content} onClick={this.changeSlide} tabIndex={-1}>
           {this.props.images.map((image, index) => (
             <img
               src={image.src}
@@ -35,10 +36,10 @@ export default class Macbook extends Component {
               className={this.state.activeSlideIndex === index ? styles.active : null}
             />
           ))}
-          <a className={styles.button}>
-            <img src={rightArrowImageSrc} />
-          </a>
-        </div>
+          <span className={styles.button}>
+            <img src={rightArrowImageSrc} alt="Arrow icon" />
+          </span>
+        </a>
       </div>
     );
   }

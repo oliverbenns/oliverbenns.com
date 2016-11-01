@@ -32,7 +32,7 @@ const images = [
   {
     src: require('./img/extras.jpg'),
     description: 'Ahm add extras',
-  }
+  },
 ];
 
 export default class Ahm extends Component {
@@ -41,7 +41,7 @@ export default class Ahm extends Component {
 
     const image = (
       <div className={styles.image}>
-        <img src={coverImage} />
+        <img src={coverImage} alt="Cover" />
       </div>
     );
 

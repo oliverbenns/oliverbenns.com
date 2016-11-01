@@ -27,7 +27,7 @@ const images = [
   {
     src: require('./img/whats-on.jpg'),
     description: 'Chadstone what\'s on',
-  }
+  },
 ];
 
 export default class Chadstone extends Component {
@@ -35,7 +35,7 @@ export default class Chadstone extends Component {
     const project = projects.find(_project => _project.slug === 'chadstone');
 
     const image = (
-      <img src={coverImage} />
+      <img src={coverImage} alt="Cover" />
     );
 
     return (

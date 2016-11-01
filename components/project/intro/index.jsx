@@ -20,7 +20,7 @@ export default class ProjectIntro extends Component {
         <div className={styles.intro}>
           <h1>{project.title}</h1>
           <p>{project.clientDescription || project.description}</p>
-          {cta ? cta : (
+          {cta || (
             <a href={project.cta.link} target="_blank" rel="noopener noreferrer">{project.cta.text}</a>
           )}
         </div>
