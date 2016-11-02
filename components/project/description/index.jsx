@@ -7,16 +7,16 @@ import styles from './styles.module.css';
 export default class ProjectDescription extends Component {
   static propTypes = {
     children: PropTypes.node,
-    image: PropTypes.node,
+    media: PropTypes.node,
   };
 
   render() {
-    const { children, image } = this.props;
+    const { children, media } = this.props;
 
     return (
       <Wrapper className={styles.content}>
-        <div className={styles.image}>
-          {image}
+        <div className={styles.media}>
+          {media}
         </div>
 
         <div className={styles.information}>

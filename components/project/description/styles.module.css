@@ -12,11 +12,11 @@
 }
 
 .information,
-.image {
+.media {
   flex: 0 0 auto;
 }
 
-.image {
+.media {
   width: calc(6 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
 }
@@ -28,7 +28,7 @@
 
 @media (--small) {
   .information,
-  .image {
+  .media {
     width: 100%;
     padding-right: 0;
     margin-left: 0;
