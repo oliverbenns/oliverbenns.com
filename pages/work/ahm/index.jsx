@@ -69,7 +69,7 @@ export default class Ahm extends Component {
     const iphone = (
       <div className={styles.iphone}>
         <Iphone invert>
-          <Carousel images={mobileImages}/>
+          <Carousel images={mobileImages} />
         </Iphone>
       </div>
     );
@@ -86,7 +86,7 @@ export default class Ahm extends Component {
         </ProjectDescription>
         <Wrapper>
           <Macbook>
-            <Carousel images={images}/>
+            <Carousel images={images} />
           </Macbook>
         </Wrapper>
       </ProjectPage>
