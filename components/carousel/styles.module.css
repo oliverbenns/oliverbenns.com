@@ -1,0 +1,44 @@
+@import '../../assets/css/variables.css';
+
+.content {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  border: 0 !important;
+}
+
+.content > img {
+  display: none;
+}
+
+.button {
+  width: 3%;
+  min-width: 24px;
+  background: var(--colorBlack);
+  position: absolute;
+  bottom: 5px;
+}
+
+.content:hover .button {
+  animation: flash 0.8s ease;
+}
+
+.active {
+  display: block !important;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+

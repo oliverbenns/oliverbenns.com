@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
+import Carousel from 'components/carousel';
 import Macbook from 'components/macbook';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
@@ -56,7 +57,9 @@ export default class Ahm extends Component {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
         </ProjectDescription>
         <Wrapper>
-          <Macbook images={images} />
+          <Macbook>
+            <Carousel images={images}/>
+          </Macbook>
         </Wrapper>
       </ProjectPage>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
+import Carousel from 'components/carousel';
 import Macbook from 'components/macbook';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
@@ -51,9 +52,12 @@ export default class LifeWithBird extends Component {
           <h3>Role</h3>
 
           <p>Whilst working at <a href="http://inlight.com.au" target="_blank" rel="noopener noreferrer">Inlight</a>, myself and 1 other developer worked together closely with the client to provide a solution they sought after. After visiting the current codebase, we realised that it we needed to rebuild the existing solution. I was responsible for the majority of the delivery.</p>
+          <Carousel images={images} />
         </ProjectDescription>
         <Wrapper>
-          <Macbook images={images} />
+          <Macbook>
+            <Carousel images={images}/>
+          </Macbook>
         </Wrapper>
       </ProjectPage>
     );

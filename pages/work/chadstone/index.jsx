@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
+import Carousel from 'components/carousel';
 import Macbook from 'components/macbook';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
@@ -49,7 +50,9 @@ export default class Chadstone extends Component {
           <p>I was part of a development team that helped produce a solution using React + Redux over the space of a few months. I was responsible for building components and UI in the build, including a Google Maps integration that helped user's get to and from the shopping mall.</p>
         </ProjectDescription>
         <Wrapper>
-          <Macbook images={images} />
+          <Macbook>
+            <Carousel images={images}/>
+          </Macbook>
         </Wrapper>
       </ProjectPage>
     );
