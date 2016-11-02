@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import macbookImageSrc from './img/macbook.png';
+import frameSrc from './img/macbook.png';
 import styles from './styles.module.css';
 
 export default class Macbook extends Component {
@@ -11,7 +11,7 @@ export default class Macbook extends Component {
   render() {
     return (
       <div className={styles.macbook}>
-        <img src={macbookImageSrc} alt="Macbook Frame" />
+        <img src={frameSrc} alt="Macbook Frame" />
         <div className={styles.content}>
           {this.props.children}
         </div>
