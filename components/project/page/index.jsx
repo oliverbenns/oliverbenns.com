@@ -9,6 +9,7 @@ import styles from './styles.module.css';
 export default class ProjectPage extends Component {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.node,
     project: PropTypes.object,
   };
 
@@ -16,7 +17,7 @@ export default class ProjectPage extends Component {
     const { project } = this.props;
 
     return (
-      <ContentPage className={styles[project.className]}>
+      <ContentPage className={`${styles[project.className]} ${this.props.className}`}>
         <Helmet
           title={`${project.title} | ${config.siteTitle}`}
           meta={[
