@@ -11,7 +11,12 @@
   font-size: 1.333rem;
 }
 
+.email a:hover {
+  border-bottom: 1px solid;
+}
+
 .social li {
   display: inline-block;
   margin-right: calc(var(--gutter) * 1.5);
 }
+
