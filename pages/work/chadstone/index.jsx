@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
 import Carousel from 'components/carousel';
+import Iphone from 'components/iphone';
 import Macbook from 'components/macbook';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
@@ -31,6 +32,31 @@ const images = [
   },
 ];
 
+
+const mobileImages = [
+  {
+    src: require('./img/mobile-about.jpg'),
+    description: 'Chadstone about us mobile',
+  },
+  {
+    src: require('./img/mobile-article.jpg'),
+    description: 'Chadstone article mobile',
+  },
+  {
+    src: require('./img/mobile-directions.jpg'),
+    description: 'Chadstone directions mobile',
+  },
+  {
+    src: require('./img/mobile-shopping.jpg'),
+    description: 'Chadstone shopping mobile',
+  },
+  {
+    src: require('./img/mobile-store.jpg'),
+    description: 'Chadstone store mobile',
+  },
+];
+
+
 export default class Chadstone extends Component {
   render() {
     const project = projects.find(_project => _project.slug === 'chadstone');
@@ -39,10 +65,16 @@ export default class Chadstone extends Component {
       <img src={coverImage} alt="Cover" />
     );
 
+    const iphone = (
+      <Iphone>
+        <Carousel images={mobileImages} />
+      </Iphone>
+    );
+
     return (
       <ProjectPage project={project}>
         <ProjectIntro project={project} media={image} />
-        <ProjectDescription>
+        <ProjectDescription media={iphone}>
           <h3>Project</h3>
           <p>Soon to be unveiling the mall's new shopping, dining & entertainment precincts, Chadstone was keen to revisit their online presence and website in line with the new development. <a href="http://inlight.com.au" target="_blank" rel="noopener noreferrer">Inlight</a> was tasked with building a new website that offered information on stores, entertainment, events and an intuitive mapping solution.</p>
 
