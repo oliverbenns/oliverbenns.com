@@ -19,6 +19,7 @@
   justify-content: center;
   user-select: none;
   cursor: pointer;
+  border: 0 !important;
 }
 
 .content > img {

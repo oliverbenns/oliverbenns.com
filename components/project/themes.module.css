@@ -1,10 +1,12 @@
 @import '../../assets/css/variables.css';
 
 .light {
+  border-color: var(--colorBlack);
   color: var(--colorBlack);
 }
 
 .dark {
+  border-color: var(--colorWhite);
   color: var(--colorWhite);
 }
 

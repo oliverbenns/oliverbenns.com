@@ -11,6 +11,10 @@
   min-height: calc(100vh - var(--headerHeight));
 }
 
+.page a {
+  border-bottom: 1px solid;
+}
+
 .mrRed {
   composes: mrRed from "../themes.module.css";
   composes: page;
