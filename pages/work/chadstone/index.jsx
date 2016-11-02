@@ -43,10 +43,10 @@ export default class Chadstone extends Component {
         <ProjectIntro project={project} image={image} />
         <ProjectDescription>
           <h3>Project</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          <p>Soon to be unveiling the mall's new shopping, dining & entertainment precincts, Chadstone was keen to revisit their online presence and website in line with the new development. <a href="http://inlight.com.au" target="_blank" rel="noopener noreferrer">Inlight</a> was tasked with building a new website that offered information on stores, entertainment, events and an intuitive mapping solution.</p>
 
           <h3>Role</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          <p>I was part of a development team that helped produce a solution using React + Redux over the space of a few months. I was responsible for building components and UI in the build, including a Google Maps integration that helped user's get to and from the shopping mall.</p>
         </ProjectDescription>
         <Wrapper>
           <Macbook images={images} />
