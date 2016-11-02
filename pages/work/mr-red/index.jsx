@@ -13,7 +13,7 @@ export default class MrRed extends Component {
     const project = projects.find(_project => _project.slug === 'mr-red');
 
     const cta = (
-      <a href={project.cta.link} target="_blank" rel="noopener noreferrer">
+      <a href={project.cta.link} target="_blank" rel="noopener noreferrer" className={styles.download}>
         <img src={downloadImageSrc} alt={project.cta.text} />
       </a>
     );
