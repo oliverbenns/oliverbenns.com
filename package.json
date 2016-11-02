@@ -8,6 +8,7 @@
     "flux": "^3.1.0",
     "gatsby": "^0.12.6",
     "history": "^2.0.2",
+    "react-ga": "^2.1.2",
     "react-github-button": "^0.1.10",
     "react-helmet": "^3.1.0"
   },
