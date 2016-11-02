@@ -46,10 +46,11 @@ export default class LifeWithBird extends Component {
         <ProjectIntro project={project} image={image} />
         <ProjectDescription>
           <h3>Project</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          <p>After building their mobile website, Life with Bird left us with the challenge of rebuilding their current Shopify build. Part of it's remit was to improve the user experience and include a much cleaner UI that matched their brand and achieve more conversions. The current code and deployment solution also needed revisiting to be scalable and flexible.</p>
 
           <h3>Role</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+
+          <p>Whilst working at Inlight Media, myself and 1 other developer worked together closely with the client to provide a solution they sought after. After visiting the current codebase, we realised that it we needed to rebuild the existing solution. I was responsible for the majority of the delivery.</p>
         </ProjectDescription>
         <Wrapper>
           <Macbook images={images} />
