@@ -13,6 +13,14 @@
   background-color: #5ab6ff;
 }
 
+/* Improve readability. */
+.mrRed h1,
+.mrRed h2,
+.mrRed h3,
+.mrRed p {
+  text-shadow: 0px 0px 5px #359bed;
+}
+
 .ahm {
   composes: dark;
   background-color: #000;
