@@ -31,7 +31,7 @@ export default class MrRed extends Component {
         <div className={backgroundStyles.background3} />
 
         <div className={backgroundStyles.content}>
-          <ProjectIntro project={project} cta={cta} image={image} />
+          <ProjectIntro project={project} cta={cta} media={image} />
           <ProjectDescription>
             <h3>Project</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>

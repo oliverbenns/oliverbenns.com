@@ -40,7 +40,7 @@ export default class Ahm extends Component {
   render() {
     const project = projects.find(_project => _project.slug === 'ahm');
 
-    const image = (
+    const logo = (
       <div className={styles.image}>
         <img src={coverImage} alt="Cover" />
       </div>
@@ -48,7 +48,7 @@ export default class Ahm extends Component {
 
     return (
       <ProjectPage project={project}>
-        <ProjectIntro project={project} image={image} />
+        <ProjectIntro project={project} media={logo} />
         <ProjectDescription>
           <h3>Project</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>

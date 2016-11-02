@@ -41,7 +41,7 @@ export default class Chadstone extends Component {
 
     return (
       <ProjectPage project={project}>
-        <ProjectIntro project={project} image={image} />
+        <ProjectIntro project={project} media={image} />
         <ProjectDescription>
           <h3>Project</h3>
           <p>Soon to be unveiling the mall's new shopping, dining & entertainment precincts, Chadstone was keen to revisit their online presence and website in line with the new development. <a href="http://inlight.com.au" target="_blank" rel="noopener noreferrer">Inlight</a> was tasked with building a new website that offered information on stores, entertainment, events and an intuitive mapping solution.</p>

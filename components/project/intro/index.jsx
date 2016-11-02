@@ -7,13 +7,12 @@ import styles from './styles.module.css';
 export default class ProjectIntro extends Component {
   static propTypes = {
     cta: PropTypes.node,
-    image: PropTypes.node,
+    media: PropTypes.node,
     project: PropTypes.object,
-
   };
 
   render() {
-    const { cta, image, project } = this.props;
+    const { cta, media, project } = this.props;
 
     return (
       <Wrapper className={styles.cover}>
@@ -24,8 +23,8 @@ export default class ProjectIntro extends Component {
             <a href={project.cta.link} target="_blank" rel="noopener noreferrer">{project.cta.text}</a>
           )}
         </div>
-        <div className={styles.image}>
-          {image}
+        <div className={styles.media}>
+          {media}
         </div>
       </Wrapper>
     );

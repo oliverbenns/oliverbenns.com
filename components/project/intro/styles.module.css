@@ -14,7 +14,7 @@
 }
 
 .intro,
-.image {
+.media {
   width: calc(6 / var(--columnCount) * 100%);
   flex: 0 0 auto;
 }
@@ -31,7 +31,7 @@
 }
 
 @media (--small) {
-  .image {
+  .media {
     margin: 0 auto 5vh auto;
     width: auto;
   }
