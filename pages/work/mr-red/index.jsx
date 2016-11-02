@@ -5,6 +5,7 @@ import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/projec
 
 import avatarImageSrc from 'components/project/img/mr-red.png';
 import downloadImageSrc from './img/download-app-store.svg';
+import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';
 
 export default class MrRed extends Component {
@@ -24,15 +25,21 @@ export default class MrRed extends Component {
     );
 
     return (
-      <ProjectPage project={project}>
-        <ProjectIntro project={project} cta={cta} image={image} />
-        <ProjectDescription>
-          <h3>Project</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+      <ProjectPage project={project} className={backgroundStyles.page}>
+        <div className={backgroundStyles.background1} />
+        <div className={backgroundStyles.background2} />
+        <div className={backgroundStyles.background3} />
 
-          <h3>Role</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-        </ProjectDescription>
+        <div className={backgroundStyles.content}>
+          <ProjectIntro project={project} cta={cta} image={image} />
+          <ProjectDescription>
+            <h3>Project</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+
+            <h3>Role</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          </ProjectDescription>
+        </div>
       </ProjectPage>
     );
   }
