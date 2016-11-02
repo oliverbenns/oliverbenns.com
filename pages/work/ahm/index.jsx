@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
 import Carousel from 'components/carousel';
+import Iphone from 'components/iphone';
 import Macbook from 'components/macbook';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
@@ -36,6 +37,25 @@ const images = [
   },
 ];
 
+const mobileImages = [
+  {
+    src: require('./img/mobile-compare.png'),
+    description: 'Ahm compare mobile',
+  },
+  {
+    src: require('./img/mobile-form.png'),
+    description: 'Ahm mobile form mobile',
+  },
+  {
+    src: require('./img/mobile-product-listing.png'),
+    description: 'Ahm product listing mobile',
+  },
+  {
+    src: require('./img/mobile-product.png'),
+    description: 'Ahm product mobile',
+  },
+];
+
 export default class Ahm extends Component {
   render() {
     const project = projects.find(_project => _project.slug === 'ahm');
@@ -46,10 +66,18 @@ export default class Ahm extends Component {
       </div>
     );
 
+    const iphone = (
+      <div className={styles.iphone}>
+        <Iphone invert>
+          <Carousel images={mobileImages}/>
+        </Iphone>
+      </div>
+    );
+
     return (
       <ProjectPage project={project}>
-        <ProjectIntro project={project} media={logo} />
-        <ProjectDescription>
+        <ProjectIntro project={project} media={iphone} />
+        <ProjectDescription media={logo}>
           <h3>Project</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 

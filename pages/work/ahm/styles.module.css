@@ -5,6 +5,10 @@
   margin: 0 auto;
 }
 
+.iphone {
+  text-align: center;
+}
+
 @media (--medium) {
   .image {
     max-width: 75%;
