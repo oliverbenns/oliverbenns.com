@@ -3,7 +3,7 @@
 .intro {
   width: calc(6 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
 }
 
 @media (--medium) {
