@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export default class Macbook extends Component {
   static propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.node,
   };
 
   render() {

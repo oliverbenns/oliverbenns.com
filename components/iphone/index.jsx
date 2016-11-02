@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 export default class Iphone extends Component {
   static propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.node,
     invert: PropTypes.bool,
   };
 
