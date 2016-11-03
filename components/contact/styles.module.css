@@ -1,5 +1,9 @@
 @import '../../assets/css/variables.css';
 
+
+.contact a {
+  border-bottom: 0;
+}
 .lineBreak {
   height: 3px;
   width: 100px;
@@ -11,7 +15,7 @@
   font-size: 1.333rem;
 }
 
-.email a:hover {
+.link:hover {
   border-bottom: 1px solid;
 }
 
