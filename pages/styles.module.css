@@ -8,4 +8,13 @@
 .intro {
   background: var(--colorBlack);
   color: var(--colorWhite);
+
+}
+
+.intro h1 {
+  font-size: 2.75rem;
+}
+
+.link {
+  border-bottom: 3px solid var(--colorWhite);
 }
