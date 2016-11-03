@@ -23,8 +23,8 @@ body {
 
 body {
   font-family: Book, Arial, Helvetica, sans-serif;
-  color: #000;
-  line-height: 1.375;
+  color: var(--colorBlack);
+  line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -85,6 +85,28 @@ p:last-child {
   margin-bottom: 0;
 }
 
-h1 + p {
-  margin-top: 2.5rem
+/*@TODO: Work on this some more and calculate good sizing*/
+
+h1 + p,
+h2 + p {
+  margin-top: 2rem
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5 {
+  margin-top: 3.5rem
+}
+
+h3 + p,
+h4 + p {
+  margin-top: 0.5rem;
+}
+
+h2 + h3,
+h2 + h4,
+h3 + h4 {
+  margin-top: 3rem;
 }
