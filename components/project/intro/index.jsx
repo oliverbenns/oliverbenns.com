@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
+import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
 
 import styles from './styles.module.css';
@@ -20,7 +21,7 @@ export default class ProjectIntro extends Component {
           <h1>{project.title}</h1>
           <p>{project.clientDescription || project.description}</p>
           {cta || (
-            <a href={project.cta.link} target="_blank" rel="noopener noreferrer">{project.cta.text}</a>
+            <OutboundLink to={project.cta.link}>{project.cta.text}</OutboundLink>
           )}
         </div>
         <div className={styles.media}>

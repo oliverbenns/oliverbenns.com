@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Icon from 'components/icon';
+import OutboundLink from 'components/outbound-link';
 
 import styles from './styles.module.css';
 
@@ -20,19 +21,19 @@ export default class Contact extends Component {
         <div className={styles.lineBreak} />
         <ul className={styles.social}>
           <li>
-            <a href="https://github.com/oliverbenns/" target="_blank" rel="noopener noreferrer">
+            <OutboundLink to="https://github.com/oliverbenns/">
               <Icon name="github" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href="https://twitter.com/oliverbenns/" target="_blank" rel="noopener noreferrer">
+            <OutboundLink to="https://twitter.com/oliverbenns/">
               <Icon name="twitter" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href="https://www.instagram.com/oliverbenns" target="_blank" rel="noopener noreferrer">
+            <OutboundLink to="https://www.instagram.com/oliverbenns">
               <Icon name="instagram" />
-            </a>
+            </OutboundLink>
           </li>
         </ul>
       </div>

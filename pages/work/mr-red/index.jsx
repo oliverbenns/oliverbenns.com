@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
+import OutboundLink from 'components/outbound-link';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
 import avatarImageSrc from 'components/project/img/mr-red.png';
@@ -13,9 +14,9 @@ export default class MrRed extends Component {
     const project = projects.find(_project => _project.slug === 'mr-red');
 
     const cta = (
-      <a href={project.cta.link} target="_blank" rel="noopener noreferrer" className={styles.download}>
+      <OutboundLink to={project.cta.link} className={styles.download}>
         <img src={downloadImageSrc} alt={project.cta.text} />
-      </a>
+      </OutboundLink>
     );
 
     const image = (
