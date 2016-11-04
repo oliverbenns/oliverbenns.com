@@ -2,6 +2,7 @@
 
 .download {
   display: inline-block;
+  border-bottom: 0 !important;
 }
 
 .avatar {
