@@ -26,6 +26,11 @@ export default class Contact extends Component {
             </OutboundLink>
           </li>
           <li>
+            <OutboundLink to="https://www.linkedin.com/in/oliverbenns">
+              <Icon name="linkedin" />
+            </OutboundLink>
+          </li>
+          <li>
             <OutboundLink to="https://twitter.com/oliverbenns/">
               <Icon name="twitter" />
             </OutboundLink>
