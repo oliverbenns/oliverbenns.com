@@ -7,7 +7,7 @@ export default class Meta extends Component {
     description: PropTypes.string,
     noIndex: PropTypes.bool,
     title: PropTypes.string,
-  };
+  }
 
   static contextTypes = {
     location: PropTypes.object,
