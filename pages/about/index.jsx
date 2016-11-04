@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { config } from 'config';
 
 import ContentPage from 'components/content-page';
-import Helmet from 'react-helmet';
+import Meta from 'components/meta';
 import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
 
@@ -12,13 +11,7 @@ export default class About extends Component {
   render() {
     return (
       <ContentPage>
-        <Helmet
-          title={`About | ${config.siteTitle}`}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
+        <Meta title="About" />
         <Wrapper>
           <div className={styles.intro}>
             <h1>Hello world.</h1>

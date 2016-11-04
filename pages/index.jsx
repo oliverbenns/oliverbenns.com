@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { config } from 'config';
 import { prefixLink } from 'gatsby-helpers';
 
 import Fullscreen from 'components/fullscreen';
-import Helmet from 'react-helmet';
+import Meta from 'components/meta';
 import Wrapper from 'components/wrapper';
 import { Link } from 'react-router';
 
@@ -13,13 +12,7 @@ export default class Index extends Component {
   render() {
     return (
       <div>
-        <Helmet
-          title={config.siteTitle}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
+        <Meta />
         <Fullscreen className={styles.intro} firstItem>
           <Wrapper>
             <h1>

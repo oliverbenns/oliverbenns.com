@@ -11,7 +11,7 @@ export default class Html extends Component {
   };
 
   render() {
-    const head = Helmet.rewind();
+    const helmet = Helmet.rewind();
 
     let css;
     if (process.env.NODE_ENV === 'production') {
@@ -21,20 +21,26 @@ export default class Html extends Component {
     return (
       <html lang="en">
         <head>
+          {/* Document */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+          {/* Meta */}
+          {helmet.title.toComponent()}
+          {helmet.meta.toComponent()}
+          <meta property="og:site_name" content="Oliver Benns" />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@oliverbenns" />
+          <meta name="twitter:creator" content="@oliverbenns" />
+
+          {/* Favicon */}
           <link rel="icon" type="image/png" href={require('assets/img/favicon/favicon-32x32.png')} sizes="32x32" />
           <link rel="icon" type="image/png" href={require('assets/img/favicon/favicon-16x16.png')} sizes="16x16" />
           <link rel="apple-touch-icon" sizes="180x180" href={require('assets/img/favicon/apple-touch-icon.png')} />
           <meta name="theme-color" content="#000000" />
 
-          {head.title.toComponent()}
-          {head.meta.toComponent()}
           {css}
         </head>
         <body>

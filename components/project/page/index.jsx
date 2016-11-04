@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { config } from 'config';
 
 import ContentPage from 'components/content-page';
-import Helmet from 'react-helmet';
+import Meta from 'components/meta';
 
 import styles from './styles.module.css';
 
@@ -18,13 +17,7 @@ export default class ProjectPage extends Component {
 
     return (
       <ContentPage className={`${styles[project.className]} ${this.props.className}`}>
-        <Helmet
-          title={`${project.title} | ${config.siteTitle}`}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
+        <Meta title={project.title} description={project.description} />
         {this.props.children}
       </ContentPage>
     );
