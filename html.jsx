@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { prefixLink } from 'gatsby-helpers';
+import { config } from 'config';
 
 import Helmet from 'react-helmet';
 
@@ -29,7 +30,7 @@ export default class Html extends Component {
           {/* Meta */}
           {helmet.title.toComponent()}
           {helmet.meta.toComponent()}
-          <meta property="og:site_name" content="Oliver Benns" />
+          <meta property="og:site_name" content={config.siteTitle} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@oliverbenns" />
