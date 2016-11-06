@@ -46,7 +46,9 @@ export default class LifeWithBird extends Component {
     return (
       <ProjectPage project={project}>
         <ProjectIntro project={project} media={image} />
-        <ProjectDescription>
+        <ProjectDescription media={(<Macbook>
+            <Carousel images={images} />
+          </Macbook>)}>
           <h3>Project</h3>
           <p>After building their mobile website, Life with Bird left us with the challenge of rebuilding their current Shopify build. Part of it&apos;s remit was to improve the user experience and include a much cleaner UI that matched their brand and achieve more conversions. The current code and deployment solution also needed revisiting to be scalable and flexible.</p>
 
