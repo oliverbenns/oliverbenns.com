@@ -1,3 +1,7 @@
+.container {
+  text-align: center;
+}
+
 .iphone {
   position: relative;
   display: flex;

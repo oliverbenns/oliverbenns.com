@@ -12,10 +12,12 @@ export default class Iphone extends Component {
 
   render() {
     return (
-      <div className={styles.iphone}>
-        <img src={this.props.invert ? blackFrameSrc : whiteFrameSrc} alt="iPhone Frame" />
-        <div className={styles.content}>
-          {this.props.children}
+      <div className={styles.container}>
+        <div className={styles.iphone}>
+          <img src={this.props.invert ? blackFrameSrc : whiteFrameSrc} alt="iPhone Frame" />
+          <div className={styles.content}>
+            {this.props.children}
+          </div>
         </div>
       </div>
     );

@@ -67,11 +67,9 @@ export default class Ahm extends Component {
     );
 
     const iphone = (
-      <div className={styles.iphone}>
-        <Iphone invert>
-          <Carousel images={mobileImages} />
-        </Iphone>
-      </div>
+      <Iphone invert>
+        <Carousel images={mobileImages} />
+      </Iphone>
     );
 
     return (
