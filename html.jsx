@@ -32,9 +32,11 @@ export default class Html extends Component {
           {helmet.meta.toComponent()}
           <meta property="og:site_name" content={config.siteTitle} />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content={require('assets/img/favicon/share.png')} />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@oliverbenns" />
           <meta name="twitter:creator" content="@oliverbenns" />
+          <meta property="twitter:image" content={require('assets/img/favicon/share.png')} />
 
           {/* Favicon */}
           <link rel="icon" type="image/png" href={require('assets/img/favicon/favicon-32x32.png')} sizes="32x32" />
