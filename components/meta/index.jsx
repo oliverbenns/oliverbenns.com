@@ -17,7 +17,8 @@ export default class Meta extends Component {
     const { description, noIndex, title } = this.props;
     const { location } = this.context;
 
-    const metaTitle = title ? `${title} | ${config.siteTitle}` : config.siteTitle;
+    const mainTitle = `${config.siteTitle} - Freelance Web Developer`;
+    const metaTitle = title ? `${title} | ${mainTitle}` : mainTitle;
     const metaDescription = description || config.description;
     const absoluteUrl = `${config.siteUrl}${location.pathname}`;
 
