@@ -35,10 +35,10 @@ export default class MrRed extends Component {
           <ProjectIntro project={project} cta={cta} media={image} />
           <ProjectDescription>
             <h3>Project</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <p>I have always enjoyed video games and have wondered what it would be like to actually make one. The project's goal was to appreciate and understand game development at a high level, as well as to publish something for myself.</p>
 
-            <h3>Role</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <h3>Result</h3>
+            <p>I used the Unity 3D game engine to develop Mr. Red. It took a considerable amount of time to learn the interface, the C# language and how to put it all together. On top of this, I also created the game assets and learnt how to publish to Apple's iOS platform. Despite the challenges I feel proud to have been able to publish this and look forward to creating a similar project soon.</p>
           </ProjectDescription>
         </div>
       </ProjectPage>
