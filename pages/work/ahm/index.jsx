@@ -4,6 +4,7 @@ import { projects } from 'data/projects.json';
 import Carousel from 'components/carousel';
 import Iphone from 'components/iphone';
 import Macbook from 'components/macbook';
+import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
@@ -77,10 +78,10 @@ export default class Ahm extends Component {
         <ProjectIntro project={project} media={iphone} />
         <ProjectDescription media={logo}>
           <h3>Project</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          <p>Ahm has been a client of <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> for quite some time. With numerous years of design and development, it was time to analyse the current solution to see what problems existed and how we could go about solving them for both business and customers. We worked closely with the Medibank team to re-build the current stack using the latest web technologies.</p>
 
           <h3>Role</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+          <p>With a team of 5 developers, we created a web app with client and server-side rendering using React. I was mainly responsible for building the current pages using reusable components and handling application state. Notable work includes building the product and product listing pages.</p>
         </ProjectDescription>
         <Wrapper>
           <Macbook>
