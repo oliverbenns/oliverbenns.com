@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { prefixLink } from 'gatsby-helpers';
 
 import ContentPage from 'components/content-page';
 import Meta from 'components/meta';
 import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
+import { Link } from 'react-router';
 
 import styles from './styles.module.css';
 
@@ -15,21 +17,23 @@ export default class About extends Component {
         <Wrapper>
           <div className={styles.intro}>
             <h1>Hello world.</h1>
-            <p>I'm a web developer currently situated in Norwich, United Kingdom and had the pleasure to be in the industry for 4 years.</p>
-            <p>I first began my journey into code whilst studying at <OutboundLink to="https://twitter.com/oliverbenns/status/345433447810101248">Nottingham Trent University</OutboundLink>. During my final year, I also helped maintain e-commerce solutions for existing clients at <OutboundLink to="http://wearejh.com">JH</OutboundLink>.</p>
-            <p>After obtaining my degree, I flew to Australia, where I worked with Melbourne based agency <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> for 3 years. I spent my time there on a variety of projects such as advanced web applications, mobile apps, static websites, e-commerce and blogs.</p>
-            <p>I now work on a freelance basis working on both ideas of my own and others. If you have a project in mind, do get in touch.</p>
+            <p>I’m a freelance web developer currently situated in Norwich, United Kingdom. I’ve had the pleasure to be in the industry for 4 years.</p>
+            <p>I first began my journey into code whilst studying Multimedia at <OutboundLink to="https://twitter.com/oliverbenns/status/345433447810101248">Nottingham Trent University</OutboundLink>. During my final year, I juggled assignments with part time work at <OutboundLink to="http://wearejh.com">JH</OutboundLink> where I maintained existing e-commerce websites by squashing bugs and adding new features. I gained a considerable amount of experience and was my stepping stone into the industry.</p>
+
+            <p>Once obtaining my degree, I flew to Melbourne, Australia and worked with <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> for 3 years. I was responsible for the front end web development of various projects, such as web applications, mobile apps, static websites, online stores and blogs. With the variety of work and my attitude towards learning, I quickly grew from a graduate into a dependable, valuable front end developer that could work both solo and in teams.</p>
+
+            <p>I now work on a freelance basis working on both ideas of my own and others. If you have a project in mind, <Link to={prefixLink('/contact/')}>get in touch</Link>.</p>
 
             <h2>Technical skills</h2>
 
             <h4>Presentation</h4>
-            <p>Bootstrap, Html, Less, Postcss, Sass, Stylus</p>
+            <p>Bootstrap, Css, Html, Less, Postcss, Sass, Stylus</p>
             <h4>Javascript</h4>
             <p>Angular, Grunt, Gulp, jQuery, Pug, React, Webpack</p>
             <h4>Server</h4>
             <p>Express, Mongo, Node, SQL</p>
             <h4>Other</h4>
-            <p>CI, Git, Svn</p>
+            <p>CI, Git, Svn, Unity 3D</p>
 
             <h2>What people say</h2>
 
