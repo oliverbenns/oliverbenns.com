@@ -39,6 +39,10 @@ export default class Meta extends Component {
         content: absoluteUrl,
       },
       {
+        name: 'twitter:title',
+        content: metaTitle,
+      },
+      {
         name: 'twitter:description',
         content: metaDescription,
       },
