@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
+import Carousel from 'components/carousel';
+import Iphone from 'components/iphone';
 import OutboundLink from 'components/outbound-link';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
@@ -12,6 +14,21 @@ import styles from './styles.module.css';
 export default class MrRed extends Component {
   render() {
     const project = projects.find(_project => _project.slug === 'mr-red');
+
+    const images = [
+      {
+        src: require('./img/home.png'),
+        description: 'Mr. Red app home',
+      },
+      {
+        src: require('./img/in-game.png'),
+        description: 'Mr. Red app in game',
+      },
+      {
+        src: require('./img/end-screen.png'),
+        description: 'Mr. Red app end screen',
+      }
+    ];
 
     const cta = (
       <OutboundLink to={project.cta.link} className={styles.download}>
@@ -25,6 +42,14 @@ export default class MrRed extends Component {
       </div>
     );
 
+    const iphone = (
+      <div className={styles.iphone}>
+        <Iphone>
+          <Carousel images={images} />
+        </Iphone>
+      </div>
+    );
+
     return (
       <ProjectPage project={project} className={backgroundStyles.page}>
         <div className={backgroundStyles.background1} />
@@ -33,7 +58,7 @@ export default class MrRed extends Component {
 
         <div className={backgroundStyles.content}>
           <ProjectIntro project={project} cta={cta} media={image} />
-          <ProjectDescription>
+          <ProjectDescription media={iphone}>
             <h3>Project</h3>
             <p>I have always enjoyed video games and have wondered what it would be like to actually make one. The project's goal was to appreciate and understand game development at a high level, as well as to publish something for myself.</p>
 
