@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
@@ -9,8 +10,13 @@ export default class ContentPage extends Component {
   }
 
   render() {
+    const containerClassName = classNames(
+      styles.content,
+      this.props.className
+    );
+
     return (
-      <section className={`${styles.content} ${this.props.className}`}>
+      <section className={containerClassName}>
         {this.props.children}
       </section>
     );

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
@@ -10,8 +11,13 @@ export default class Hamburger extends Component {
   }
 
   render() {
+    const containerClassName = classNames(
+      this.props.active ? styles.active : styles.icon,
+      this.props.className
+    );
+
     return (
-      <a className={`${this.props.active ? styles.active : styles.icon} ${this.props.className}`} onClick={this.props.onClick} tabIndex={-1}>
+      <a className={containerClassName} onClick={this.props.onClick} tabIndex={-1}>
         <span />
         <span />
         <span />

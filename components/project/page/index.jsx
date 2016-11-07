@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 
 import ContentPage from 'components/content-page';
 import Meta from 'components/meta';
@@ -14,9 +15,13 @@ export default class ProjectPage extends Component {
 
   render() {
     const { project } = this.props;
+    const containerClassName = classNames(
+      styles[project.className],
+      this.props.className
+    );
 
     return (
-      <ContentPage className={`${styles[project.className]} ${this.props.className}`}>
+      <ContentPage className={containerClassName}>
         <Meta title={project.title} description={project.description} />
         {this.props.children}
       </ContentPage>
