@@ -2630,9 +2630,9 @@ function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
-gatsby@^0.12.6:
-  version "0.12.12"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-0.12.12.tgz#414eaea23943b4539f04cd46cfa6d08632bb3c0c"
+gatsby:
+  version "0.12.19"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-0.12.19.tgz#beafc88c58b065baca81c7439173e854c0edc5cb"
   dependencies:
     async "^1.2.1"
     babel-core "^6.13.2"

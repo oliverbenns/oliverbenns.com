@@ -6,7 +6,7 @@
   "author": "Oliver Benns",
   "dependencies": {
     "flux": "^3.1.0",
-    "gatsby": "^0.12.6",
+    "gatsby": "^0.12.19",
     "history": "^2.0.2",
     "react-ga": "^2.1.2",
     "react-github-button": "^0.1.10",
