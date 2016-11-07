@@ -23,3 +23,12 @@
 .active {
   border-bottom: 4px solid var(--colorWhite);
 }
+
+@media (--small) {
+  .item {
+    font-size: 2.2857rem;
+  }
+  .active {
+    border-width: 2px;
+  }
+}

@@ -29,17 +29,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (--small) {
-  html {
-    font-size: 14px;
-  }
-
-  body {
-    font-size: 16px;
-  }
-}
-
-
 h1,
 h2,
 h3,
@@ -109,4 +98,15 @@ h2 + h3,
 h2 + h4,
 h3 + h4 {
   margin-top: 3rem;
+}
+
+@media (--small) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2.2857rem;
+  }
 }

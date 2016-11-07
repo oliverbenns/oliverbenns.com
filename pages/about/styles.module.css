@@ -16,6 +16,7 @@
   .intro {
     width: calc(12 / var(--columnCount) * 100%);
     padding-right: 0;
+    font-size: 1.1428rem;
   }
 }
 

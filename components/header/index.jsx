@@ -38,7 +38,7 @@ export default class Header extends Component {
             <h1 className={styles.title}>
               <IndexLink to={prefixLink('/')}>Oliver Benns</IndexLink>
             </h1>
-            <GitHubButton type="stargazers" namespace="oliverbenns" repo="oliverbenns.com" />
+            <GitHubButton type="stargazers" namespace="oliverbenns" repo="oliverbenns.com" className={styles.github} />
             <Hamburger onClick={actions.toggleMenu} active={this.state.menuActive} className={styles.hamburger} />
           </div>
         </Wrapper>

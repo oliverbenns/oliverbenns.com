@@ -27,3 +27,13 @@
   font-family: Medium, Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
 }
+
+@media (--small) {
+  .title {
+    font-size: 1.285rem;
+  }
+
+  .github {
+    display: none;
+  }
+}
