@@ -18,7 +18,7 @@ export default class Work extends Component {
 
         <div className={styles.contact}>
           <Wrapper>
-            <Contact title="Your project could be here." />
+            <Contact title="Your project here?" />
           </Wrapper>
         </div>
       </div>
