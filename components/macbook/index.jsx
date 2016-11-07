@@ -11,7 +11,7 @@ export default class Macbook extends Component {
   render() {
     return (
       <div className={styles.macbook}>
-        <img src={frameSrc} alt="Macbook Frame" />
+        <img src={frameSrc} alt="Macbook Frame" role="presentation" />
         <div className={styles.content}>
           {this.props.children}
         </div>

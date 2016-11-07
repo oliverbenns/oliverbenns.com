@@ -14,7 +14,7 @@ export default class Iphone extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.iphone}>
-          <img src={this.props.invert ? blackFrameSrc : whiteFrameSrc} alt="iPhone Frame" />
+          <img src={this.props.invert ? blackFrameSrc : whiteFrameSrc} alt="iPhone Frame" role="presentation" />
           <div className={styles.content}>
             {this.props.children}
           </div>
