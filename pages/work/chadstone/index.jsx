@@ -77,10 +77,10 @@ export default class Chadstone extends Component {
         <ProjectIntro project={project} media={image} />
         <ProjectDescription media={iphone}>
           <h3>Project</h3>
-          <p>Soon to be unveiling the mall&apos;s new shopping, dining &amp; entertainment precincts, Chadstone was keen to revisit their online presence and website in line with the new development. <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> was tasked with building a new website that offered information on stores, entertainment, events and an intuitive mapping solution.</p>
+          <p>Soon to be unveiling the mall’s new shopping, dining &amp; entertainment precincts, Chadstone was keen to revisit their online presence and website in line with the new development. <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> was tasked with building a new website that offered information on stores, entertainment, events and an intuitive mapping solution.</p>
 
           <h3>Role</h3>
-          <p>I was part of a development team that helped produce a solution using React + Redux over the space of a few months. I was responsible for building components and UI in the build, including a Google Maps integration that helped user&apos;s get to and from the shopping mall.</p>
+          <p>I was part of a development team that helped produce a solution over the space of a few months. I was mainly responsible for building components and UI in the build and handling application state, but also worked on the api. I am most proud of the getting there page, which included a Google Maps integration that helped users get to the shopping mall and provided taxi and Uber estimations.</p>
         </ProjectDescription>
         <Wrapper>
           <Macbook>

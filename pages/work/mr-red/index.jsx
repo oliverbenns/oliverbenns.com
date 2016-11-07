@@ -63,7 +63,7 @@ export default class MrRed extends Component {
             <p>I have always enjoyed video games and have wondered what it would be like to actually make one. The project’s goal was to appreciate and understand game development at a high level, as well as to publish something for myself.</p>
 
             <h3>Result</h3>
-            <p>I used the Unity 3D game engine to develop Mr. Red. It took a considerable amount of time to learn the interface, the C# language and how to put it all together. On top of this, I also created the game assets and learnt how to publish to Apple’s iOS platform. Despite the challenges I feel proud to have been able to publish this and look forward to creating a similar project soon.</p>
+            <p>I used the Unity 3D game engine to develop Mr. Red. Despite the simplicity of the game, it took a considerable amount of time to learn the interface, the C# language and how to put it all together. On top of this, I also created the game assets and learnt how to publish to Apple’s iOS platform. Despite the challenges I feel that I learnt a lot and I’m proud to have been able to publish my first game. I look forward to creating a similar project soon.</p>
           </ProjectDescription>
         </div>
       </ProjectPage>
