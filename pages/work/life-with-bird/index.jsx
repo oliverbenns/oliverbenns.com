@@ -21,7 +21,7 @@ const images = [
   },
   {
     src: require('./img/product-listing.jpg'),
-    description: 'Life with Bird product listng',
+    description: 'Life with Bird product listing',
   },
   {
     src: require('./img/product.jpg'),
