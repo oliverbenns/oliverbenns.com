@@ -1,67 +1,92 @@
 @import '../../../assets/css/variables.css';
 
+/*@TODO: Use <imgs> instead of backgrounds for better positioning control, cleaner css and accessibility*/
 .panel {
-  height: 25vh;
+  display: flex;
+  font-size: 1.125rem;
+}
+
+.panel:nth-child(even) {
+  background-position: 25% center !important;
+}
+
+.inner {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: center;
+  height: 30vh;
   min-height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  font-size: 1.125rem;
-}
-
-@media (--medium) {
-  .panel {
-    background-image: none !important;
-  }
 }
 
 .content {
   width: calc(5 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
+  margin-right: auto;
 }
 
-@media (--medium) {
-  .content {
-    width: calc(10 / var(--columnCount) * 100%);
-  }
-}
-
-@media (--small) {
-  .content {
-    width: calc(12 / var(--columnCount) * 100%);
-    padding-right: 0;
-    height: auto;
-  }
+.panel:nth-child(even) .content {
+  margin-left: calc(7 / var(--columnCount) * 100%);
+  padding-right: 0;
 }
 
 .mrRed {
   composes: panel;
   composes: mrRed from "../themes.module.css";
+}
+
+.mrRed .inner {
   background-image: url('../img/mr-red.png');
-  background-position: 75% center;
+  background-position-x: 15%;
   background-size: auto 50%;
 }
 
 .ahm {
   composes: panel;
   composes: ahm from "../themes.module.css";
+}
+
+.ahm .inner {
   background-image: url('../img/ahm.png');
-  background-position: 75% center;
+  background-position-x: 80%;
   background-size: auto 50%;
 }
 
 .lifeWithBird {
   composes: panel;
   composes: lifeWithBird from "../themes.module.css";
+}
+
+.lifeWithBird .inner {
   background-image: url('../img/life-with-bird.jpg');
-  background-position: 75% center;
+  background-position-x: 13%;
+  background-size: auto 95%;
+  background-position-y: bottom;
 }
 
 .chadstone {
   composes: panel;
   composes: chadstone from "../themes.module.css";
+}
+
+.chadstone .inner {
   background-image: url('../img/chadstone.jpg');
-  background-position: 65% center;
+  background-position-x: 78.5%;
+}
+
+@media (--small) {
+  .inner {
+    background-image: none !important;
+    height: 20vh;
+    min-height: 200px;
+  }
+
+  .content {
+    width: calc(12 / var(--columnCount) * 100%);
+    padding-right: 0;
+    height: auto;
+    margin-left: 0 !important;
+  }
 }

@@ -17,9 +17,11 @@ export default class ProjectPanel extends Component {
     return (
       <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
         <Wrapper>
-          <div className={styles.content}>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+          <div className={styles.inner}>
+            <div className={styles.content}>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+            </div>
           </div>
         </Wrapper>
       </Link>
