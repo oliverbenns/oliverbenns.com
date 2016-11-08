@@ -13,12 +13,3 @@
   composes: fullscreen;
   margin-top: calc(var(--headerHeight) * -1);
 }
-
-/* Stop crushing the content*/
-
-@media only screen and (max-device-width : 768px) and (orientation: landscape) {
-  .fullscreen {
-    height: 100vw;
-  }
-}
-

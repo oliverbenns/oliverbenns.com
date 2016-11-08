@@ -15,5 +15,5 @@
   --zIndexHamburger: 4;
 }
 
-@custom-media --small (max-width: 768px);
-@custom-media --medium (max-width: 1024px);
+@custom-media --small (max-width: 767px);
+@custom-media --medium (max-width: 1023px);
