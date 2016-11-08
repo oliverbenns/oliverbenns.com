@@ -24,7 +24,7 @@ body {
 body {
   font-family: Book, Arial, Helvetica, sans-serif;
   color: var(--colorBlack);
-  line-height: 1.5;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }

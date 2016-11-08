@@ -4,6 +4,7 @@
   width: calc(6 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
   font-size: 1.125rem;
+  line-height: 1.7;
 }
 
 @media (--medium) {
