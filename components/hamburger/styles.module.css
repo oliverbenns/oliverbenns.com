@@ -1,4 +1,7 @@
 @import '../../assets/css/variables.css';
+.container {
+  padding: 10px;
+}
 
 .icon {
   width: 28px;
@@ -19,7 +22,6 @@
   transform: rotate(0deg);
   transition: .25s ease-in-out;
 }
-
 
 .icon span:nth-child(1) {
   top: 0;

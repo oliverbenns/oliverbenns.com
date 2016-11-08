@@ -12,16 +12,18 @@ export default class Hamburger extends Component {
 
   render() {
     const containerClassName = classNames(
-      this.props.active ? styles.active : styles.icon,
+      styles.container,
       this.props.className
     );
 
     return (
       <a className={containerClassName} onClick={this.props.onClick} tabIndex={-1}>
-        <span />
-        <span />
-        <span />
-        <span />
+        <div className={this.props.active ? styles.active : styles.icon}>
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
       </a>
     );
   }
