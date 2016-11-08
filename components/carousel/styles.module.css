@@ -32,9 +32,7 @@
 
 .content:hover .button {
   animation: none;
-  opacity: 0;
 }
-
 
 .active {
   display: block !important;
@@ -42,11 +40,11 @@
 
 @keyframes flash {
   from, 50%, to {
-    opacity: 0;
+    opacity: 1;
   }
 
   25%, 75% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
