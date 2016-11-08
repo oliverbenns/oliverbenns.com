@@ -43,4 +43,8 @@
     margin: 0 auto 5vh auto;
     width: auto;
   }
+
+  .cover {
+    margin-bottom: 5vh;
+  }
 }
