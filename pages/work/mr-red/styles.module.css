@@ -8,6 +8,8 @@
 .avatar {
   animation: float 6s ease-in-out infinite;
   position: relative;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .avatar img {
