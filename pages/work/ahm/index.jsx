@@ -75,8 +75,8 @@ export default class Ahm extends Component {
 
     return (
       <ProjectPage project={project}>
-        <ProjectIntro project={project} media={iphone} />
-        <ProjectDescription media={logo}>
+        <ProjectIntro project={project} media={logo} />
+        <ProjectDescription media={iphone}>
           <h3>Project</h3>
           <p>Ahm has been a client of <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> for quite some time. With numerous years of design and development, it was time to analyse the current solution to see what problems existed and how we could go about solving them for both business and customers. We worked closely with the Medibank team to re-build the current stack using the latest web technologies.</p>
 

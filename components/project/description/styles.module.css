@@ -3,7 +3,7 @@
 .content {
   display: flex;
   align-items: center;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
 }
 
 @media (--small) {

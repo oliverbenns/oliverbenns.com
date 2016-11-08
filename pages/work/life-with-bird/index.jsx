@@ -8,7 +8,6 @@ import Wrapper from 'components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
 
 import coverImage from 'components/project/img/life-with-bird.jpg';
-import styles from './styles.module.css';
 
 const images = [
   {
@@ -38,9 +37,7 @@ export default class LifeWithBird extends Component {
     const project = projects.find(_project => _project.slug === 'life-with-bird');
 
     const image = (
-      <div className={styles.image}>
-        <img src={coverImage} alt="Cover" />
-      </div>
+      <img src={coverImage} alt="Cover" />
     );
 
     return (

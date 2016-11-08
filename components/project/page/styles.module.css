@@ -9,6 +9,7 @@
 
 .page {
   min-height: calc(100vh - var(--headerHeight));
+  padding-top: 10vh;
 }
 
 .mrRed {

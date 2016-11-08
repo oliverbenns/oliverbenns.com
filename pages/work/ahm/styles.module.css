@@ -4,11 +4,3 @@
   max-width: 50%;
   margin: 0 auto;
 }
-
-@media (--medium) {
-  .image {
-    max-width: 75%;
-  }
-}
-
-

@@ -6,12 +6,7 @@
   margin-bottom: 10vh;
   font-size: 1.125rem;
   line-height: 1.5;
-}
-
-@media (--small) {
-  .cover {
-    flex-direction: column-reverse;
-  }
+  min-height: 50vh;
 }
 
 .intro,
@@ -24,17 +19,28 @@
   padding-right: var(--gutter);
 }
 
+.media img {
+  max-height: 60vh;
+}
+
+@media (--medium) {
+  .media img {
+    max-height: 50vh;
+  }
+}
+
 @media (--small) {
   .intro {
     width: 100%;
     padding-right: 0;
   }
-}
 
-@media (--small) {
+  .cover {
+    flex-direction: column-reverse;
+  }
+
   .media {
     margin: 0 auto 5vh auto;
     width: auto;
   }
 }
-
