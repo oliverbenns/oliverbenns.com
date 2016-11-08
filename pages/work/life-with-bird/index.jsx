@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { projects } from 'data/projects.json';
 
 import Carousel from 'components/carousel';
+import Iphone from 'components/iphone';
 import Macbook from 'components/macbook';
 import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
@@ -32,6 +33,21 @@ const images = [
   },
 ];
 
+const mobileImages = [
+  {
+    src: require('./img/mobile-product-listing.jpg'),
+    description: 'Life with Bird product listing mobile',
+  },
+  {
+    src: require('./img/mobile-product.jpg'),
+    description: 'Life with Bird product mobile',
+  },
+  {
+    src: require('./img/mobile-cart.jpg'),
+    description: 'Life with Bird cart mobile',
+  }
+];
+
 export default class LifeWithBird extends Component {
   render() {
     const project = projects.find(_project => _project.slug === 'life-with-bird');
@@ -40,10 +56,16 @@ export default class LifeWithBird extends Component {
       <img src={coverImage} alt="Cover" />
     );
 
+    const iphone = (
+      <Iphone invert>
+        <Carousel images={mobileImages} />
+      </Iphone>
+    );
+
     return (
       <ProjectPage project={project}>
         <ProjectIntro project={project} media={image} />
-        <ProjectDescription>
+        <ProjectDescription media={iphone}>
           <h3>Project</h3>
           <p>Life with Bird gave us with the challenge of rebuilding their Shopify theme. Part of it&apos;s remit was to improve the user experience and include a much cleaner UI that matched their brand and achieved   more conversions. The current code and deployment solution also needed revisiting to be scalable and flexible.</p>
 
