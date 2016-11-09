@@ -12,6 +12,10 @@ import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';
 
 export default class MrRed extends Component {
+  notify() {
+    alert('Pending app store approval - please hang tight!');
+  }
+
   render() {
     const project = projects.find(_project => _project.slug === 'mr-red');
 
@@ -31,10 +35,16 @@ export default class MrRed extends Component {
     ];
 
     const cta = (
-      <OutboundLink to={project.cta.link} className={styles.download}>
+      <a onClick={this.notify} className={styles.download}>
         <img src={downloadImageSrc} alt={project.cta.text} />
-      </OutboundLink>
+      </a>
     );
+
+    // const cta = (
+    //   <OutboundLink to={project.cta.link} className={styles.download}>
+    //     <img src={downloadImageSrc} alt={project.cta.text} />
+    //   </OutboundLink>
+    // );
 
     const image = (
       <div className={styles.avatar}>
