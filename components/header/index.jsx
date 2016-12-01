@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import actions from 'assets/js/actions';
-import store from 'assets/js/store';
 import { prefixLink } from 'gatsby-helpers';
 
 import GitHubButton from 'react-github-button';
@@ -15,22 +13,30 @@ import 'react-github-button/assets/style.css';
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = store.data;
+    this.state = {
+      menuActive: false,
+    }
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  toggleMenu(isVisible) {
+    this.setState({ menuActive: typeof isVisible === "undefined" ? !this.state.menuActive : isVisible });
   }
 
   componentDidMount() {
-    store.subscribe(this.handleStateChange.bind(this));
+    // @TODO: Remove this event listener when menu isn't open.
+    document.addEventListener('keydown', this.handleKeyPress);
   }
 
-  componentWillUnmount() {
-    store.unsubscribe(this.handleStateChange.bind(this));
+  handleKeyPress(event) {
+    if (event.keyCode === 27) {
+      this.toggleMenu(false);
+    }
   }
-
-  handleStateChange() {
-    this.setState(store.data);
-  }
-
   render() {
+    const { menuActive } = this.state;
+
     return (
       <header className={styles.header}>
         <Wrapper>
@@ -39,10 +45,10 @@ export default class Header extends Component {
               <IndexLink to={prefixLink('/')}>Oliver Benns</IndexLink>
             </h1>
             <GitHubButton type="stargazers" namespace="oliverbenns" repo="oliverbenns.com" className={styles.github} />
-            <Hamburger onClick={actions.toggleMenu} active={this.state.menuActive} className={styles.hamburger} />
+            <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={styles.hamburger} />
           </div>
         </Wrapper>
-        <Menu />
+        <Menu onNavClick={() => this.toggleMenu(false)} active={menuActive} />
       </header>
     );
   }
