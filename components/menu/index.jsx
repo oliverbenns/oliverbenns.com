@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { prefixLink } from 'gatsby-helpers';
 
 import Fullscreen from 'components/fullscreen';
@@ -8,6 +8,11 @@ import { IndexLink, Link } from 'react-router';
 import styles from './styles.module.css';
 
 export default class Menu extends Component {
+  static propTypes = {
+    active: PropTypes.bool,
+    onNavClick: PropTypes.func,
+  };
+
   render() {
     const linkProps = {
       onClick: this.props.onNavClick,
