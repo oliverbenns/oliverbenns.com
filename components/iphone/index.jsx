@@ -19,3 +19,5 @@ Iphone.propTypes = {
   children: PropTypes.node,
   invert: PropTypes.bool,
 };
+
+export default Iphone;
