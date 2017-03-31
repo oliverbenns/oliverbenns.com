@@ -1,25 +1,25 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
-export default class Fullscreen extends Component {
-  static propTypes = {
-    firstItem: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-  };
+const Fullscreen = ({ children, className, firstItem }) => {
+  const containerClassName = classNames(
+    firstItem ? styles.first : styles.fullscreen,
+    className
+  );
 
-  render() {
-    const containerClassName = classNames(
-      this.props.firstItem ? styles.first : styles.fullscreen,
-      this.props.className
-    );
+  return (
+    <div className={containerClassName}>
+      {children}
+    </div>
+  );
+};
 
-    return (
-      <div className={containerClassName}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+Fullscreen.propTypes = {
+  firstItem: PropTypes.bool,
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+export default Fullscreen;

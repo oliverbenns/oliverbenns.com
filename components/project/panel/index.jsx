@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { prefixLink } from 'gatsby-helpers';
 
 import Wrapper from 'components/wrapper';
@@ -6,25 +6,21 @@ import { Link } from 'react-router';
 
 import styles from './styles.module.css';
 
-export default class ProjectPanel extends Component {
-  static propTypes = {
-    project: PropTypes.object,
-  };
+const ProjectPanel = ({ project }) => (
+  <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
+    <Wrapper>
+      <div className={styles.inner}>
+        <div className={styles.content}>
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+        </div>
+      </div>
+    </Wrapper>
+  </Link>
+);
 
-  render() {
-    const { project } = this.props;
+ProjectPanel.propTypes = {
+  project: PropTypes.object,
+};
 
-    return (
-      <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
-        <Wrapper>
-          <div className={styles.inner}>
-            <div className={styles.content}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-            </div>
-          </div>
-        </Wrapper>
-      </Link>
-    );
-  }
-}
+export default ProjectPanel;
