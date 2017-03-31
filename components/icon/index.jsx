@@ -1,23 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
-export default class Icon extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-    name: PropTypes.string,
-  };
+const Icon = ({ className, name }) => {
+  const src = require(`./svg/${name}.svg`);
 
-  render() {
-    const src = require(`./svg/${this.props.name}.svg`);
-    const containerClassName = classNames(
-      styles.icon,
-      this.props.className
-    );
+  return (
+    <img src={src} className={classNames(styles.icon, className)} alt={`${name} icon`} />
+  );
+};
 
-    return (
-      <img src={src} className={containerClassName} alt={`${this.props.name} icon`} />
-    );
-  }
-}
+Icon.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string,
+};
+
+export default Icon;

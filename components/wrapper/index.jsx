@@ -1,24 +1,17 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
-export default class Wrapper extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.node,
-  };
+const Wrapper = ({ children, className }) => (
+  <div className={classNames(styles.wrapper, className)}>
+    {children}
+  </div>
+);
 
-  render() {
-    const containerClassName = classNames(
-      styles.wrapper,
-      this.props.className
-    );
+Wrapper.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
 
-    return (
-      <div className={containerClassName}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+export default Wrapper;

@@ -1,28 +1,24 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import Wrapper from 'components/wrapper';
 
 import styles from './styles.module.css';
 
-export default class ProjectDescription extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    media: PropTypes.node,
-  };
+const ProjectDescription = ({ children, media }) => (
+  <Wrapper className={styles.content}>
+    <div className={styles.media}>
+      {media}
+    </div>
 
-  render() {
-    const { children, media } = this.props;
+    <div className={styles.information}>
+      {children}
+    </div>
+  </Wrapper>
+);
 
-    return (
-      <Wrapper className={styles.content}>
-        <div className={styles.media}>
-          {media}
-        </div>
+ProjectDescription.propTypes = {
+  children: PropTypes.node,
+  media: PropTypes.node,
+};
 
-        <div className={styles.information}>
-          {children}
-        </div>
-      </Wrapper>
-    );
-  }
-}
+export default ProjectDescription;

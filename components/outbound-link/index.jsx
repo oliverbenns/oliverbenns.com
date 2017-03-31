@@ -1,14 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class OutboundLink extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    to: PropTypes.string, // Follow react router props for consistency
-  };
+const OutboundLink = props => (
+  <a {...props} href={props.to} target="_blank" rel="noopener noreferrer">{props.children}</a>
+);
 
-  render() {
-    return (
-      <a {...this.props} href={this.props.to} target="_blank" rel="noopener noreferrer">{this.props.children}</a>
-    );
-  }
-}
+OutboundLink.propTypes = {
+  children: PropTypes.node,
+  to: PropTypes.string, // Follow react router props for consistency
+};
+
+export default OutboundLink;

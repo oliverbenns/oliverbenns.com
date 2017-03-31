@@ -1,21 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import frameSrc from './img/macbook.png';
 import styles from './styles.module.css';
 
-export default class Macbook extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
+const Macbook = ({ children }) => (
+  <div className={styles.macbook}>
+    <img src={frameSrc} alt="Macbook Frame" role="presentation" />
+    <div className={styles.content}>
+      {children}
+    </div>
+  </div>
+);
 
-  render() {
-    return (
-      <div className={styles.macbook}>
-        <img src={frameSrc} alt="Macbook Frame" role="presentation" />
-        <div className={styles.content}>
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
-}
+Macbook.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Macbook;

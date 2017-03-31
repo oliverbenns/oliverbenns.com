@@ -1,30 +1,23 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
-export default class Hamburger extends Component {
-  static propTypes = {
-    active: PropTypes.bool,
-    className: PropTypes.string,
-    onClick: PropTypes.func,
-  }
+const Hamburger = ({ active, className, onClick }) => (
+  <a className={classNames(styles.container, className)} onClick={onClick} tabIndex={-1}>
+    <div className={active ? styles.active : styles.icon}>
+      <span />
+      <span />
+      <span />
+      <span />
+    </div>
+  </a>
+);
 
-  render() {
-    const containerClassName = classNames(
-      styles.container,
-      this.props.className
-    );
+Hamburger.propTypes = {
+  active: PropTypes.bool,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+};
 
-    return (
-      <a className={containerClassName} onClick={this.props.onClick} tabIndex={-1}>
-        <div className={this.props.active ? styles.active : styles.icon}>
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </a>
-    );
-  }
-}
+export default Hamburger;

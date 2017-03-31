@@ -1,25 +1,17 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
 
-export default class ContentPage extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-  }
+const ContentPage = ({ children, className }) => (
+  <section className={classNames(styles.content, className)}>
+    {children}
+  </section>
+);
 
-  render() {
-    const containerClassName = classNames(
-      styles.content,
-      this.props.className
-    );
+ContentPage.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
 
-    return (
-      <section className={containerClassName}>
-        {this.props.children}
-      </section>
-    );
-  }
-}
-
+export default ContentPage;
