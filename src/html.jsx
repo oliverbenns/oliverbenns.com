@@ -6,6 +6,8 @@ import shareImage from '../static/share.png';
 
 const openGraphUrl = process.env.NODE_ENV === 'production' ? `${config.url}/static/share.png` : shareImage;
 
+const styles = process.env.NODE_ENV === 'production' ? require('!raw-loader!../public/styles.css') : null;
+
 export default class Html extends Component {
   render() {
     const { body, headComponents, postBodyComponents } = this.props;
@@ -37,6 +39,9 @@ export default class Html extends Component {
           <link rel="icon" type="image/png" href={require('../static/favicon-16x16.png')} sizes="16x16" />
           <link rel="apple-touch-icon" sizes="180x180" href={require('../static/apple-touch-icon.png')} />
           <meta name="theme-color" content="#000000" />
+
+          {/* Styles */}
+          {styles && <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: styles }} />}
         </head>
         <body>
           <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
