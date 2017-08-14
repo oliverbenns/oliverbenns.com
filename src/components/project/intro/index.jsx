@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
-import OutboundLink from 'components/outbound-link';
-import Wrapper from 'components/wrapper';
+import OutboundLink from '../../outbound-link';
+import Wrapper from '../../wrapper';
 
 import styles from './styles.module.css';
 

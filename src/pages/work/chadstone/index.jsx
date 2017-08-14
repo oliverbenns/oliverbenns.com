@@ -1,14 +1,14 @@
 import React from 'react';
-import { projects } from 'data/projects.json';
+import { projects } from '../../../../data/projects.json';
 
-import Carousel from 'components/carousel';
-import Iphone from 'components/iphone';
-import Macbook from 'components/macbook';
-import OutboundLink from 'components/outbound-link';
-import Wrapper from 'components/wrapper';
-import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
+import Carousel from '../../../components/carousel';
+import Iphone from '../../../components/iphone';
+import Macbook from '../../../components/macbook';
+import OutboundLink from '../../../components/outbound-link';
+import Wrapper from '../../../components/wrapper';
+import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from 'components/project/img/chadstone.jpg';
+import coverImage from '../../../components/project/img/chadstone.jpg';
 
 const images = [
   {

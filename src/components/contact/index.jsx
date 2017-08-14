@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
-import Icon from 'components/icon';
-import OutboundLink from 'components/outbound-link';
+import Icon from '../icon';
+import OutboundLink from '../outbound-link';
 
 import styles from './styles.module.css';
 

@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
-import Header from 'components/header';
+import Header from '../components/header';
 
 import styles from './styles.module.css';
-import 'assets/css/reset.css';
-import 'assets/css/document.css';
-import 'assets/css/typography.css';
+import '../css/reset.css';
+import '../css/document.css';
+import '../css/typography.css';
 
 export default class Template extends Component {
   static propTypes = {

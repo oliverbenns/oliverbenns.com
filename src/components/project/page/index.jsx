@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-import ContentPage from 'components/content-page';
-import Meta from 'components/meta';
+import ContentPage from '../../content-page';
+import Meta from '../../meta';
 
 import styles from './styles.module.css';
 

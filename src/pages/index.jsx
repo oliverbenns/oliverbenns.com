@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Fullscreen from 'components/fullscreen';
-import Meta from 'components/meta';
-import Wrapper from 'components/wrapper';
+import Fullscreen from '../components/fullscreen';
+import Meta from '../components/meta';
+import Wrapper from '../components/wrapper';
 import Link from 'gatsby-link';
 
 import styles from './styles.module.css';

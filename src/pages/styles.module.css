@@ -1,14 +1,8 @@
-@import '../assets/css/variables.css';
-
-.page {
-  padding-top: var(--headerHeight);
-  min-height: 100vh;
-}
+@import '../css/variables.css';
 
 .intro {
   background: var(--colorBlack);
   color: var(--colorWhite);
-
 }
 
 .intro h1 {

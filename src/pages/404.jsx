@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ContentPage from 'components/content-page';
-import Meta from 'components/meta';
-import Wrapper from 'components/wrapper';
+import ContentPage from '../components/content-page';
+import Meta from '../components/meta';
+import Wrapper from '../components/wrapper';
 import Link from 'gatsby-link';
 
 import gifSrc from './img/rage-quit.gif';

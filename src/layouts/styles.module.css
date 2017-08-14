@@ -1,0 +1,6 @@
+@import '../css/variables.css';
+
+.page {
+  padding-top: var(--headerHeight);
+  min-height: 100vh;
+}

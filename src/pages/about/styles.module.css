@@ -1,4 +1,4 @@
-@import '../../assets/css/variables.css';
+@import '../../css/variables.css';
 
 .intro {
   width: calc(6 / var(--columnCount) * 100%);

@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
-import { config } from 'config';
+import { siteMetadata as config } from '../../../gatsby-config';
 import Helmet from 'react-helmet';
 
 const Meta = ({ description, noIndex, title }, { location }) => {
-  const mainTitle = `${config.siteTitle} - Freelance Web Developer`;
+  const mainTitle = `${config.title} - Freelance Web Developer`;
   const metaTitle = title ? `${title} | ${mainTitle}` : mainTitle;
   const metaDescription = description || config.description;
-  const absoluteUrl = `${config.siteUrl}${location.pathname}`;
+  const absoluteUrl = `${config.url}${location.pathname}`;
 
   const meta = [
     { name: 'description', content: metaDescription },

@@ -1,4 +1,4 @@
-@import '../../../assets/css/variables.css';
+@import '../../../css/variables.css';
 
 /*@TODO: Use <imgs> instead of backgrounds for better positioning control, cleaner css and accessibility*/
 .panel {

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 
-import Fullscreen from 'components/fullscreen';
-import Wrapper from 'components/wrapper';
-import { IndexLink, Link } from 'react-router';
+import Fullscreen from '../fullscreen';
+import Wrapper from '../wrapper';
+import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 
@@ -18,7 +18,7 @@ const Menu = ({ active, onNavClick }) => {
         <nav>
           <ul>
             <li className={styles.item}>
-              <IndexLink {...linkProps} to="/">Home</IndexLink>
+              <Link {...linkProps} to="/">Home</Link>
             </li>
             <li className={styles.item}>
               <Link {...linkProps} to="/about">About</Link>

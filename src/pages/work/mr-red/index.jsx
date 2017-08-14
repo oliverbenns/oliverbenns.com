@@ -1,12 +1,12 @@
 import React from 'react';
-import { projects } from 'data/projects.json';
+import { projects } from '../../../../data/projects.json';
 
-import Carousel from 'components/carousel';
-import Iphone from 'components/iphone';
-import OutboundLink from 'components/outbound-link';
-import { ProjectDescription, ProjectIntro, ProjectPage } from 'components/project';
+import Carousel from '../../../components/carousel';
+import Iphone from '../../../components/iphone';
+import OutboundLink from '../../../components/outbound-link';
+import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import avatarImageSrc from 'components/project/img/mr-red.png';
+import avatarImageSrc from '../../../components/project/img/mr-red.png';
 import downloadImageSrc from './img/download-app-store.svg';
 import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';

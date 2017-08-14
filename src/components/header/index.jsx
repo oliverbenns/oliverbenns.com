@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import GitHubButton from 'react-github-button';
-import Hamburger from 'components/hamburger';
-import Menu from 'components/menu';
-import Wrapper from 'components/wrapper';
-import { IndexLink } from 'react-router';
+import Hamburger from '../hamburger';
+import Menu from '../menu';
+import Wrapper from '../wrapper';
+import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 import 'react-github-button/assets/style.css';
@@ -42,7 +42,7 @@ export default class Header extends Component {
         <Wrapper>
           <div className={styles.inner}>
             <h1 className={styles.title}>
-              <IndexLink to="/">Oliver Benns</IndexLink>
+              <Link to="/">Oliver Benns</Link>
             </h1>
             <GitHubButton type="stargazers" namespace="oliverbenns" repo="oliverbenns.com" className={styles.github} />
             <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={styles.hamburger} />

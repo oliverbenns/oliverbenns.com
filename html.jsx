@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { config } from 'config';
+import { siteMetadata as config } from 'config';
 
 import Helmet from 'react-helmet';
 
@@ -7,7 +7,7 @@ import shareImage from 'assets/img/favicon/share.png';
 
 const BUILD_TIME = new Date().getTime();
 
-const openGraphUrl = process.env.NODE_ENV === 'production' ? `${config.siteUrl}${shareImage}` : shareImage;
+const openGraphUrl = process.env.NODE_ENV === 'production' ? `${config.url}${shareImage}` : shareImage;
 
 export default class Html extends Component {
   static propTypes = {
