@@ -2,11 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { siteMetadata as config } from '../../../gatsby-config';
 
-const Meta = ({ description, location, noIndex, title }) => {
+const Meta = props => {
+  console.log('config', config);
+  console.log('props', props);
+
   const mainTitle = `${config.title} - Freelance Web Developer`;
-  const metaTitle = title ? `${title} | ${mainTitle}` : mainTitle;
-  const metaDescription = description || config.description;
-  const absoluteUrl = `${config.url}${location.pathname}`;
+  const metaTitle = props.title ? `${props.title} | ${mainTitle}` : mainTitle;
+  const metaDescription = props.description || config.description;
+  const absoluteUrl = `${config.url}${props.location.pathname}`;
 
   const meta = [
     { name: 'description', content: metaDescription },
@@ -18,7 +21,7 @@ const Meta = ({ description, location, noIndex, title }) => {
     { property: 'twitter:url', content: absoluteUrl },
   ];
 
-  if (noIndex) {
+  if (props.noIndex) {
     meta.push({ name: 'robots', content: 'noindex' });
   }
 
