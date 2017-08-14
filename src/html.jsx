@@ -5,7 +5,7 @@ import { siteMetadata as config } from '../gatsby-config';
 import shareImage from '../static/share.png';
 
 const isProduction = process.env.NODE_ENV === 'production';
-const openGraphUrl = isProduction ? `${config.url}/share.png` : 'share.png';
+const openGraphUrl = isProduction ? `${config.url}/share.png` : '/share.png';
 const styles = isProduction ? require('!raw-loader!../public/styles.css') : null;
 
 const Html = ({ body, headComponents, postBodyComponents }) => {
