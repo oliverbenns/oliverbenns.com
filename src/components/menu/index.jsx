@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const Menu = ({ active, onNavClick }) => {
   const linkProps = {
     onClick: onNavClick,
-    activeClassName: styles.active,
+    // activeClassName: styles.active,
   };
 
   return (
