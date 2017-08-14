@@ -56,7 +56,7 @@ const mobileImages = [
   },
 ];
 
-const Chadstone = () => {
+const Chadstone = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'chadstone');
 
   const image = (
@@ -70,7 +70,7 @@ const Chadstone = () => {
   );
 
   return (
-    <ProjectPage project={project}>
+    <ProjectPage project={project} location={location}>
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={iphone}>
         <h3>Project</h3>

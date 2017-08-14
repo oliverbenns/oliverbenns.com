@@ -8,9 +8,9 @@ import Wrapper from '../../components/wrapper';
 
 import styles from './styles.module.css';
 
-const About = () => (
+const About = ({ location }) => (
   <ContentPage>
-    <Meta title="About" />
+    <Meta title="About" location={location} />
     <Wrapper>
       <div className={styles.intro}>
         <h1>Hello world.</h1>

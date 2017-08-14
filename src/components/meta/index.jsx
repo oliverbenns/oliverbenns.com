@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { siteMetadata as config } from '../../../gatsby-config';
 
-const Meta = ({ description, noIndex, title }, { location }) => {
+const Meta = ({ description, location, noIndex, title }) => {
   const mainTitle = `${config.title} - Freelance Web Developer`;
   const metaTitle = title ? `${title} | ${mainTitle}` : mainTitle;
   const metaDescription = description || config.description;
@@ -25,10 +25,6 @@ const Meta = ({ description, noIndex, title }, { location }) => {
   return (
     <Helmet title={metaTitle} meta={meta} />
   );
-};
-
-Meta.contextTypes = {
-  location: React.PropTypes.object,
 };
 
 export default Meta;

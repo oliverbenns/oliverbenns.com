@@ -11,7 +11,7 @@ import downloadImageSrc from './img/download-app-store.svg';
 import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';
 
-const MrRed = () => {
+const MrRed = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'mr-red');
 
   const images = [
@@ -50,7 +50,7 @@ const MrRed = () => {
   );
 
   return (
-    <ProjectPage project={project} className={backgroundStyles.page}>
+    <ProjectPage project={project} location={location} className={backgroundStyles.page}>
       <div className={backgroundStyles.background1} />
       <div className={backgroundStyles.background2} />
       <div className={backgroundStyles.background3} />

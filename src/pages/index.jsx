@@ -7,9 +7,9 @@ import Wrapper from '../components/wrapper';
 
 import styles from './styles.module.css';
 
-const Index = () => (
+const Index = ({ location }) => (
   <div>
-    <Meta />
+    <Meta location={location} />
     <Fullscreen className={styles.intro} firstItem>
       <Wrapper>
         <h1>

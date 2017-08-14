@@ -8,9 +8,9 @@ import { projects } from '../../data/projects.json';
 
 import styles from './styles.module.css';
 
-const Work = () => (
+const Work = ({ location }) => (
   <div>
-    <Meta title="Work" description="Web applications, static websites and mobile apps built built by or collaboratively with Oliver Benns." />
+    <Meta title="Work" description="Web applications, static websites and mobile apps built built by or collaboratively with Oliver Benns." location={location} />
 
     {projects.map(project => <ProjectPanel project={project} key={project.slug} />)}
 
