@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import Icon from '../icon';
 import OutboundLink from '../outbound-link';
@@ -37,9 +37,5 @@ const Contact = ({ title }) => (
     </ul>
   </div>
 );
-
-Contact.propTypes = {
-  title: PropTypes.string,
-};
 
 export default Contact;

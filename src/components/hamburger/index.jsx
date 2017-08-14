@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
@@ -13,11 +13,5 @@ const Hamburger = ({ active, className, onClick }) => (
     </div>
   </a>
 );
-
-Hamburger.propTypes = {
-  active: PropTypes.bool,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-};
 
 export default Hamburger;

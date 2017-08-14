@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import Wrapper from '../../wrapper';
 import Link from 'gatsby-link';
@@ -17,9 +17,5 @@ const ProjectPanel = ({ project }) => (
     </Wrapper>
   </Link>
 );
-
-ProjectPanel.propTypes = {
-  project: PropTypes.object,
-};
 
 export default ProjectPanel;

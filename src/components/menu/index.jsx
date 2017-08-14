@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import Fullscreen from '../fullscreen';
 import Wrapper from '../wrapper';
@@ -34,11 +34,6 @@ const Menu = ({ active, onNavClick }) => {
       </Wrapper>
     </Fullscreen>
   );
-};
-
-Menu.propTypes = {
-  active: PropTypes.bool,
-  onNavClick: PropTypes.func,
 };
 
 export default Menu;

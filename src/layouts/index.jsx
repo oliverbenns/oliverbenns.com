@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Header from '../components/header';
 
@@ -8,11 +8,6 @@ import '../css/document.css';
 import '../css/typography.css';
 
 export default class Template extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    location: PropTypes.object,
-  }
-
   static childContextTypes = {
     location: React.PropTypes.object,
   }

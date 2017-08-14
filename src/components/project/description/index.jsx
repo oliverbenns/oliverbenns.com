@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import Wrapper from '../../wrapper';
 
@@ -15,10 +15,5 @@ const ProjectDescription = ({ children, media }) => (
     </div>
   </Wrapper>
 );
-
-ProjectDescription.propTypes = {
-  children: PropTypes.node,
-  media: PropTypes.node,
-};
 
 export default ProjectDescription;

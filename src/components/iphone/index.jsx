@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import whiteFrameSrc from './img/iphone-white.png';
 import blackFrameSrc from './img/iphone-black.png';
@@ -14,10 +14,5 @@ const Iphone = ({ children, invert }) => (
     </div>
   </div>
 );
-
-Iphone.propTypes = {
-  children: PropTypes.node,
-  invert: PropTypes.bool,
-};
 
 export default Iphone;

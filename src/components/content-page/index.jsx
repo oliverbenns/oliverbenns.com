@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import styles from './styles.module.css';
@@ -8,10 +8,5 @@ const ContentPage = ({ children, className }) => (
     {children}
   </section>
 );
-
-ContentPage.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-};
 
 export default ContentPage;

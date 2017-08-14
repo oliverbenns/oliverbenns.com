@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import ContentPage from '../../content-page';
@@ -12,11 +12,5 @@ const ProjectPage = ({ children, className, project }) => (
     {children}
   </ContentPage>
 );
-
-ProjectPage.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.node,
-  project: PropTypes.object,
-};
 
 export default ProjectPage;

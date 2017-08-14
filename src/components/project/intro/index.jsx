@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import OutboundLink from '../../outbound-link';
 import Wrapper from '../../wrapper';
@@ -19,11 +19,5 @@ const ProjectIntro = ({ cta, media, project }) => (
     </div>
   </Wrapper>
 );
-
-ProjectIntro.propTypes = {
-  cta: PropTypes.node,
-  media: PropTypes.node,
-  project: PropTypes.object,
-};
 
 export default ProjectIntro;

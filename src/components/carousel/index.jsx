@@ -1,13 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import rightArrowImageSrc from './img/right-arrow.svg';
 import styles from './styles.module.css';
 
 export default class Carousel extends Component {
-  static propTypes = {
-    images: PropTypes.array,
-  };
-
   constructor(props) {
     super(props);
     this.state = {

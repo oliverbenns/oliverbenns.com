@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { siteMetadata as config } from 'config';
 
 import Helmet from 'react-helmet';
@@ -10,10 +10,6 @@ const BUILD_TIME = new Date().getTime();
 const openGraphUrl = process.env.NODE_ENV === 'production' ? `${config.url}${shareImage}` : shareImage;
 
 export default class Html extends Component {
-  static propTypes = {
-    body: PropTypes.string,
-  };
-
   render() {
     const helmet = Helmet.rewind();
     const { body, headComponents, postBodyComponents } = this.props;

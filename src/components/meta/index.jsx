@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { siteMetadata as config } from '../../../gatsby-config';
 import Helmet from 'react-helmet';
 
@@ -27,14 +27,8 @@ const Meta = ({ description, noIndex, title }, { location }) => {
   );
 }
 
-Meta.propTypes = {
-  description: PropTypes.string,
-  noIndex: PropTypes.bool,
-  title: PropTypes.string,
-};
-
 Meta.contextTypes = {
-  location: PropTypes.object,
+  location: React.PropTypes.object,
 };
 
 export default Meta;

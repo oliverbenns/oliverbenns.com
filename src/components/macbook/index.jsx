@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import frameSrc from './img/macbook.png';
 import styles from './styles.module.css';
@@ -11,9 +11,5 @@ const Macbook = ({ children }) => (
     </div>
   </div>
 );
-
-Macbook.propTypes = {
-  children: PropTypes.node,
-};
 
 export default Macbook;
