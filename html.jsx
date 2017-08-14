@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
 import Helmet from 'react-helmet';
@@ -17,6 +16,7 @@ export default class Html extends Component {
 
   render() {
     const helmet = Helmet.rewind();
+    const { body, headComponents, postBodyComponents } = this.props;
 
     let css;
     if (process.env.NODE_ENV === 'production') {
@@ -30,6 +30,8 @@ export default class Html extends Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+          {headComponents}
 
           {/* Meta */}
           {helmet.title.toComponent()}
@@ -51,8 +53,8 @@ export default class Html extends Component {
           {css}
         </head>
         <body>
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+          <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
+          {postBodyComponents}
         </body>
       </html>
     );
