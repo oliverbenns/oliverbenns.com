@@ -29,7 +29,7 @@ export default class Template extends Component {
       <div>
         <Header />
         <div className={styles.page}>
-          {this.props.children}
+          {this.props.children()}
         </div>
       </div>
     );
