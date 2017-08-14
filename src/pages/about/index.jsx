@@ -1,11 +1,10 @@
 import React from 'react';
-import { prefixLink } from 'gatsby-helpers';
 
 import ContentPage from 'components/content-page';
 import Meta from 'components/meta';
 import OutboundLink from 'components/outbound-link';
 import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
+import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 
@@ -20,7 +19,7 @@ const About = () => (
 
         <p>Once obtaining my degree, I flew to Melbourne, Australia and worked with <OutboundLink to="http://inlight.com.au">Inlight</OutboundLink> for 3 years. I was responsible for the front end web development of various projects, such as web applications, mobile apps, static websites, online stores and blogs. With the variety of work and my attitude towards learning, I quickly grew from a graduate into a dependable, valuable front end developer that could work both solo and in teams.</p>
 
-        <p>I now work on a freelance basis working on both ideas of my own and others. If you have a project in mind, <Link to={prefixLink('/contact/')}>get in touch</Link>.</p>
+        <p>I now work on a freelance basis working on both ideas of my own and others. If you have a project in mind, <Link to="/contact">get in touch</Link>.</p>
 
         <h2>Technical skills</h2>
 

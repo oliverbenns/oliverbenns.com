@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { prefixLink } from 'gatsby-helpers';
 
 import GitHubButton from 'react-github-button';
 import Hamburger from 'components/hamburger';
@@ -43,7 +42,7 @@ export default class Header extends Component {
         <Wrapper>
           <div className={styles.inner}>
             <h1 className={styles.title}>
-              <IndexLink to={prefixLink('/')}>Oliver Benns</IndexLink>
+              <IndexLink to="/">Oliver Benns</IndexLink>
             </h1>
             <GitHubButton type="stargazers" namespace="oliverbenns" repo="oliverbenns.com" className={styles.github} />
             <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={styles.hamburger} />

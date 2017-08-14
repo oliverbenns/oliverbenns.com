@@ -1,13 +1,12 @@
 import React, { PropTypes } from 'react';
-import { prefixLink } from 'gatsby-helpers';
 
 import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
+import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 
 const ProjectPanel = ({ project }) => (
-  <Link to={prefixLink(`/work/${project.slug}/`)} className={styles[project.className]}>
+  <Link to={`/work/${project.slug}`} className={styles[project.className]}>
     <Wrapper>
       <div className={styles.inner}>
         <div className={styles.content}>

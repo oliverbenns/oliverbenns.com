@@ -1,10 +1,9 @@
 import React from 'react';
-import { prefixLink } from 'gatsby-helpers';
 
 import Fullscreen from 'components/fullscreen';
 import Meta from 'components/meta';
 import Wrapper from 'components/wrapper';
-import { Link } from 'react-router';
+import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 
@@ -20,7 +19,7 @@ const Index = () => (
           I’m a freelance web developer.
           <br />
           <br />
-          Check out my <Link className={styles.link} to={prefixLink('/work/')}>work</Link>.
+          Check out my <Link className={styles.link} to="/work">work</Link>.
         </h1>
       </Wrapper>
     </Fullscreen>
