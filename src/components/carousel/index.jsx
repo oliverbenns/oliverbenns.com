@@ -21,7 +21,7 @@ export default class Carousel extends Component {
   render() {
     return (
       <div className={styles.macbook}>
-        <a className={styles.content} onClick={this.changeSlide} tabIndex={-1}>
+        <a className={styles.content} onClick={this.changeSlide} tabIndex={-1} role="button">
           {this.props.images.map((image, index) => (
             <img
               src={image.src}

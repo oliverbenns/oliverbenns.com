@@ -1,6 +1,6 @@
 import React from 'react';
-import { siteMetadata as config } from '../../../gatsby-config';
 import Helmet from 'react-helmet';
+import { siteMetadata as config } from '../../../gatsby-config';
 
 const Meta = ({ description, noIndex, title }, { location }) => {
   const mainTitle = `${config.title} - Freelance Web Developer`;
@@ -25,7 +25,7 @@ const Meta = ({ description, noIndex, title }, { location }) => {
   return (
     <Helmet title={metaTitle} meta={meta} />
   );
-}
+};
 
 Meta.contextTypes = {
   location: React.PropTypes.object,

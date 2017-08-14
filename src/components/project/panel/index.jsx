@@ -1,7 +1,7 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import Wrapper from '../../wrapper';
-import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 

@@ -1,10 +1,10 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import ContentPage from '../../components/content-page';
 import Meta from '../../components/meta';
 import OutboundLink from '../../components/outbound-link';
 import Wrapper from '../../components/wrapper';
-import Link from 'gatsby-link';
 
 import styles from './styles.module.css';
 

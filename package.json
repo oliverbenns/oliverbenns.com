@@ -8,6 +8,7 @@
     "classnames": "^2.2.5",
     "gatsby": "^1.8.4",
     "gatsby-link": "^1.6.7",
+    "gatsby-plugin-google-analytics": "^1.0.3",
     "history": "^4.6.3",
     "react-ga": "^2.2.0",
     "react-github-button": "^0.1.11",
@@ -19,7 +20,7 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.2.0"
+    "eslint-plugin-react": "^7.2.1"
   },
   "main": "n/a",
   "scripts": {
