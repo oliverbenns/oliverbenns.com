@@ -1,6 +1,5 @@
 @import '../../../css/variables.css';
 
-/*@TODO: Use <imgs> instead of backgrounds for better positioning control, cleaner css and accessibility*/
 .panel {
   display: flex;
   font-size: 1.125rem;
@@ -38,29 +37,24 @@
 }
 
 .mrRed .inner {
-  background-image: url('../img/mr-red.png');
   background-position-x: 15%;
   background-size: auto 50%;
 }
 
 .ahm {
   composes: panel;
-  composes: ahm from "../themes.module.css";
 }
 
 .ahm .inner {
-  background-image: url('../img/ahm.png');
   background-position-x: 80%;
   background-size: auto 50%;
 }
 
 .lifeWithBird {
   composes: panel;
-  composes: lifeWithBird from "../themes.module.css";
 }
 
 .lifeWithBird .inner {
-  background-image: url('../img/life-with-bird.jpg');
   background-position-x: 13%;
   background-size: auto 95%;
   background-position-y: bottom;
@@ -68,11 +62,9 @@
 
 .chadstone {
   composes: panel;
-  composes: chadstone from "../themes.module.css";
 }
 
 .chadstone .inner {
-  background-image: url('../img/chadstone.jpg');
   background-position-x: 78.5%;
 }
 

@@ -1,33 +1,23 @@
 import React from 'react';
-import { projects } from '../../../data/projects.json';
+import projects from '../../../data/projects';
 
 import Carousel from '../../../components/carousel';
 import Iphone from '../../../components/iphone';
 import OutboundLink from '../../../components/outbound-link';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import avatarImageSrc from '../../../components/project/img/mr-red.png';
 import downloadImageSrc from './img/download-app-store.svg';
 import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';
 
+const images = [
+  { src: require('./img/home.png'), description: 'Mr. Red app home' },
+  { src: require('./img/in-game.png'), description: 'Mr. Red app in game' },
+  { src: require('./img/end-screen.png'), description: 'Mr. Red app end screen' },
+];
+
 const MrRed = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'mr-red');
-
-  const images = [
-    {
-      src: require('./img/home.png'),
-      description: 'Mr. Red app home',
-    },
-    {
-      src: require('./img/in-game.png'),
-      description: 'Mr. Red app in game',
-    },
-    {
-      src: require('./img/end-screen.png'),
-      description: 'Mr. Red app end screen',
-    },
-  ];
 
   const cta = (
     <OutboundLink to={project.cta.link} className={styles.download}>
@@ -37,7 +27,7 @@ const MrRed = ({ location }) => {
 
   const image = (
     <div className={styles.avatar}>
-      <img src={avatarImageSrc} alt="Cover" />
+      <img src={project.cover} alt="Cover" />
     </div>
   );
 

@@ -10,30 +10,10 @@
   color: var(--colorWhite);
 }
 
-.mrRed {
-  composes: dark;
-  background-color: #5ab6ff;
-}
-
 /* Improve readability. */
 .mrRed h1,
 .mrRed h2,
 .mrRed h3,
 .mrRed p {
   text-shadow: 0px 0px 5px #359bed;
-}
-
-.ahm {
-  composes: dark;
-  background-color: #000;
-}
-
-.lifeWithBird {
-  composes: light;
-  background-color: #f4f5fa;
-}
-
-.chadstone {
-  composes: dark;
-  background-color: #a77e60;
 }

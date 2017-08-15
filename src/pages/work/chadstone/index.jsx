@@ -1,5 +1,5 @@
 import React from 'react';
-import { projects } from '../../../data/projects.json';
+import projects from '../../../data/projects.js';
 
 import Carousel from '../../../components/carousel';
 import Iphone from '../../../components/iphone';
@@ -8,64 +8,33 @@ import OutboundLink from '../../../components/outbound-link';
 import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from '../../../components/project/img/chadstone.jpg';
-
-const images = [
-  {
-    src: require('./img/dining.jpg'),
-    description: 'Chadstone dining',
-  },
-  {
-    src: require('./img/home.jpg'),
-    description: 'Chadstone home',
-  },
-  {
-    src: require('./img/services.jpg'),
-    description: 'Chadstone services',
-  },
-  {
-    src: require('./img/store.jpg'),
-    description: 'Chadstone store',
-  },
-  {
-    src: require('./img/whats-on.jpg'),
-    description: 'Chadstone what\'s on',
-  },
-];
-
-const mobileImages = [
-  {
-    src: require('./img/mobile-about.jpg'),
-    description: 'Chadstone about us mobile',
-  },
-  {
-    src: require('./img/mobile-article.jpg'),
-    description: 'Chadstone article mobile',
-  },
-  {
-    src: require('./img/mobile-directions.jpg'),
-    description: 'Chadstone directions mobile',
-  },
-  {
-    src: require('./img/mobile-shopping.jpg'),
-    description: 'Chadstone shopping mobile',
-  },
-  {
-    src: require('./img/mobile-store.jpg'),
-    description: 'Chadstone store mobile',
-  },
-];
+const images = {
+  desktop: [
+    { src: require('./img/dining.jpg'), description: 'Chadstone dining' },
+    { src: require('./img/home.jpg'), description: 'Chadstone home' },
+    { src: require('./img/services.jpg'), description: 'Chadstone services' },
+    { src: require('./img/store.jpg'), description: 'Chadstone store' },
+    { src: require('./img/whats-on.jpg'), description: 'Chadstone what\'s on' },
+  ],
+  mobile: [
+    { src: require('./img/mobile-about.jpg'), description: 'Chadstone about us mobile' },
+    { src: require('./img/mobile-article.jpg'), description: 'Chadstone article mobile' },
+    { src: require('./img/mobile-directions.jpg'), description: 'Chadstone directions mobile' },
+    { src: require('./img/mobile-shopping.jpg'), description: 'Chadstone shopping mobile' },
+    { src: require('./img/mobile-store.jpg'), description: 'Chadstone store mobile' },
+  ],
+};
 
 const Chadstone = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'chadstone');
 
   const image = (
-    <img src={coverImage} alt="Cover" />
+    <img src={project.cover} alt="Cover" />
   );
 
   const iphone = (
     <Iphone>
-      <Carousel images={mobileImages} />
+      <Carousel images={images.mobile} />
     </Iphone>
   );
 
@@ -81,7 +50,7 @@ const Chadstone = ({ location }) => {
       </ProjectDescription>
       <Wrapper>
         <Macbook>
-          <Carousel images={images} />
+          <Carousel images={images.desktop} />
         </Macbook>
       </Wrapper>
     </ProjectPage>

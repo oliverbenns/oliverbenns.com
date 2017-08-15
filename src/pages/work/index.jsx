@@ -4,7 +4,7 @@ import Contact from '../../components/contact';
 import { ProjectPanel } from '../../components/project';
 import Wrapper from '../../components/wrapper';
 
-import { projects } from '../../data/projects.json';
+import projects from '../../data/projects';
 
 import styles from './styles.module.css';
 

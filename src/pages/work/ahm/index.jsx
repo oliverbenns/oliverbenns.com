@@ -1,5 +1,5 @@
 import React from 'react';
-import { projects } from '../../../data/projects.json';
+import projects from '../../../data/projects';
 
 import Carousel from '../../../components/carousel';
 import Iphone from '../../../components/iphone';
@@ -8,67 +8,37 @@ import OutboundLink from '../../../components/outbound-link';
 import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from '../../../components/project/img/ahm.png';
 import styles from './styles.module.css';
 
-const images = [
-  {
-    src: require('./img/product.jpg'),
-    description: 'Ahm product',
-  },
-  {
-    src: require('./img/products.jpg'),
-    description: 'Ahm product listing',
-  },
-  {
-    src: require('./img/modal.jpg'),
-    description: 'Ahm ambulance services modal',
-  },
-  {
-    src: require('./img/home.jpg'),
-    description: 'Ahm home',
-  },
-  {
-    src: require('./img/manage.jpg'),
-    description: 'Ahm manage health over',
-  },
-  {
-    src: require('./img/extras.jpg'),
-    description: 'Ahm add extras',
-  },
-];
-
-const mobileImages = [
-  {
-    src: require('./img/mobile-compare.png'),
-    description: 'Ahm compare mobile',
-  },
-  {
-    src: require('./img/mobile-form.png'),
-    description: 'Ahm mobile form mobile',
-  },
-  {
-    src: require('./img/mobile-product-listing.png'),
-    description: 'Ahm product listing mobile',
-  },
-  {
-    src: require('./img/mobile-product.png'),
-    description: 'Ahm product mobile',
-  },
-];
+const images = {
+  desktop: [
+    { src: require('./img/product.jpg'), description: 'Ahm product' },
+    { src: require('./img/products.jpg'), description: 'Ahm product listing' },
+    { src: require('./img/modal.jpg'), description: 'Ahm ambulance services modal' },
+    { src: require('./img/home.jpg'), description: 'Ahm home' },
+    { src: require('./img/manage.jpg'), description: 'Ahm manage health over' },
+    { src: require('./img/extras.jpg'), description: 'Ahm add extras' },
+  ],
+  mobile: [
+    { src: require('./img/mobile-compare.png'), description: 'Ahm compare mobile' },
+    { src: require('./img/mobile-form.png'), description: 'Ahm mobile form mobile' },
+    { src: require('./img/mobile-product-listing.png'), description: 'Ahm product listing mobile' },
+    { src: require('./img/mobile-product.png'), description: 'Ahm product mobile' },
+  ],
+};
 
 const Ahm = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'ahm');
 
   const logo = (
     <div className={styles.image}>
-      <img src={coverImage} alt="Cover" />
+      <img src={project.cover} alt="Cover" />
     </div>
   );
 
   const iphone = (
     <Iphone invert>
-      <Carousel images={mobileImages} />
+      <Carousel images={images.mobile} />
     </Iphone>
   );
 
@@ -84,7 +54,7 @@ const Ahm = ({ location }) => {
       </ProjectDescription>
       <Wrapper>
         <Macbook>
-          <Carousel images={images} />
+          <Carousel images={images.desktop} />
         </Macbook>
       </Wrapper>
     </ProjectPage>

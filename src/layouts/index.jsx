@@ -7,10 +7,11 @@ import '../css/reset.css';
 import '../css/document.css';
 import '../css/typography.css';
 
-const Layout = ({ children }) => (
+// Need to pass in location here on build. On development it comes from the individual pages.
+const Layout = ({ children, location }) => (
   <div>
     <Header />
-    <div className={styles.page}>{children()}</div>
+    <div className={styles.page}>{children({ location })}</div>
   </div>
 );
 

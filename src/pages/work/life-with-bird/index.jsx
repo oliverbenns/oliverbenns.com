@@ -1,5 +1,5 @@
 import React from 'react';
-import { projects } from '../../../data/projects.json';
+import projects from '../../../data/projects';
 
 import Carousel from '../../../components/carousel';
 import Iphone from '../../../components/iphone';
@@ -8,56 +8,31 @@ import OutboundLink from '../../../components/outbound-link';
 import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import coverImage from '../../../components/project/img/life-with-bird.jpg';
-
-const images = [
-  {
-    src: require('./img/collection-listing.jpg'),
-    description: 'Life with Bird collection listing',
-  },
-  {
-    src: require('./img/home.jpg'),
-    description: 'Life with Bird home',
-  },
-  {
-    src: require('./img/product-listing.jpg'),
-    description: 'Life with Bird product listing',
-  },
-  {
-    src: require('./img/product.jpg'),
-    description: 'Life with Bird product',
-  },
-  {
-    src: require('./img/store-listing.jpg'),
-    description: 'Life with Bird store listing',
-  },
-];
-
-const mobileImages = [
-  {
-    src: require('./img/mobile-product-listing.jpg'),
-    description: 'Life with Bird product listing mobile',
-  },
-  {
-    src: require('./img/mobile-product.jpg'),
-    description: 'Life with Bird product mobile',
-  },
-  {
-    src: require('./img/mobile-cart.jpg'),
-    description: 'Life with Bird cart mobile',
-  },
-];
+const images = {
+  desktop: [
+    { src: require('./img/collection-listing.jpg'), description: 'Life with Bird collection listing' },
+    { src: require('./img/home.jpg'), description: 'Life with Bird home' },
+    { src: require('./img/product-listing.jpg'), description: 'Life with Bird product listing' },
+    { src: require('./img/product.jpg'), description: 'Life with Bird product' },
+    { src: require('./img/store-listing.jpg'), description: 'Life with Bird store listing' },
+  ],
+  mobile: [
+    { src: require('./img/mobile-product-listing.jpg'), description: 'Life with Bird product listing mobile' },
+    { src: require('./img/mobile-product.jpg'), description: 'Life with Bird product mobile' },
+    { src: require('./img/mobile-cart.jpg'), description: 'Life with Bird cart mobile' },
+  ],
+};
 
 const LifeWithBird = ({ location }) => {
   const project = projects.find(_project => _project.slug === 'life-with-bird');
 
   const image = (
-    <img src={coverImage} alt="Cover" />
+    <img src={project.cover} alt="Cover" />
   );
 
   const iphone = (
     <Iphone invert>
-      <Carousel images={mobileImages} />
+      <Carousel images={images.mobile} />
     </Iphone>
   );
 
@@ -73,7 +48,7 @@ const LifeWithBird = ({ location }) => {
       </ProjectDescription>
       <Wrapper>
         <Macbook>
-          <Carousel images={images} />
+          <Carousel images={images.desktop} />
         </Macbook>
       </Wrapper>
     </ProjectPage>
