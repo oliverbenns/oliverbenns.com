@@ -3,21 +3,11 @@
 .content {
   padding: 20vh 0 10vh;
   min-height: calc(100vh - var(--headerHeight));
-  animation: fadeIn 0.4s;
   opacity: 1;
 }
 
 .content a {
   border-bottom: 1px solid;
-}
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
 }
 
 @media (--medium) {
