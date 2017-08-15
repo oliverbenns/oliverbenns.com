@@ -24,7 +24,7 @@ const images = {
 };
 
 const LifeWithBird = ({ location }) => {
-  const project = projects.find(_project => _project.slug === 'life-with-bird');
+  const project = projects.find(p => p.slug === 'life-with-bird');
 
   const image = (
     <img src={project.cover} alt="Cover" />

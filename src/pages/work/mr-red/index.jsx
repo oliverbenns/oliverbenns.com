@@ -6,7 +6,6 @@ import Iphone from '../../../components/iphone';
 import OutboundLink from '../../../components/outbound-link';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
-import downloadImageSrc from './img/download-app-store.svg';
 import backgroundStyles from './background.module.css';
 import styles from './styles.module.css';
 
@@ -17,13 +16,7 @@ const images = [
 ];
 
 const MrRed = ({ location }) => {
-  const project = projects.find(_project => _project.slug === 'mr-red');
-
-  const cta = (
-    <OutboundLink to={project.cta.link} className={styles.download}>
-      <img src={downloadImageSrc} alt={project.cta.text} />
-    </OutboundLink>
-  );
+  const project = projects.find(p => p.slug === 'mr-red');
 
   const image = (
     <div className={styles.avatar}>
@@ -46,7 +39,7 @@ const MrRed = ({ location }) => {
       <div className={backgroundStyles.background3} />
 
       <div className={backgroundStyles.content}>
-        <ProjectIntro project={project} cta={cta} media={image} />
+        <ProjectIntro project={project} media={image} />
         <ProjectDescription media={iphone}>
           <h3>Project</h3>
           <p>I have always enjoyed video games and have wondered what it would be like to actually make one. The project’s goal was to appreciate and understand game development at a high level, as well as to publish something for myself.</p>

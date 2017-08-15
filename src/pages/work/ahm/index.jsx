@@ -28,7 +28,7 @@ const images = {
 };
 
 const Ahm = ({ location }) => {
-  const project = projects.find(_project => _project.slug === 'ahm');
+  const project = projects.find(p => p.slug === 'ahm');
 
   const logo = (
     <div className={styles.image}>

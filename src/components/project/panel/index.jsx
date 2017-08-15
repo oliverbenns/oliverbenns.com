@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 const ProjectPanel = ({ project }) => (
   <Link
     to={`/work/${project.slug}`}
-    className={classNames(themeStyles[project.theme.light ? 'light' : 'dark'], styles[project.className])}
+    className={classNames(styles.panel, themeStyles[project.theme.light ? 'light' : 'dark'], styles[project.className])}
     style={{ background: `${project.theme.background}` }}
   >
     <Wrapper>

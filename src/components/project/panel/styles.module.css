@@ -32,7 +32,6 @@
 }
 
 .mrRed {
-  composes: panel;
   composes: mrRed from "../themes.module.css";
 }
 
@@ -41,17 +40,9 @@
   background-size: auto 50%;
 }
 
-.ahm {
-  composes: panel;
-}
-
 .ahm .inner {
   background-position-x: 80%;
   background-size: auto 50%;
-}
-
-.lifeWithBird {
-  composes: panel;
 }
 
 .lifeWithBird .inner {
@@ -60,12 +51,19 @@
   background-position-y: bottom;
 }
 
-.chadstone {
-  composes: panel;
-}
-
 .chadstone .inner {
   background-position-x: 78.5%;
+  background-position-y: bottom;
+}
+
+.kindyNow .inner {
+  background-position-x: 15%;
+  background-size: auto 75%;
+}
+
+.click .inner {
+  background-position-x: 75%;
+  background-size: auto 65%;
 }
 
 @media (--small) {

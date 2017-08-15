@@ -1,5 +1,11 @@
 @import '../../../css/variables.css';
 
+.download {
+  display: inline-block;
+  margin-right: calc(var(--gutter) / 2);
+  border-bottom: 0 !important;
+}
+
 .cover {
   display: flex;
   align-items: center;
@@ -46,5 +52,11 @@
 
   .cover {
     margin-bottom: 5vh;
+  }
+
+  .download {
+    display: inline-block;
+    margin-right: calc(var(--gutter) / 4);
+    border-bottom: 0 !important;
   }
 }

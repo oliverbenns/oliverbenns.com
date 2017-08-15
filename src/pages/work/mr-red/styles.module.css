@@ -1,10 +1,5 @@
 @import '../../../css/variables.css';
 
-.download {
-  display: inline-block;
-  border-bottom: 0 !important;
-}
-
 .avatar {
   animation: float 6s ease-in-out infinite;
   position: relative;
