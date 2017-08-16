@@ -26,11 +26,11 @@ const About = ({ location }) => (
         <h4>Presentation</h4>
         <p>Bootstrap, Css, Html, Less, Postcss, Sass, Stylus</p>
         <h4>Javascript</h4>
-        <p>Angular, Grunt, Gulp, jQuery, Pug, React, Webpack</p>
+        <p>Angular, Grunt, Gulp, jQuery, Pug, React, React Native, Redux, Webpack</p>
         <h4>Server</h4>
         <p>Express, Mongo, Node, SQL</p>
         <h4>Other</h4>
-        <p>CI, Git, Svn, Unity 3D</p>
+        <p>C, CI, Git, Svn, Unity 3D</p>
 
         <h2>What people say</h2>
 
