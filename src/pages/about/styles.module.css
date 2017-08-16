@@ -1,23 +1,94 @@
 @import '../../css/variables.css';
 
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
 .intro {
-  width: calc(6 / var(--columnCount) * 100%);
+  width: calc(7 / var(--columnCount) * 100%);
   padding-right: var(--gutter);
   font-size: 1.125rem;
   line-height: 1.7;
+  padding-right: calc(1 / var(--columnCount) * 100%);
+}
+
+.skills {
+  width: calc(5 / var(--columnCount) * 100%);
+  font-size: 1rem;
+  padding-left: calc(1 / var(--columnCount) * 100%);
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+.skills:before {
+  content: "";
+  position: absolute;
+  height: 75%;
+  width: 4px;
+  display: block;
+  left: 0;
+  top: 12.5%;
+  background: black;
+}
+
+.referrals {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.referral {
+  display: flex;
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
+  align-items: flex-start;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.referral img {
+  margin-right: var(--gutter);
+  max-width: 80px;
+  border-radius: 1px;
 }
 
 @media (--medium) {
-  .intro {
+  .about {
+    margin-bottom: 3rem;
+  }
+
+  .intro, .skills {
+    width: calc(10 / var(--columnCount) * 100%);
+    padding: 0;
+  }
+
+  .intro, .referral {
+    font-size: 1.1428rem;
+  }
+
+  .skills {
+    margin-top: 3rem;
+  }
+
+  .skills:before {
+    display: none;
+  }
+
+  .referral {
+    margin-top: 2rem;
     width: calc(10 / var(--columnCount) * 100%);
   }
 }
 
 @media (--small) {
-  .intro {
+  .intro, .referral {
     width: calc(12 / var(--columnCount) * 100%);
-    padding-right: 0;
-    font-size: 1.1428rem;
+  }
+
+  .referral img {
+    display: none;
   }
 }
 
