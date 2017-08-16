@@ -9,9 +9,10 @@ import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
 const images = [
-  { src: require('./img/test.png'), description: '' },
-  { src: require('./img/test-2.png'), description: '' },
-  { src: require('./img/test-3.png'), description: '' },
+  { src: require('./img/centre-detail.png'), description: 'Click Childcare App Centre Detail' },
+  { src: require('./img/register.png'), description: 'Click Childcare App Registration Form' },
+  { src: require('./img/booking.png'), description: 'Click Childcare App Calendar Booking' },
+  { src: require('./img/profile.png'), description: 'Click Childcare App Login/Register' },
 ];
 
 const Click = ({ location }) => {
