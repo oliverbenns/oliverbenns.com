@@ -48,7 +48,7 @@ const KindyNow = ({ location }) => {
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={iphone}>
         <h3>Project</h3>
-        <p>Responsible for delivering the front end of the web app from designs through to production, I worked closely with the designers, developers and managers of the KindyNow team to ensure requirements were met and it that worked seamlessly with the API. I used React and Redux to build the platform.</p>
+        <p>Responsible for delivering the front end of the web app from designs through to production, I worked closely with the designers, developers and managers of the <OutboundLink to="https://kindynow.com">KindyNow</OutboundLink> team to ensure requirements were met and it that worked seamlessly with the API. I used React and Redux to build the platform.</p>
       </ProjectDescription>
       <Wrapper>
         <Macbook>

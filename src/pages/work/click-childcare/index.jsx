@@ -37,7 +37,7 @@ const Click = ({ location }) => {
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={iphone}>
         <h3>Project</h3>
-        <p>After working with KindyNow previously, the company approached me to provide updates, bug fixes and maintenance for their existing app over a 2 month period. Initially the React Native project was refactored in certain areas to get it in a state in which further work could begin. Afterwards, the updates were generally minor functionality changes and UI tweaks, though I also delivered an improved deployment process that allowed future updates to be shipped at a much faster rate.</p>
+        <p>After working with <OutboundLink to="https://kindynow.com">KindyNow</OutboundLink> previously, the company approached me to provide updates, bug fixes and maintenance for their existing app over a 2 month period. Initially the React Native project was refactored in certain areas to get it in a state in which further work could begin. Afterwards, the updates were generally minor functionality changes and UI tweaks, though I also delivered an improved deployment process that allowed future updates to be shipped at a much faster rate.</p>
       </ProjectDescription>
     </ProjectPage>
   );
