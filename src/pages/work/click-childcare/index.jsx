@@ -8,6 +8,8 @@ import OutboundLink from '../../../components/outbound-link';
 import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
+import styles from './styles.module.css';
+
 const images = [
   { src: require('./img/centre-detail.png'), description: 'Click Childcare App Centre Detail' },
   { src: require('./img/register.png'), description: 'Click Childcare App Registration Form' },
@@ -19,7 +21,9 @@ const Click = ({ location }) => {
   const project = projects.find(p => p.slug === 'click-childcare');
 
   const image = (
-    <img src={project.cover} alt="Cover" />
+    <div className={styles.image}>
+      <img src={project.cover} alt="Cover" />
+    </div>
   );
 
   const iphone = (
@@ -33,10 +37,7 @@ const Click = ({ location }) => {
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={iphone}>
         <h3>Project</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-
-        <h3>Role</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p>After working with KindyNow previously, the company approached me to provide updates, bug fixes and maintenance for their existing app over a 2 month period. Initially the React Native project was refactored in certain areas to get it in a state in which further work could begin. Afterwards, the updates were generally minor functionality changes and UI tweaks, though I also delivered an improved deployment process that allowed future updates to be shipped at a much faster rate.</p>
       </ProjectDescription>
     </ProjectPage>
   );

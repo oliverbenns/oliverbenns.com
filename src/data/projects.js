@@ -1,8 +1,7 @@
 const projects = [
   {
     className: 'click',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-    clientDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+    description: 'Australia\'s first mobile App that helps busy families quickly find and secure available childcare.',
     links: {
       ios: 'https://itunes.apple.com/app/id1175973285',
       android: 'https://play.google.com/store/apps/details?id=com.clickchildcareapp',
@@ -16,8 +15,7 @@ const projects = [
   },
   {
     className: 'kindyNow',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-    clientDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+    description: 'Web app to allow childcare centre managers to monitor and control abscences, bookings and capacities.',
     links: {
       website: 'https://kindynow.com/admin',
     },

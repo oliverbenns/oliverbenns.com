@@ -8,6 +8,9 @@ import OutboundLink from '../../../components/outbound-link';
 import Wrapper from '../../../components/wrapper';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
+import styles from './styles.module.css';
+
+
 const images = {
   desktop: [
     { src: require('./img/centre-detail.png'), description: 'KindyNow centre detail' },
@@ -29,7 +32,9 @@ const KindyNow = ({ location }) => {
   const project = projects.find(p => p.slug === 'kindynow');
 
   const image = (
-    <img src={project.cover} alt="Cover" />
+    <div className={styles.image}>
+      <img src={project.cover} alt="Cover" />
+    </div>
   );
 
   const iphone = (
@@ -43,10 +48,7 @@ const KindyNow = ({ location }) => {
       <ProjectIntro project={project} media={image} />
       <ProjectDescription media={iphone}>
         <h3>Project</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-
-        <h3>Role</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p>Responsible for delivering the front end of the web app from designs through to production, I worked closely with the designers, developers and managers of the KindyNow team to ensure requirements were met and it that worked seamlessly with the API. I used React and Redux to build the platform.</p>
       </ProjectDescription>
       <Wrapper>
         <Macbook>
