@@ -15,7 +15,7 @@ const projects = [
   },
   {
     className: 'kindyNow',
-    description: 'Web app to allow childcare centre managers to monitor and control abscences, bookings and capacities.',
+    description: 'Web app to allow childcare centre managers to monitor and control absences, bookings and capacities.',
     links: {
       website: 'https://kindynow.com/admin',
     },
