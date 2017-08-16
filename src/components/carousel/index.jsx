@@ -28,6 +28,7 @@ export default class Carousel extends Component {
               key={image.description}
               alt={`${image.description} page screenshot ${index}`}
               className={this.state.activeSlideIndex === index ? styles.active : null}
+              draggable={false}
             />
           ))}
           <span className={styles.button}>
