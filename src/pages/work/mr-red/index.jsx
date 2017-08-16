@@ -3,7 +3,6 @@ import projects from '../../../data/projects';
 
 import Carousel from '../../../components/carousel';
 import Iphone from '../../../components/iphone';
-import OutboundLink from '../../../components/outbound-link';
 import { ProjectDescription, ProjectIntro, ProjectPage } from '../../../components/project';
 
 import backgroundStyles from './background.module.css';

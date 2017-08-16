@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 
 import { siteMetadata as config } from '../gatsby-config';
-import shareImage from '../static/share.png';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const openGraphUrl = isProduction ? `${config.url}/share.png` : '/share.png';
@@ -47,7 +46,7 @@ const Html = ({ body, headComponents, postBodyComponents }) => {
       </body>
     </html>
   );
-}
+};
 
 
 export default Html;
