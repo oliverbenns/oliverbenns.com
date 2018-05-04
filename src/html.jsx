@@ -5,7 +5,16 @@ import { siteMetadata as config } from '../gatsby-config';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const openGraphUrl = isProduction ? `${config.url}/share.png` : '/share.png';
-const styles = isProduction ? require('!raw-loader!../public/styles.css') : null;
+
+let styles;
+
+if (isProduction) {
+  try {
+    styles = require(`!raw-loader!../public/styles.css`);
+  } catch (e) {
+    console.error(e);
+  }
+}
 
 const Html = ({ body, headComponents, postBodyComponents }) => {
   const helmet = Helmet.rewind();
