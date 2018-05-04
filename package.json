@@ -1,9 +1,15 @@
 {
   "name": "oliverbenns",
-  "version": "1.0.0",
-  "description": "",
+  "author": {
+    "name": "Oliver Benns",
+    "email": "info@oliverbenns.com",
+    "url": "https://oliverbenns.com"
+  },
   "license": "MIT",
-  "author": "Oliver Benns",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverbenns/oliverbenns.com.git"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "gatsby": "^1.9.259",
@@ -20,11 +26,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0"
   },
-  "main": "n/a",
   "scripts": {
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "build": "rm -rf public; gatsby build",
-    "develop": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "gatsby develop"
   }
 }
