@@ -1,9 +1,0 @@
-@import '../../css/variables.css';
-
-.wrapper {
-  width: 100%;
-  max-width: var(--wrapperWidth);
-  margin: 0 auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
