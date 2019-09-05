@@ -8,10 +8,10 @@ import "text/template"
 import "bytes"
 
 type Document struct {
-	Title string
+	Title       string
 	Description string
-	Url string
-	Content string
+	Url         string
+	Content     string
 }
 
 func generateHtml(document Document) string {
@@ -19,23 +19,22 @@ func generateHtml(document Document) string {
 	t, err := template.ParseFiles("src/templates/layout.html")
 
 	if err != nil {
-	    panic(err)
+		panic(err)
 	}
-
 
 	var tpl bytes.Buffer
 
 	eerr := t.Execute(&tpl, document)
 
 	if eerr != nil {
-	    panic(eerr)
+		panic(eerr)
 	}
 
 	html := tpl.String()
 
 	fmt.Print(html)
 
- 	return html
+	return html
 }
 
 func createPages() {
@@ -59,10 +58,10 @@ func createPages() {
 
 		title := fmt.Sprintf("Oliver Benns | %s", file.Name())
 		document := Document{
-			Title: title,
+			Title:       title,
 			Description: "Lorem Ipsum",
-			Url: "https://oliverbenns.com",
-			Content: string(page),
+			Url:         "https://oliverbenns.com",
+			Content:     string(page),
 		}
 
 		fmt.Println(file.Name())
@@ -109,7 +108,7 @@ func copyAssets() {
 
 type Article struct {
 	Title string
-	Path string
+	Path  string
 }
 
 func getArticles() []Article {
@@ -126,7 +125,7 @@ func getArticles() []Article {
 
 		article := Article{
 			Title: "Unknown",
-			Path: fmt.Sprintf("/%s/unknown", date),
+			Path:  fmt.Sprintf("/%s/unknown", date),
 		}
 
 		articles = append(articles, article)
@@ -140,11 +139,9 @@ func createHome() {
 	t, eerr := template.ParseFiles("src/pages/index.html")
 	articles := getArticles()
 
-
 	if eerr != nil {
-	    panic(eerr)
+		panic(eerr)
 	}
-
 
 	var tpl bytes.Buffer
 
@@ -153,10 +150,10 @@ func createHome() {
 	hhtml := tpl.String()
 
 	doc := Document{
-		Title: "Oliver Benns",
+		Title:       "Oliver Benns",
 		Description: "Lorem Ipsum",
-		Url: "https://oliverbenns.com",
-		Content: hhtml,
+		Url:         "https://oliverbenns.com",
+		Content:     hhtml,
 	}
 
 	html := generateHtml(doc)
