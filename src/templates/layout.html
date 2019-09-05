@@ -1,19 +1,19 @@
 <html lang="en">
 	<head>
-		<title>{{title}}</title>
-		<meta name="description" content="{{description}}" />
+		<title>{{.Title}}</title>
+		<meta name="description" content="{{.Description}}" />
 		<meta charset="utf-8" />
-        	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	        <meta property="og:site_name" content="{{title}}" />
-        	<meta property="og:type" content="website" />
- 	        <meta property="og:image" content="{{url}}/assets/preview.png" />
-        	<meta name="twitter:card" content="summary_large_image" />
-        	<meta name="twitter:site" content="@oliverbenns" />
- 	        <meta name="twitter:creator" content="@oliverbenns" />
- 	        <meta property="twitter:image" content="{{url}}/assets/preview.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:site_name" content="{{.Title}}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="{{.Url}}/assets/preview.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@oliverbenns" />
+		<meta name="twitter:creator" content="@oliverbenns" />
+		<meta property="twitter:image" content="{{.Url}}/assets/preview.png" />
 		<meta name="theme-color" content="#000000">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
-	        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
 		<link rel="stylesheet" type="text/css" href="/assets/styles.css" />
 		<script>
 			(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
@@ -38,6 +38,6 @@
 				</ul>
 			</nav>
 		</header>
-		{{content}}
+		{{.Content}}
 	</body>
 </html>

@@ -4,27 +4,37 @@ import "os"
 import "io/ioutil"
 import "fmt"
 import "strings"
+import "text/template"
+import "bytes"
 
 type Document struct {
-	title string
-	description string
-	data string
+	Title string
+	Description string
+	Url string
+	Content string
 }
 
 func generateHtml(document Document) string {
-	template, err := ioutil.ReadFile("src/templates/layout.html")
+	var err error
+	t, err := template.ParseFiles("src/templates/layout.html")
 
 	if err != nil {
-		panic(err)
+	    panic(err)
 	}
 
-	html := string(template)
-	html = strings.Replace(html, "{{title}}", document.title, -1)
-	html = strings.Replace(html, "{{description}}", document.description, -1)
-	html = strings.Replace(html, "{{url}}", "https://oliverbenns.com", -1)
-	html = strings.Replace(html, "{{content}}", document.data, -1)
 
- 	fmt.Print(html)
+	var tpl bytes.Buffer
+
+	eerr := t.Execute(&tpl, document)
+
+	if eerr != nil {
+	    panic(eerr)
+	}
+
+	html := tpl.String()
+
+	fmt.Print(html)
+
  	return html
 }
 
@@ -48,7 +58,12 @@ func createPages() {
 		}
 
 		title := fmt.Sprintf("Oliver Benns | %s", file.Name())
-		document := Document {title: title, description: "Lorem Ipsum", data: string(page)}
+		document := Document{
+			Title: title,
+			Description: "Lorem Ipsum",
+			Url: "https://oliverbenns.com",
+			Content: string(page),
+		}
 
 		fmt.Println(file.Name())
 		html := generateHtml(document)
@@ -92,8 +107,57 @@ func copyAssets() {
 	}
 }
 
+type Article struct {
+	Title string
+	Path string
+}
+
+func getArticles() []Article {
+	var articles []Article
+
+	files, err := ioutil.ReadDir("src/posts")
+
+	if err != nil {
+		panic(err)
+	}
+
+	for _, file := range files {
+		date := strings.Replace(file.Name(), ".md", "", -1)
+
+		article := Article{
+			Title: "Unknown",
+			Path: fmt.Sprintf("/%s/unknown", date),
+		}
+
+		articles = append(articles, article)
+	}
+
+	return articles
+}
+
 func createHome() {
-	doc := Document {title: "Oliver Benns", description: "Lorem Ipsum", data: "<p>A bunch of links to each blog post would appear here.</p>"}
+	var eerr error
+	t, eerr := template.ParseFiles("src/pages/index.html")
+	articles := getArticles()
+
+
+	if eerr != nil {
+	    panic(eerr)
+	}
+
+
+	var tpl bytes.Buffer
+
+	eerr = t.Execute(&tpl, articles)
+
+	hhtml := tpl.String()
+
+	doc := Document{
+		Title: "Oliver Benns",
+		Description: "Lorem Ipsum",
+		Url: "https://oliverbenns.com",
+		Content: hhtml,
+	}
 
 	html := generateHtml(doc)
 
@@ -109,6 +173,6 @@ func main() {
 	os.Mkdir("dist", 0755)
 
 	createHome()
-	copyAssets()
-	createPages()
+	// copyAssets()
+	// createPages()
 }
