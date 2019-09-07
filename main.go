@@ -48,7 +48,7 @@ func createPages() {
 	}
 
 	for _, file := range files {
-		if !strings.Contains(file.Name(), ".html") {
+		if !strings.Contains(file.Name(), ".html") || file.Name() == "index.html" {
 			continue
 		}
 
