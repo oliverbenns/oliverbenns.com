@@ -6,6 +6,8 @@ import "fmt"
 import "strings"
 import "text/template"
 import "bytes"
+import "gopkg.in/russross/blackfriday.v2"
+import "github.com/gosimple/slug"
 
 type Document struct {
 	Title       string
@@ -109,7 +111,7 @@ func copyAssets() {
 type Post struct {
 	Title   string
 	Date    string
-	Path    string
+	Slug    string
 	Content []byte
 }
 
@@ -136,16 +138,14 @@ func getPosts() []Post {
 			panic(eerr)
 		}
 
-		fmt.Print(string(data))
-
-		// fmt.Print(string(data))
-
 		post := Post{
 			Title:   "Unknown",
 			Date:    date,
-			Path:    fmt.Sprintf("/%s/unknown", date),
-			Content: data,
+			Slug:    slug.Make("Get the title"),
+			Content: blackfriday.Run(data, blackfriday.WithNoExtensions()),
 		}
+
+		fmt.Println(string(post.Content))
 
 		posts = append(posts, post)
 	}
