@@ -46,7 +46,7 @@ func createPages() {
 
 	for _, file := range files {
 		if !strings.Contains(file.Name(), ".html") {
-			return
+			continue
 		}
 
 		source := fmt.Sprintf("src/pages/%s", file.Name())
