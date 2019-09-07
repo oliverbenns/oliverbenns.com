@@ -32,7 +32,7 @@ func generateHtml(document Document) string {
 
 	html := tpl.String()
 
-	fmt.Print(html)
+	// fmt.Print(html)
 
 	return html
 }
@@ -106,13 +106,15 @@ func copyAssets() {
 	}
 }
 
-type Article struct {
-	Title string
-	Path  string
+type Post struct {
+	Title   string
+	Date    string
+	Path    string
+	Content []byte
 }
 
-func getArticles() []Article {
-	var articles []Article
+func getPosts() []Post {
+	var posts []Post
 
 	files, err := ioutil.ReadDir("src/posts")
 
@@ -121,23 +123,40 @@ func getArticles() []Article {
 	}
 
 	for _, file := range files {
-		date := strings.Replace(file.Name(), ".md", "", -1)
-
-		article := Article{
-			Title: "Unknown",
-			Path:  fmt.Sprintf("/%s/unknown", date),
+		if !strings.Contains(file.Name(), ".md") {
+			continue
 		}
 
-		articles = append(articles, article)
+		date := strings.Replace(file.Name(), ".md", "", -1)
+
+		path := fmt.Sprintf("src/posts/%s", file.Name())
+		data, eerr := ioutil.ReadFile(path)
+
+		if eerr != nil {
+			panic(eerr)
+		}
+
+		fmt.Print(string(data))
+
+		// fmt.Print(string(data))
+
+		post := Post{
+			Title:   "Unknown",
+			Date:    date,
+			Path:    fmt.Sprintf("/%s/unknown", date),
+			Content: data,
+		}
+
+		posts = append(posts, post)
 	}
 
-	return articles
+	return posts
 }
 
 func createHome() {
 	var eerr error
 	t, eerr := template.ParseFiles("src/pages/index.html")
-	articles := getArticles()
+	posts := getPosts()
 
 	if eerr != nil {
 		panic(eerr)
@@ -145,7 +164,7 @@ func createHome() {
 
 	var tpl bytes.Buffer
 
-	eerr = t.Execute(&tpl, articles)
+	eerr = t.Execute(&tpl, posts)
 
 	hhtml := tpl.String()
 
