@@ -154,6 +154,37 @@ func getPosts() []Post {
 	return posts
 }
 
+func createPosts() {
+	posts := getPosts()
+
+	for _, post := range posts {
+		doc := Document{
+			Title:       post.Title,
+			Description: post.Title,
+			Url:         "https://oliverbenns.com",
+			Content:     string(post.Content),
+		}
+
+		html := generateHtml(doc)
+
+		path := fmt.Sprintf("dist/%s/%s", post.Date, post.Slug)
+		filePath := fmt.Sprintf("%s/index.html", path)
+
+		err := os.MkdirAll(path, 0755)
+
+		if err != nil {
+			panic(err)
+		}
+
+		eerr := ioutil.WriteFile(filePath, []byte(html), 0644)
+
+		if eerr != nil {
+			panic(eerr)
+		}
+	}
+
+}
+
 func createHome() {
 	var eerr error
 	t, eerr := template.ParseFiles("src/pages/index.html")
@@ -191,6 +222,7 @@ func main() {
 	os.Mkdir("dist", 0755)
 
 	createHome()
+	// createPosts()
 	// copyAssets()
 	// createPages()
 
