@@ -8,6 +8,7 @@ import "text/template"
 import "bytes"
 import "gopkg.in/russross/blackfriday.v2"
 import "github.com/gosimple/slug"
+import "time"
 
 type Document struct {
 	Title       string
@@ -185,10 +186,14 @@ func createHome() {
 }
 
 func main() {
+	start := time.Now()
 	os.RemoveAll("dist")
 	os.Mkdir("dist", 0755)
 
 	createHome()
 	// copyAssets()
 	// createPages()
+
+	elapsed := time.Since(start)
+	fmt.Printf("Built in %s\n", elapsed)
 }
