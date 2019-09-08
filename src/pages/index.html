@@ -1,3 +1,7 @@
-{{range .}}
-	<a href="{{.Path}}">{{.Title}}</a>
-{{end}}
+<ul id="#blog-post-list">
+	{{range .}}
+		<li>
+			<a href="{{.Path}}">{{.Date}} - {{.Title}}</a>
+		</li>
+	{{end}}
+</ul>
