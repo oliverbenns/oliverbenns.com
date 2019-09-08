@@ -114,7 +114,7 @@ type Post struct {
 	Title       string
 	Description string
 	Date        string
-	Slug        string
+	Path        string
 	Content     []byte
 }
 
@@ -150,12 +150,12 @@ func getPosts() []Post {
 			Title:       title,
 			Description: doc.Find("p").First().Text(),
 			Date:        date,
-			Slug:        slug.Make(title),
+			Path:        fmt.Sprintf("/posts/%s", slug.Make(title)),
 			Content:     html,
 		}
 
 		fmt.Printf("Title: %s\n", post.Title)
-		fmt.Printf("Slug: %s\n", post.Slug)
+		fmt.Printf("Path: %s\n", post.Path)
 		fmt.Printf("Description: %s\n\n", post.Description)
 
 		posts = append(posts, post)
@@ -177,7 +177,7 @@ func createPosts() {
 
 		html := generateHtml(doc)
 
-		path := fmt.Sprintf("dist/%s/%s", post.Date, post.Slug)
+		path := fmt.Sprintf("dist%s", post.Path)
 		filePath := fmt.Sprintf("%s/index.html", path)
 
 		err := os.MkdirAll(path, 0755)
