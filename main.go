@@ -9,6 +9,7 @@ import "bytes"
 import "gopkg.in/russross/blackfriday.v2"
 import "github.com/gosimple/slug"
 import "time"
+import "github.com/PuerkitoBio/goquery"
 
 type Document struct {
 	Title       string
@@ -110,10 +111,11 @@ func copyAssets() {
 }
 
 type Post struct {
-	Title   string
-	Date    string
-	Slug    string
-	Content []byte
+	Title       string
+	Description string
+	Date        string
+	Slug        string
+	Content     []byte
 }
 
 func getPosts() []Post {
@@ -139,14 +141,22 @@ func getPosts() []Post {
 			panic(eerr)
 		}
 
+		html := blackfriday.Run(data, blackfriday.WithNoExtensions())
+		reader := strings.NewReader(string(html))
+		doc, _ := goquery.NewDocumentFromReader(reader)
+		title := doc.Find("h1").First().Text()
+
 		post := Post{
-			Title:   "Unknown",
-			Date:    date,
-			Slug:    slug.Make("Get the title"),
-			Content: blackfriday.Run(data, blackfriday.WithNoExtensions()),
+			Title:       title,
+			Description: doc.Find("p").First().Text(),
+			Date:        date,
+			Slug:        slug.Make(title),
+			Content:     html,
 		}
 
-		fmt.Println(string(post.Content))
+		fmt.Printf("Title: %s\n", post.Title)
+		fmt.Printf("Slug: %s\n", post.Slug)
+		fmt.Printf("Description: %s\n\n", post.Description)
 
 		posts = append(posts, post)
 	}
