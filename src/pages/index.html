@@ -1,7 +1,5 @@
-<ul id="#blog-post-list">
+<ul id="blog-post-list">
 	{{range .}}
-		<li>
-			<a href="{{.Path}}">{{.Date}} - {{.Title}}</a>
-		</li>
+	<li><a href="{{.Path}}">{{.Date}} - {{.Title}}</a></li>
 	{{end}}
 </ul>
