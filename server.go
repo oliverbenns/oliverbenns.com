@@ -5,6 +5,7 @@ import "net/http"
 
 const port = 3000
 
+// For development purposes only.
 func main() {
 	dir := http.Dir("dist")
 	fileServer := http.FileServer(dir)
