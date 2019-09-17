@@ -56,6 +56,10 @@ table {
   text-align: left;
 }
 
+blockquote {
+  font-style: italic;
+}
+
 /* General Layout */
 
 header,
