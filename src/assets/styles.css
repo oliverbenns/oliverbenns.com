@@ -1,3 +1,5 @@
+/* Typography and resets */
+
 @font-face {
   font-family: "Medium";
   src: url("/assets/medium.woff2") format("woff2"),
@@ -16,8 +18,9 @@ body {
   background: #161616;
   color: #ddd;
   max-width: 640px;
-  margin: 100px auto 100px auto;
+  margin: 100px auto;
 }
+
 h1,
 h2,
 h3,
@@ -53,25 +56,29 @@ table {
   text-align: left;
 }
 
+/* General Layout */
+
 header,
 section,
 footer {
-  margin: 0px 20px 0px 20px;
+  margin: 0 20px;
+}
+
+section {
+  margin-top: 20px;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0px 0px 20px 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
   display: inline-block;
 }
 
-footer {
-  margin: 20px 20px 0px 20px;
-}
+/* Content */
 
 #link-list {
   list-style-type: none;
@@ -88,4 +95,33 @@ footer {
 img,
 iframe {
   max-width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 0;
+}
+
+footer img {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+footer a {
+  display: block;
+}
+
+footer a:hover img {
+  filter: invert(1);
+}
+
+@media only screen and (max-width: 640px) {
+  footer {
+    display: block;
+  }
+
+  footer nav {
+    margin-top: 5px;
+  }
 }
