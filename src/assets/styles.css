@@ -122,6 +122,7 @@ footer img {
 
 footer a {
   display: block;
+  line-height: 1;
 }
 
 footer a:hover img {
