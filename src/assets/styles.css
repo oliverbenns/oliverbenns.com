@@ -29,6 +29,12 @@ body {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -46,6 +52,12 @@ th {
 h1 {
   /* Since when did browsers start making h1 + h2 the same size? */
   font-size: 2em;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.75em;
+  }
 }
 
 pre {
@@ -135,6 +147,12 @@ nav ul li {
 
 #link-list a {
   border-bottom: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  #link-list span {
+    display: none;
+  }
 }
 
 img,
