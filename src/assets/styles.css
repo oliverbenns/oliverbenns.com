@@ -8,6 +8,10 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-weight: 400;
   font-size: 14px;
@@ -18,7 +22,11 @@ body {
   background: #161616;
   color: #ddd;
   max-width: 640px;
-  margin: 100px auto;
+  padding: 5px 0;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1,
@@ -63,13 +71,13 @@ blockquote {
 /* General Layout */
 
 header,
-section,
 footer {
   margin: 0 20px;
 }
 
 section {
-  margin-top: 20px;
+  margin: 20px;
+  flex: 1;
 }
 
 nav ul {
