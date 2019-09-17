@@ -139,7 +139,7 @@ func getPosts() (posts []Post) {
 			panic(eerr)
 		}
 
-		html := blackfriday.Run(data, blackfriday.WithNoExtensions())
+		html := blackfriday.Run(data)
 		reader := strings.NewReader(string(html))
 		doc, _ := goquery.NewDocumentFromReader(reader)
 		title := doc.Find("h1").First().Text()
