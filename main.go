@@ -243,9 +243,9 @@ func main() {
 	os.Mkdir("dist", 0755)
 
 	createHome()
-	// createPosts()
-	// copyAssets()
-	// createPages()
+	createPosts()
+	copyAssets()
+	createPages()
 
 	elapsed := time.Since(start)
 	fmt.Printf("Built in %s\n", elapsed)
