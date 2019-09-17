@@ -118,9 +118,7 @@ type Post struct {
 	Content     []byte
 }
 
-func getPosts() []Post {
-	var posts []Post
-
+func getPosts() (posts []Post) {
 	files, err := ioutil.ReadDir("src/posts")
 
 	if err != nil {
