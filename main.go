@@ -162,6 +162,18 @@ func getPosts() (posts []Post) {
 	return posts
 }
 
+func reversePosts(posts []Post) []Post {
+	first := 0
+	last := len(posts) - 1
+	for first < last {
+		posts[first], posts[last] = posts[last], posts[first]
+		first++
+		last--
+	}
+
+	return posts
+}
+
 func createPosts() {
 	posts := getPosts()
 
@@ -197,6 +209,7 @@ func createHome() {
 	var eerr error
 	t, eerr := template.ParseFiles("src/pages/index.html")
 	posts := getPosts()
+	posts = reversePosts(posts)
 
 	if eerr != nil {
 		panic(eerr)
