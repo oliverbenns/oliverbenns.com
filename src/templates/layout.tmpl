@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{template "title" .}}</title>
-		<meta name="description" content="{{template "description" .}}" />
+		<title>{{if .Title}}{{.Title}} | {{end}}Oliver Benns</title>
+		<meta name="description" content="{{.Description}}" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:title" content="{{template "title" .}}" />
+		<meta property="og:title" content="{{if .Title}}{{.Title}}{{else}}Oliver Benns{{end}}" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://oliverbenns.com/assets/preview.png" />
 		<meta property="og:url" content="https://oliverbenns.com{{.Path}}" />
@@ -45,7 +45,7 @@
 			</nav>
 		</header>
 		<section>
-			{{template "content" .}}
+			{{template "main" .}}
 		</section>
 		<footer>
 			<span>© 2019 Oliver Benns. All rights reserved.</span>

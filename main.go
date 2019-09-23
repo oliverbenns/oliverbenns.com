@@ -11,6 +11,27 @@ import "github.com/gosimple/slug"
 import "time"
 import "github.com/PuerkitoBio/goquery"
 
+type Document struct {
+	Path        string
+	Title       string
+	Description string
+}
+
+var staticPages = map[string]Document{
+	"src/index.tmpl": {
+		Title:       "",
+		Description: "This is the home description",
+	},
+	"src/pages/about.tmpl": {
+		Title:       "About",
+		Description: "This is the about description",
+	},
+	"src/pages/contact.tmpl": {
+		Title:       "Contact",
+		Description: "Ways to get in contact with me - through email or social media.",
+	},
+}
+
 func createPages() {
 	files, err := ioutil.ReadDir("src/pages")
 
@@ -30,13 +51,9 @@ func createPages() {
 
 		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
 
-		type PageDocument struct {
-			Path string
-		}
-
-		doc := PageDocument{
-			Path: fmt.Sprintf("/%s", folderName),
-		}
+		doc := staticPages[source]
+		doc.Path = fmt.Sprintf("/%s", folderName)
+		fmt.Println(doc)
 
 		t.Execute(&tpl, doc)
 
@@ -196,14 +213,17 @@ func createHome() {
 
 	var tpl bytes.Buffer
 
+	// @TODO: union?
 	type HDocument struct {
-		Path  string
-		Posts []Post
+		Path        string
+		Title       string
+		Description string
+		Posts       []Post
 	}
 
 	doc := HDocument{
-		Path:  "",
-		Posts: posts,
+		Description: "foo",
+		Posts:       posts,
 	}
 
 	eerr = t.Execute(&tpl, doc)

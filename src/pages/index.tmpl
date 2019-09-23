@@ -1,7 +1,4 @@
-{{define "title"}}Oliver Benns{{end}}
-{{define "description"}}This is the home description{{end}}
-
-{{define "content"}}
+{{define "main"}}
   <ul id="link-list">
     {{range .Posts}}
       <li><a href="{{.Path}}"><span>{{.Date}} - </span>{{.Title}}</a></li>
