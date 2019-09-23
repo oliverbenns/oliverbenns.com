@@ -1,0 +1,7 @@
+{{define "main"}}
+  <ul id="link-list">
+    {{range .Posts}}
+      <li><a href="{{.Path}}"><span>{{.Date}} - </span>{{.Title}}</a></li>
+    {{end}}
+  </ul>
+{{end}}
