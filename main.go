@@ -28,19 +28,20 @@ func createPages() {
 		t, _ := template.ParseFiles("src/templates/layout.html", source)
 		var tpl bytes.Buffer
 
+		folderName := strings.Replace(file.Name(), ".html", "", -1)
+
 		type PageDocument struct {
-			Url string
+			Path string
 		}
 
 		doc := PageDocument{
-			Url: "https://oliverbenns.com",
+			Path: fmt.Sprintf("/%s", folderName),
 		}
 
 		t.Execute(&tpl, doc)
 
 		fmt.Println(file.Name())
 
-		folderName := strings.Replace(file.Name(), ".html", "", -1)
 		directory := fmt.Sprintf("dist/%s", folderName)
 		os.MkdirAll(directory, 0755)
 
@@ -153,14 +154,14 @@ func createPosts() {
 		type Document struct {
 			Title       string
 			Description string
-			Url         string
+			Path        string
 			Content     string
 		}
 
 		doc := Document{
 			Title:       post.Title,
 			Description: post.Description,
-			Url:         "https://oliverbenns.com",
+			Path:        post.Path,
 			Content:     string(post.Content),
 		}
 
@@ -196,12 +197,12 @@ func createHome() {
 	var tpl bytes.Buffer
 
 	type HDocument struct {
-		Url   string
+		Path  string
 		Posts []Post
 	}
 
 	doc := HDocument{
-		Url:   "https://oliverbenns.com",
+		Path:  "",
 		Posts: posts,
 	}
 
