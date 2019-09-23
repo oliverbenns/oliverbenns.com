@@ -11,16 +11,18 @@ import "github.com/gosimple/slug"
 import "time"
 import "github.com/PuerkitoBio/goquery"
 
-type Document struct {
-	Path        string
+type Meta struct {
 	Title       string
 	Description string
 }
 
-var staticPages = map[string]Document{
-	"src/index.tmpl": {
-		Title:       "",
+var staticPages = map[string]Meta{
+	"src/pages/index.tmpl": {
 		Description: "This is the home description",
+	},
+	"src/pages/blog.tmpl": {
+		Title:       "Blog",
+		Description: "This is the blog description",
 	},
 	"src/pages/about.tmpl": {
 		Title:       "About",
@@ -39,8 +41,11 @@ func createPages() {
 		panic(err)
 	}
 
+	posts := getPosts()
+	posts = reversePosts(posts)
+
 	for _, file := range files {
-		if !strings.Contains(file.Name(), ".tmpl") || file.Name() == "index.tmpl" {
+		if !strings.Contains(file.Name(), ".tmpl") {
 			continue
 		}
 
@@ -51,15 +56,35 @@ func createPages() {
 
 		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
 
-		doc := staticPages[source]
-		doc.Path = fmt.Sprintf("/%s", folderName)
-		fmt.Println(doc)
+		meta := staticPages[source]
+
+		type Document struct {
+			Path        string
+			Title       string
+			Description string
+			Posts       []Post
+		}
+
+		doc := Document{
+			Title:       meta.Title,
+			Description: meta.Description,
+			Posts:       posts,
+		}
+
+		if file.Name() != "index.tmpl" {
+			doc.Path = fmt.Sprintf("/%s", folderName)
+		}
 
 		t.Execute(&tpl, doc)
 
-		fmt.Println(file.Name())
+		var directory string
 
-		directory := fmt.Sprintf("dist/%s", folderName)
+		if file.Name() == "index.tmpl" {
+			directory = "dist"
+		} else {
+			directory = fmt.Sprintf("dist/%s", folderName)
+		}
+
 		os.MkdirAll(directory, 0755)
 
 		destination := fmt.Sprintf("%s/index.html", directory)
@@ -139,10 +164,6 @@ func getPosts() (posts []Post) {
 			Content:     html,
 		}
 
-		fmt.Printf("Title: %s\n", post.Title)
-		fmt.Printf("Path: %s\n", post.Path)
-		fmt.Printf("Description: %s\n\n", post.Description)
-
 		posts = append(posts, post)
 	}
 
@@ -201,46 +222,11 @@ func createPosts() {
 	}
 }
 
-func createHome() {
-	var eerr error
-	t, eerr := template.ParseFiles("src/templates/layout.tmpl", "src/pages/index.tmpl")
-	posts := getPosts()
-	posts = reversePosts(posts)
-
-	if eerr != nil {
-		panic(eerr)
-	}
-
-	var tpl bytes.Buffer
-
-	// @TODO: union?
-	type HDocument struct {
-		Path        string
-		Title       string
-		Description string
-		Posts       []Post
-	}
-
-	doc := HDocument{
-		Description: "foo",
-		Posts:       posts,
-	}
-
-	eerr = t.Execute(&tpl, doc)
-
-	err := ioutil.WriteFile("dist/index.html", tpl.Bytes(), 0644)
-
-	if err != nil {
-		panic(err)
-	}
-}
-
 func main() {
 	start := time.Now()
 	os.RemoveAll("dist")
 	os.Mkdir("dist", 0755)
 
-	createHome()
 	createPosts()
 	copyAssets()
 	createPages()
