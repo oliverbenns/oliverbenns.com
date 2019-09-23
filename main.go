@@ -11,36 +11,6 @@ import "github.com/gosimple/slug"
 import "time"
 import "github.com/PuerkitoBio/goquery"
 
-type Document struct {
-	Title       string
-	Description string
-	Url         string
-	Content     string
-}
-
-func generateHtml(document Document) string {
-	var err error
-	t, err := template.ParseFiles("src/templates/layout.html")
-
-	if err != nil {
-		panic(err)
-	}
-
-	var tpl bytes.Buffer
-
-	eerr := t.Execute(&tpl, document)
-
-	if eerr != nil {
-		panic(eerr)
-	}
-
-	html := tpl.String()
-
-	// fmt.Print(html)
-
-	return html
-}
-
 func createPages() {
 	files, err := ioutil.ReadDir("src/pages")
 
@@ -54,29 +24,28 @@ func createPages() {
 		}
 
 		source := fmt.Sprintf("src/pages/%s", file.Name())
-		page, err := ioutil.ReadFile(source)
 
-		if err != nil {
-			panic(err)
+		t, _ := template.ParseFiles("src/templates/layout.html", source)
+		var tpl bytes.Buffer
+
+		type PageDocument struct {
+			Url string
 		}
 
-		title := fmt.Sprintf("Oliver Benns | %s", file.Name())
-		document := Document{
-			Title:       title,
-			Description: "Lorem Ipsum",
-			Url:         "https://oliverbenns.com",
-			Content:     string(page),
+		doc := PageDocument{
+			Url: "https://oliverbenns.com",
 		}
+
+		t.Execute(&tpl, doc)
 
 		fmt.Println(file.Name())
-		html := generateHtml(document)
 
 		folderName := strings.Replace(file.Name(), ".html", "", -1)
 		directory := fmt.Sprintf("dist/%s", folderName)
 		os.MkdirAll(directory, 0755)
 
 		destination := fmt.Sprintf("%s/index.html", directory)
-		saveErr := ioutil.WriteFile(destination, []byte(html), 0644)
+		saveErr := ioutil.WriteFile(destination, tpl.Bytes(), 0644)
 
 		if saveErr != nil {
 			panic(saveErr)
@@ -176,16 +145,26 @@ func reversePosts(posts []Post) []Post {
 
 func createPosts() {
 	posts := getPosts()
+	t, _ := template.ParseFiles("src/templates/layout.html", "src/templates/post.html")
 
 	for _, post := range posts {
+		var tpl bytes.Buffer
+
+		type Document struct {
+			Title       string
+			Description string
+			Url         string
+			Content     string
+		}
+
 		doc := Document{
 			Title:       post.Title,
-			Description: post.Title,
+			Description: post.Description,
 			Url:         "https://oliverbenns.com",
 			Content:     string(post.Content),
 		}
 
-		html := generateHtml(doc)
+		t.Execute(&tpl, doc)
 
 		path := fmt.Sprintf("dist%s", post.Path)
 		filePath := fmt.Sprintf("%s/index.html", path)
@@ -196,18 +175,17 @@ func createPosts() {
 			panic(err)
 		}
 
-		eerr := ioutil.WriteFile(filePath, []byte(html), 0644)
+		eerr := ioutil.WriteFile(filePath, tpl.Bytes(), 0644)
 
 		if eerr != nil {
 			panic(eerr)
 		}
 	}
-
 }
 
 func createHome() {
 	var eerr error
-	t, eerr := template.ParseFiles("src/pages/index.html")
+	t, eerr := template.ParseFiles("src/templates/layout.html", "src/pages/index.html")
 	posts := getPosts()
 	posts = reversePosts(posts)
 
@@ -217,20 +195,19 @@ func createHome() {
 
 	var tpl bytes.Buffer
 
-	eerr = t.Execute(&tpl, posts)
-
-	hhtml := tpl.String()
-
-	doc := Document{
-		Title:       "Oliver Benns",
-		Description: "Lorem Ipsum",
-		Url:         "https://oliverbenns.com",
-		Content:     hhtml,
+	type HDocument struct {
+		Url   string
+		Posts []Post
 	}
 
-	html := generateHtml(doc)
+	doc := HDocument{
+		Url:   "https://oliverbenns.com",
+		Posts: posts,
+	}
 
-	err := ioutil.WriteFile("dist/index.html", []byte(html), 0644)
+	eerr = t.Execute(&tpl, doc)
+
+	err := ioutil.WriteFile("dist/index.html", tpl.Bytes(), 0644)
 
 	if err != nil {
 		panic(err)

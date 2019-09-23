@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{.Title}}</title>
-		<meta name="description" content="{{.Description}}" />
+		<title>{{template "title" .}}</title>
+		<meta name="description" content="{{template "description" .}}" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:site_name" content="{{.Title}}" />
+		<meta property="og:site_name" content="{{template "title" .}}" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="{{.Url}}/assets/preview.png" />
+		<meta property="og:image" content="https://oliverbenns.com/assets/preview.png" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@oliverbenns" />
 		<meta name="twitter:creator" content="@oliverbenns" />
-		<meta property="twitter:image" content="{{.Url}}/assets/preview.png" />
+		<meta property="twitter:image" content="https://oliverbenns.com/assets/preview.png" />
 		<meta name="theme-color" content="#000000">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
@@ -27,7 +27,7 @@
 		</script>
 	</head>
 	<body>
-		<header>		
+		<header>
 			<nav>
 				<ul>
 					<li>
@@ -43,7 +43,7 @@
 			</nav>
 		</header>
 		<section>
-			{{.Content}}
+			{{template "content" .}}
 		</section>
 		<footer>
 			<span>© 2019 Oliver Benns. All rights reserved.</span>
