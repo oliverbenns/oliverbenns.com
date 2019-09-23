@@ -22,9 +22,9 @@ var staticPages = map[string]Document{
 	"src/pages/index.tmpl": {
 		Description: "This is the home description",
 	},
-	"src/pages/blog.tmpl": {
-		Title:       "Blog",
-		Description: "This is the blog description",
+	"src/pages/posts.tmpl": {
+		Title:       "Posts",
+		Description: "This is the posts description",
 	},
 	"src/pages/about.tmpl": {
 		Title:       "About",
