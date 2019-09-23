@@ -11,12 +11,14 @@ import "github.com/gosimple/slug"
 import "time"
 import "github.com/PuerkitoBio/goquery"
 
-type Meta struct {
+type Document struct {
 	Title       string
 	Description string
+	Path        string
+	Posts       []Post // @TODO: This shouldn't be here.
 }
 
-var staticPages = map[string]Meta{
+var staticPages = map[string]Document{
 	"src/pages/index.tmpl": {
 		Description: "This is the home description",
 	},
@@ -56,20 +58,8 @@ func createPages() {
 
 		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
 
-		meta := staticPages[source]
-
-		type Document struct {
-			Path        string
-			Title       string
-			Description string
-			Posts       []Post
-		}
-
-		doc := Document{
-			Title:       meta.Title,
-			Description: meta.Description,
-			Posts:       posts,
-		}
+		doc := staticPages[source]
+		doc.Posts = posts
 
 		if file.Name() != "index.tmpl" {
 			doc.Path = fmt.Sprintf("/%s", folderName)
