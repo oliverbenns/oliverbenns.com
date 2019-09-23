@@ -1,8 +1,6 @@
 # oliverbenns.com
 
-## Install
-- `yarn install`
+- Build: `go run main.go`.
+- Static server: `go run server.go`.
+- Updates: [https://trello.com/b/K6Cd5uUX/personal-website](https://trello.com/b/K6Cd5uUX/personal-website)
 
-## Run
-- In development: `npm run develop`.
-- Static build: `npm run build`.
