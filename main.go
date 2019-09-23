@@ -19,16 +19,16 @@ func createPages() {
 	}
 
 	for _, file := range files {
-		if !strings.Contains(file.Name(), ".html") || file.Name() == "index.html" {
+		if !strings.Contains(file.Name(), ".tmpl") || file.Name() == "index.tmpl" {
 			continue
 		}
 
 		source := fmt.Sprintf("src/pages/%s", file.Name())
 
-		t, _ := template.ParseFiles("src/templates/layout.html", source)
+		t, _ := template.ParseFiles("src/templates/layout.tmpl", source)
 		var tpl bytes.Buffer
 
-		folderName := strings.Replace(file.Name(), ".html", "", -1)
+		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
 
 		type PageDocument struct {
 			Path string
@@ -146,7 +146,7 @@ func reversePosts(posts []Post) []Post {
 
 func createPosts() {
 	posts := getPosts()
-	t, _ := template.ParseFiles("src/templates/layout.html", "src/templates/post.html")
+	t, _ := template.ParseFiles("src/templates/layout.tmpl", "src/templates/post.tmpl")
 
 	for _, post := range posts {
 		var tpl bytes.Buffer
@@ -186,7 +186,7 @@ func createPosts() {
 
 func createHome() {
 	var eerr error
-	t, eerr := template.ParseFiles("src/templates/layout.html", "src/pages/index.html")
+	t, eerr := template.ParseFiles("src/templates/layout.tmpl", "src/pages/index.tmpl")
 	posts := getPosts()
 	posts = reversePosts(posts)
 
