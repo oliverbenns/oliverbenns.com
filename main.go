@@ -20,15 +20,15 @@ type Document struct {
 
 var staticPages = map[string]Document{
 	"src/pages/index.tmpl": {
-		Description: "This is the home description",
+		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
 	},
 	"src/pages/posts.tmpl": {
 		Title:       "Posts",
-		Description: "This is the posts description",
+		Description: "A list of all blog posts.",
 	},
 	"src/pages/about.tmpl": {
 		Title:       "About",
-		Description: "This is the about description",
+		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
 	},
 	"src/pages/contact.tmpl": {
 		Title:       "Contact",
