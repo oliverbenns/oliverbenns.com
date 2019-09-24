@@ -110,11 +110,6 @@ section {
   flex: 1;
 }
 
-/* @TODO: These can probably just be inside <article> eventually */
-section > *:first-child {
-  margin-top: 0;
-}
-
 section a {
   border-bottom: 1px solid white;
 }
