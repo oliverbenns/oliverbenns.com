@@ -22,6 +22,10 @@ var staticPages = map[string]Document{
 	"src/pages/index.tmpl": {
 		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
 	},
+	"src/pages/404.tmpl": {
+		Title:       "Not Found",
+		Description: "Page not found.",
+	},
 	"src/pages/posts.tmpl": {
 		Title:       "Posts",
 		Description: "A list of all blog posts.",
