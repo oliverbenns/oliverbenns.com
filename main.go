@@ -28,11 +28,11 @@ var staticPages = map[string]Document{
 	},
 	"src/pages/about.tmpl": {
 		Title:       "About",
-		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
+		Description: "Experience and skillset of Oliver Benns, a Software Engineer currently based in Norwich, United Kingdom.",
 	},
 	"src/pages/contact.tmpl": {
 		Title:       "Contact",
-		Description: "Ways to get in contact with me - through email or social media.",
+		Description: "Ways to get in contact with Oliver Benns - through email or social media.",
 	},
 }
 
