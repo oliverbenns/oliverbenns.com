@@ -10,6 +10,7 @@ import "gopkg.in/russross/blackfriday.v2"
 import "github.com/gosimple/slug"
 import "time"
 import "github.com/PuerkitoBio/goquery"
+import "sync"
 
 type Document struct {
 	Title       string
@@ -216,14 +217,25 @@ func createPosts() {
 	}
 }
 
+func worker(wg *sync.WaitGroup, task func()) {
+	task()
+	wg.Done()
+}
+
 func main() {
 	start := time.Now()
 	os.RemoveAll("dist")
 	os.Mkdir("dist", 0755)
 
-	createPosts()
-	copyAssets()
-	createPages()
+	var wg sync.WaitGroup
+
+	wg.Add(3)
+	
+	go worker(&wg, createPosts)	
+	go worker(&wg, createPages)
+	go worker(&wg, copyAssets)
+
+	wg.Wait()
 
 	elapsed := time.Since(start)
 	fmt.Printf("Built in %s\n", elapsed)
