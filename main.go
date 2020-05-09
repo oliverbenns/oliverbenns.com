@@ -1,16 +1,19 @@
 package main
 
-import "os"
-import "io/ioutil"
-import "fmt"
-import "strings"
-import "text/template"
-import "bytes"
-import "gopkg.in/russross/blackfriday.v2"
-import "github.com/gosimple/slug"
-import "time"
-import "github.com/PuerkitoBio/goquery"
-import "sync"
+import (
+	"bytes"
+	"fmt"
+	"io/ioutil"
+	"os"
+	"strings"
+	"sync"
+	"text/template"
+	"time"
+
+	"github.com/PuerkitoBio/goquery"
+	"github.com/gosimple/slug"
+	"gopkg.in/russross/blackfriday.v2"
+)
 
 type Document struct {
 	Title       string
@@ -83,10 +86,10 @@ func createPages() {
 		os.MkdirAll(directory, 0755)
 
 		destination := fmt.Sprintf("%s/index.html", directory)
-		saveErr := ioutil.WriteFile(destination, tpl.Bytes(), 0644)
+		err = ioutil.WriteFile(destination, tpl.Bytes(), 0644)
 
-		if saveErr != nil {
-			panic(saveErr)
+		if err != nil {
+			panic(err)
 		}
 	}
 }
@@ -109,10 +112,10 @@ func copyAssets() {
 		}
 
 		destination := fmt.Sprintf("dist/assets/%s", file.Name())
-		saveErr := ioutil.WriteFile(destination, data, 0644)
+		err = ioutil.WriteFile(destination, data, 0644)
 
-		if saveErr != nil {
-			panic(saveErr)
+		if err != nil {
+			panic(err)
 		}
 	}
 }
@@ -122,7 +125,7 @@ type Post struct {
 	Description string
 	Date        string
 	Path        string
-	Content     []byte
+	Content     string
 }
 
 func getPosts() (posts []Post) {
@@ -137,32 +140,37 @@ func getPosts() (posts []Post) {
 			continue
 		}
 
-		date := strings.Replace(file.Name(), ".md", "", -1)
-
 		path := fmt.Sprintf("src/posts/%s", file.Name())
-		data, eerr := ioutil.ReadFile(path)
+		data, err := ioutil.ReadFile(path)
 
-		if eerr != nil {
-			panic(eerr)
+		if err != nil {
+			panic(err)
 		}
 
-		html := blackfriday.Run(data)
-		reader := strings.NewReader(string(html))
-		doc, _ := goquery.NewDocumentFromReader(reader)
-		title := doc.Find("h1").First().Text()
-
-		post := Post{
-			Title:       title,
-			Description: doc.Find("p").First().Text(),
-			Date:        date,
-			Path:        fmt.Sprintf("/posts/%s", slug.Make(title)),
-			Content:     html,
-		}
+		post := parsePost(file, data)
 
 		posts = append(posts, post)
 	}
 
 	return posts
+}
+
+func parsePost(file os.FileInfo, data []byte) Post {
+	date := strings.Replace(file.Name(), ".md", "", -1)
+
+	html := blackfriday.Run(data)
+	reader := bytes.NewReader(html)
+	doc, _ := goquery.NewDocumentFromReader(reader)
+	title := doc.Find("h1").First().Remove().Text()
+	formattedHtml, _ := doc.Html()
+
+	return Post{
+		Title:       title,
+		Description: doc.Find("p").First().Text(),
+		Date:        date,
+		Path:        fmt.Sprintf("/posts/%s", slug.Make(title)),
+		Content:     formattedHtml,
+	}
 }
 
 func reversePosts(posts []Post) []Post {
@@ -184,18 +192,34 @@ func createPosts() {
 	for _, post := range posts {
 		var tpl bytes.Buffer
 
+		type Date struct {
+			Label string
+			Value string
+		}
+
 		type Document struct {
 			Title       string
 			Description string
 			Path        string
+			Date        Date
 			Content     string
+		}
+
+		date, err := time.Parse("2006-01-02", post.Date)
+
+		if err != nil {
+			panic(err)
 		}
 
 		doc := Document{
 			Title:       post.Title,
 			Description: post.Description,
 			Path:        post.Path,
-			Content:     string(post.Content),
+			Date: Date{
+				Label: date.Format("2 January 2006"),
+				Value: post.Date,
+			},
+			Content: post.Content,
 		}
 
 		t.Execute(&tpl, doc)
@@ -203,16 +227,16 @@ func createPosts() {
 		path := fmt.Sprintf("dist%s", post.Path)
 		filePath := fmt.Sprintf("%s/index.html", path)
 
-		err := os.MkdirAll(path, 0755)
+		err = os.MkdirAll(path, 0755)
 
 		if err != nil {
 			panic(err)
 		}
 
-		eerr := ioutil.WriteFile(filePath, tpl.Bytes(), 0644)
+		err = ioutil.WriteFile(filePath, tpl.Bytes(), 0644)
 
-		if eerr != nil {
-			panic(eerr)
+		if err != nil {
+			panic(err)
 		}
 	}
 }
@@ -230,8 +254,8 @@ func main() {
 	var wg sync.WaitGroup
 
 	wg.Add(3)
-	
-	go worker(&wg, createPosts)	
+
+	go worker(&wg, createPosts)
 	go worker(&wg, createPages)
 	go worker(&wg, copyAssets)
 

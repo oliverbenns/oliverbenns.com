@@ -135,12 +135,22 @@ section a {
   border-bottom: 1px solid white;
 }
 
+section h1 {
+  margin-bottom: 0.25em;
+}
+
+
 section h2,
 section h3,
 section h4,
 section h5,
 section h6 {
   margin-top: 2em;
+}
+
+section time {
+  margin-bottom: 2em;
+  display: block;
 }
 
 /* Nav */
