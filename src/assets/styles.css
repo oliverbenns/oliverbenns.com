@@ -70,7 +70,7 @@ h3 {
 */
 
 code {
-  padding: .1em .2em;
+  padding: 0.1em 0.2em;
   background: #000;
   color: #ccc;
 }
@@ -102,10 +102,9 @@ a:hover {
 
 /* https://stackoverflow.com/questions/14970891/css-selection-color-behaving-strangely-on-chrome */
 ::selection {
-  background: rgba(255, 255, 255, .99);
+  background: rgba(255, 255, 255, 0.99);
   color: #000;
 }
-
 
 table {
   border-collapse: collapse;
@@ -139,7 +138,6 @@ section h1 {
   margin-bottom: 0.25em;
 }
 
-
 section h2,
 section h3,
 section h4,
@@ -163,6 +161,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
+  margin-right: 0.1em;
 }
 
 /* Content */
@@ -194,13 +193,17 @@ iframe {
   max-width: 100%;
 }
 
-
 /* Footer */
 
 footer {
   display: flex;
   justify-content: space-between;
   margin: 20px 20px 0;
+}
+
+footer nav ul li {
+  margin-right: 0;
+  margin-left: 0.1em;
 }
 
 footer img {
