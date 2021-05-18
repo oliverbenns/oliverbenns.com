@@ -23,29 +23,29 @@ type Document struct {
 }
 
 var staticPages = map[string]Document{
-	"src/pages/index.tmpl": {
+	"assets/pages/index.tmpl": {
 		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
 	},
-	"src/pages/404.tmpl": {
+	"assets/pages/404.tmpl": {
 		Title:       "Not Found",
 		Description: "Page not found.",
 	},
-	"src/pages/posts.tmpl": {
+	"assets/pages/posts.tmpl": {
 		Title:       "Posts",
 		Description: "A list of all blog posts.",
 	},
-	"src/pages/about.tmpl": {
+	"assets/pages/about.tmpl": {
 		Title:       "About",
 		Description: "Experience and skillset of Oliver Benns, a Software Engineer currently based in Norwich, United Kingdom.",
 	},
-	"src/pages/contact.tmpl": {
+	"assets/pages/contact.tmpl": {
 		Title:       "Contact",
 		Description: "Ways to get in contact with Oliver Benns - through email or social media.",
 	},
 }
 
 func createPages() {
-	files, err := ioutil.ReadDir("src/pages")
+	files, err := ioutil.ReadDir("assets/pages")
 
 	if err != nil {
 		panic(err)
@@ -59,9 +59,9 @@ func createPages() {
 			continue
 		}
 
-		source := fmt.Sprintf("src/pages/%s", file.Name())
+		source := fmt.Sprintf("assets/pages/%s", file.Name())
 
-		t, _ := template.ParseFiles("src/templates/layout.tmpl", source)
+		t, _ := template.ParseFiles("assets/templates/layout.tmpl", source)
 		var tpl bytes.Buffer
 
 		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
@@ -97,14 +97,14 @@ func createPages() {
 func copyAssets() {
 	os.MkdirAll("dist/assets", 0755)
 
-	files, err := ioutil.ReadDir("src/assets")
+	files, err := ioutil.ReadDir("assets/static")
 
 	if err != nil {
 		panic(err)
 	}
 
 	for _, file := range files {
-		source := fmt.Sprintf("src/assets/%s", file.Name())
+		source := fmt.Sprintf("assets/static/%s", file.Name())
 		data, err := ioutil.ReadFile(source)
 
 		if err != nil {
@@ -129,7 +129,7 @@ type Post struct {
 }
 
 func getPosts() (posts []Post) {
-	files, err := ioutil.ReadDir("src/posts")
+	files, err := ioutil.ReadDir("assets/posts")
 
 	if err != nil {
 		panic(err)
@@ -140,7 +140,7 @@ func getPosts() (posts []Post) {
 			continue
 		}
 
-		path := fmt.Sprintf("src/posts/%s", file.Name())
+		path := fmt.Sprintf("assets/posts/%s", file.Name())
 		data, err := ioutil.ReadFile(path)
 
 		if err != nil {
@@ -187,7 +187,7 @@ func reversePosts(posts []Post) []Post {
 
 func createPosts() {
 	posts := getPosts()
-	t, _ := template.ParseFiles("src/templates/layout.tmpl", "src/templates/post.tmpl")
+	t, _ := template.ParseFiles("assets/templates/layout.tmpl", "assets/templates/post.tmpl")
 
 	for _, post := range posts {
 		var tpl bytes.Buffer

@@ -1,0 +1,231 @@
+/* Typography and resets */
+
+@font-face {
+  font-family: "Book";
+  src: url("/assets/lt-book.woff2") format("woff2"),
+    url("/assets/lt-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
+    serif;
+  line-height: 1.4;
+  background: #161616;
+  color: #ddd;
+  max-width: 640px;
+  padding: 5px 0;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-family: Book, Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+h1 {
+  /* Since when did browsers start making h1 + h2 the same size? */
+  font-size: 2em;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.75em;
+  }
+}
+
+h3 {
+  font-size: 1.24em;
+}
+
+/*
+  Github apply styles to <pre> when blocks of <code> are present instead of
+  single bg/color styles for <code>. Not sure why but replicating for now.
+*/
+
+code {
+  padding: 0.1em 0.2em;
+  background: #000;
+  color: #ccc;
+}
+
+pre {
+  background: #000;
+  color: #ccc;
+  padding: 20px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  color: inherit;
+}
+
+a {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* https://stackoverflow.com/questions/14970891/css-selection-color-behaving-strangely-on-chrome */
+::selection {
+  background: rgba(255, 255, 255, 0.99);
+  color: #000;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+/* Header */
+
+header {
+  margin: 100px 20px 0;
+}
+
+/* Section */
+
+section {
+  margin: 20px;
+  flex: 1;
+}
+
+section a {
+  border-bottom: 1px solid white;
+}
+
+section h1 {
+  margin-bottom: 0.25em;
+}
+
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  margin-top: 2em;
+}
+
+section time {
+  margin-bottom: 2em;
+  display: block;
+}
+
+/* Nav */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 0.1em;
+}
+
+/* Content */
+
+#link-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#link-list li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#link-list a {
+  border-bottom: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  #link-list span {
+    display: none;
+  }
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 0;
+}
+
+footer nav ul li {
+  margin-right: 0;
+  margin-left: 0.1em;
+}
+
+footer img {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+footer a {
+  display: block;
+  line-height: 1;
+}
+
+footer a:hover img {
+  filter: invert(1);
+}
+
+@media only screen and (max-width: 640px) {
+  footer {
+    display: block;
+  }
+
+  footer nav {
+    margin-top: 5px;
+  }
+}
