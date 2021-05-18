@@ -1,0 +1,3 @@
+[submodule "assets/posts"]
+	path = assets/posts
+	url = git@github.com:oliverbenns/blog.git
