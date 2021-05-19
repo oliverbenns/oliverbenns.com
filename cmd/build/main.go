@@ -23,22 +23,22 @@ type Document struct {
 }
 
 var staticPages = map[string]Document{
-	"assets/pages/index.tmpl": {
+	"assets/pages/index.html": {
 		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
 	},
-	"assets/pages/404.tmpl": {
+	"assets/pages/404.html": {
 		Title:       "Not Found",
 		Description: "Page not found.",
 	},
-	"assets/pages/posts.tmpl": {
+	"assets/pages/posts.html": {
 		Title:       "Posts",
 		Description: "A list of all blog posts.",
 	},
-	"assets/pages/about.tmpl": {
+	"assets/pages/about.html": {
 		Title:       "About",
 		Description: "Experience and skillset of Oliver Benns, a Software Engineer currently based in Norwich, United Kingdom.",
 	},
-	"assets/pages/contact.tmpl": {
+	"assets/pages/contact.html": {
 		Title:       "Contact",
 		Description: "Ways to get in contact with Oliver Benns - through email or social media.",
 	},
@@ -55,21 +55,21 @@ func createPages() {
 	posts = reversePosts(posts)
 
 	for _, file := range files {
-		if !strings.Contains(file.Name(), ".tmpl") {
+		if !strings.Contains(file.Name(), ".html") {
 			continue
 		}
 
 		source := fmt.Sprintf("assets/pages/%s", file.Name())
 
-		t, _ := template.ParseFiles("assets/templates/layout.tmpl", source)
+		t, _ := template.ParseFiles("assets/templates/layout.html", source)
 		var tpl bytes.Buffer
 
-		folderName := strings.Replace(file.Name(), ".tmpl", "", -1)
+		folderName := strings.Replace(file.Name(), ".html", "", -1)
 
 		doc := staticPages[source]
 		doc.Posts = posts
 
-		if file.Name() != "index.tmpl" {
+		if file.Name() != "index.html" {
 			doc.Path = fmt.Sprintf("/%s", folderName)
 		}
 
@@ -77,7 +77,7 @@ func createPages() {
 
 		var directory string
 
-		if file.Name() == "index.tmpl" {
+		if file.Name() == "index.html" {
 			directory = "dist"
 		} else {
 			directory = fmt.Sprintf("dist/%s", folderName)
@@ -187,7 +187,7 @@ func reversePosts(posts []Post) []Post {
 
 func createPosts() {
 	posts := getPosts()
-	t, _ := template.ParseFiles("assets/templates/layout.tmpl", "assets/templates/post.tmpl")
+	t, _ := template.ParseFiles("assets/templates/layout.html", "assets/templates/post.html")
 
 	for _, post := range posts {
 		var tpl bytes.Buffer
