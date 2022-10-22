@@ -24,7 +24,7 @@ type Document struct {
 
 var staticPages = map[string]Document{
 	"assets/pages/index.html": {
-		Description: "Oliver Benns is a Software Engineer currently based in Norwich, United Kingdom.",
+		Description: "Oliver Benns is a Software Engineer currently based in London, United Kingdom.",
 	},
 	"assets/pages/404.html": {
 		Title:       "Not Found",
@@ -36,7 +36,7 @@ var staticPages = map[string]Document{
 	},
 	"assets/pages/about.html": {
 		Title:       "About",
-		Description: "Experience and skillset of Oliver Benns, a Software Engineer currently based in Norwich, United Kingdom.",
+		Description: "Experience and skillset of Oliver Benns, a Software Engineer currently based in London, United Kingdom.",
 	},
 	"assets/pages/contact.html": {
 		Title:       "Contact",
