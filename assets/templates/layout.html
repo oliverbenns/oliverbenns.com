@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{if .Title}}{{.Title}} - {{end}}Oliver Benns</title>
+		<title>
+			{{if .Title}}{{.Title}} - Oliver Benns{{else}}Oliver
+			Benns - Software Engineer{{end}}
+		</title>
 		<meta name="description" content="{{.Description}}" />
 		<meta charset="utf-8" />
 		<meta
@@ -10,7 +13,7 @@
 		/>
 		<meta
 			property="og:title"
-			content="{{if .Title}}{{.Title}}{{else}}Oliver Benns - Software Engineer{{end}}"
+			content="{{if .Title}}{{.Title}} - Oliver Benns{{else}}Oliver Benns - Software Engineer{{end}}"
 		/>
 		<meta property="og:description" content="{{.Description}}" />
 		<meta property="og:type" content="website" />
