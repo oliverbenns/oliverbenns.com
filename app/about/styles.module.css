@@ -1,0 +1,43 @@
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+}
+
+.markerPulse {
+  animation: pulse 4s ease-out infinite;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.marker {
+  box-shadow: 0 16px 31px rgba(0, 0, 0, 0.13),
+    0 10.3704px 18.1551px rgba(0, 0, 0, 0.099),
+    0 6.16296px 9.87407px rgba(0, 0, 0, 0.079),
+    0 3.2px 5.0375px rgba(0, 0, 0, 0.065),
+    0 1.3037px 2.52593px rgba(0, 0, 0, 0.051),
+    0 0.296296px 1.21991px rgba(0, 0, 0, 0.031);
+}
+
+.markerBorder {
+  background: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.12)
+  );
+}
+
+:global(.mapboxgl-ctrl) {
+  display: none !important;
+}
