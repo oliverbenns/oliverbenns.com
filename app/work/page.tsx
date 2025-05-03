@@ -74,7 +74,7 @@ export default function Work() {
           description="oliverbenns"
         />
         <ContactCard
-          href="https://github.com/oliverbenns/uk-housing-developments"
+          href="https://oliverbenns.github.io/uk-housing-developments"
           icon={<FaGithub />}
           label="UK Developments"
           id="github"
