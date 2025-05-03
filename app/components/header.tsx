@@ -4,6 +4,10 @@ import { usePathname } from "next/navigation";
 
 export const Header = () => {
   const pathname = usePathname();
+
+  const chunks = pathname.split("/");
+  const first = chunks[1];
+
   return (
     <header className="flex justify-between items-center py-4 sm:py-12">
       <a
@@ -18,7 +22,7 @@ export const Header = () => {
             <a
               href="/about"
               className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
-                pathname === "/about" ? "border-b-1 border-gray-800" : ""
+                first === "about" ? "border-b-1 border-gray-800" : ""
               }`}
             >
               About
@@ -28,7 +32,7 @@ export const Header = () => {
             <a
               href="/work"
               className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
-                pathname === "/work" ? "border-b-1 border-gray-800" : ""
+                first === "work" ? "border-b-1 border-gray-800" : ""
               }`}
             >
               Work
@@ -38,7 +42,7 @@ export const Header = () => {
             <a
               href="/contact"
               className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
-                pathname === "/contact" ? "border-b-1 border-gray-800" : ""
+                first === "contact" ? "border-b-1 border-gray-800" : ""
               }`}
             >
               Contact

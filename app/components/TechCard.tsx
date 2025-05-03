@@ -1,7 +1,9 @@
-import { FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
+import { FaAws, FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
 
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiPostgresql } from "react-icons/si";
+import { DiGoogleCloudPlatform, DiRedis, DiRubyRough } from "react-icons/di";
+import { SiPostgresql, SiPulumi, SiTerraform } from "react-icons/si";
+
 import { IconType } from "react-icons/lib";
 
 type Option = {
@@ -37,6 +39,30 @@ const options: Record<string, Option> = {
   docker: {
     label: "Docker",
     icon: FaDocker,
+  },
+  pulumi: {
+    label: "Pulumi",
+    icon: SiPulumi,
+  },
+  gcp: {
+    label: "GCP",
+    icon: DiGoogleCloudPlatform,
+  },
+  redis: {
+    label: "Redis",
+    icon: DiRedis,
+  },
+  aws: {
+    label: "AWS",
+    icon: FaAws,
+  },
+  ruby: {
+    label: "Ruby",
+    icon: DiRubyRough,
+  },
+  terraform: {
+    label: "Terraform",
+    icon: SiTerraform,
   },
 };
 

@@ -8,6 +8,15 @@ export default function Work() {
         <li>
           <Link href="/work/property-track">Property Track</Link>
         </li>
+        <li>
+          <Link href="/work/elwood">Elwood</Link>
+        </li>
+        <li>
+          <Link href="/work/countingup">Countingup</Link>
+        </li>
+        <li>
+          <Link href="/work/general-assembly">General Assembly</Link>
+        </li>
       </ul>
     </main>
   );
