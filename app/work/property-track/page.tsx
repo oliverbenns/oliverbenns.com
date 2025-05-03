@@ -21,8 +21,8 @@ export default function PropertyTrack() {
 
           <p className="text-gray-600">
             Property Track is a Google Chrome extension for Rightmove, the UK's
-            largest property platform that hosts and represents ~90% of all
-            properties across England, Scotland, and Wales.
+            largest property platform that hosts ~90% of all properties across
+            England, Scotland, and Wales.
           </p>
 
           <div>
@@ -52,8 +52,8 @@ export default function PropertyTrack() {
             listings.
           </p>
           <p className="text-gray-600">
-            So I built a solution that keeps track of asking price changes. This
-            information is then injected into Rightmove pages as a user browses
+            So I built a solution that keeps track of asking price changes. The
+            extension injects this data into Rightmove pages as a user browses
             for properties. It has over 1250 monthly active users.
           </p>
         </div>
@@ -70,12 +70,12 @@ export default function PropertyTrack() {
             London
           </h2>
           <p className="text-gray-600">
-            My property search concentrated on central London. It was still
-            painful experience.
+            My property search concentrated on central London and continued to
+            be a painful experience.
           </p>
           <p className="text-gray-600">
-            Central London primarily offers apartments. This was challenging due
-            to potentially high service charges, ground rent, and often limited
+            The city primarily offers apartments. This was challenging due to
+            potentially high service charges, ground rent, and often limited
             living space.
           </p>
 
@@ -104,14 +104,18 @@ export default function PropertyTrack() {
         />
         <div className="flex flex-col gap-4 max-w-sm mx-auto">
           <p className="text-gray-600">
-            With this frustration, I built a website that extends Rightmove's
-            filters. It adds options for service charge, ground rent, floor size
-            and tenure, while eliminating auction properties.
+            With this frustration, I built a website that extends these filters.
+            It adds options for service charge, ground rent, floor size and
+            tenure, while eliminating auction properties.
           </p>
           <p className="text-gray-600">
             The prototype displays results in a map view with additional
             information such as price per square foot, parking and whether a
             garden exists, without the user having to open each listing.
+          </p>
+          <p className="text-gray-600">
+            Since this project, Rightmove have responded to these user complains
+            and added some of these filters mentioned above.
           </p>
 
           <div>
@@ -141,7 +145,7 @@ export default function PropertyTrack() {
           </p>
 
           <p className="text-gray-600">
-            The project has let to serving market data for a commercial real
+            The project has led to serving market data for a commercial real
             estate agent, allowing them to understand market conditions as well
             as provide opportunities for lead generation.
           </p>
