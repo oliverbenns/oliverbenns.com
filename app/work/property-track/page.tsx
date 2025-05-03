@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import { TechCard } from "@/app/components/TechCard";
+
 export default function PropertyTrack() {
   return (
     <main className="py-6 sm:py-12">
@@ -63,7 +66,7 @@ export default function PropertyTrack() {
         />
 
         <div className="flex flex-col gap-4 max-w-sm mx-auto">
-          <h2 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+          <h2 className="text-lg font-bold text-gray-800 leading-snug tracking-tight">
             London
           </h2>
           <p className="text-gray-600">
@@ -133,16 +136,31 @@ export default function PropertyTrack() {
 
         <div className="flex flex-col gap-4 max-w-sm mx-auto">
           <p className="text-gray-600">
-            Since October 2023, Property Track has tracked over xx listings and
-            xx price changes.
+            Since October 2023, Property Track has tracked over 4.5m listings
+            and 2m price changes.
           </p>
 
           <p className="text-gray-600">
-            The market data has served a commercial real estate agent, allowing
-            them to understand market conditions as well as provide
-            opportunities for lead generation.
+            The project has let to serving market data for a commercial real
+            estate agent, allowing them to understand market conditions as well
+            as provide opportunities for lead generation.
           </p>
         </div>
+
+        <ul className="flex flex-wrap gap-2 w-sm mx-auto">
+          <li>
+            <TechCard id="typescript" />
+          </li>
+          <li>
+            <TechCard id="go" />
+          </li>
+          <li>
+            <TechCard id="postgresql" />
+          </li>
+          <li>
+            <TechCard id="docker" />
+          </li>
+        </ul>
       </div>
     </main>
   );

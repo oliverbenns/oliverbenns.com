@@ -2,10 +2,7 @@
 
 import Image from "next/image";
 
-import { FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
-
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiPostgresql } from "react-icons/si";
+import { TechCard } from "@/app/components/TechCard";
 import Map, { Marker } from "react-map-gl/mapbox";
 
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -97,34 +94,25 @@ export default function About() {
 
           <ul className="flex flex-wrap gap-2 mt-2">
             <li>
-              <TechCard icon={<FaReact title="React" />} label="React" />
+              <TechCard id="react" />
             </li>
             <li>
-              <TechCard
-                icon={<BiLogoTypescript title="Typescript" />}
-                label="Typescript"
-              />
+              <TechCard id="typescript" />
             </li>
             <li>
-              <TechCard
-                icon={<FaReact title="React Native" />}
-                label="React Native"
-              />
+              <TechCard id="reactNative" />
             </li>
             <li>
-              <TechCard icon={<FaGolang title="Go" />} label="Go" />
+              <TechCard id="go" />
             </li>
             <li>
-              <TechCard icon={<FaNodeJs title="Node" />} label="Node" />
+              <TechCard id="node" />
             </li>
             <li>
-              <TechCard
-                icon={<SiPostgresql title="PostgreSQL" />}
-                label="PostgreSQL"
-              />
+              <TechCard id="postgresql" />
             </li>
             <li>
-              <TechCard icon={<FaDocker title="Docker" />} label="Docker" />
+              <TechCard id="docker" />
             </li>
           </ul>
         </div>
@@ -132,24 +120,6 @@ export default function About() {
     </main>
   );
 }
-
-type TechCardProps = {
-  icon: React.ReactNode;
-  label: string;
-};
-
-const TechCard = ({ icon, label }: TechCardProps) => {
-  return (
-    <div className="py-1 px-2 flex gap-2 border border-gray-200 rounded-sm items-center">
-      <div className="text-2xl w-[12px] h-[12px] flex items-center justify-center">
-        {icon}
-      </div>
-      <div className="flex flex-col">
-        <span className="text-xs">{label}</span>
-      </div>
-    </div>
-  );
-};
 
 const PulseMarker = () => {
   return (
