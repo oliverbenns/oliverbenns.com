@@ -17,7 +17,7 @@ export const Header = () => {
           <li>
             <a
               href="/about"
-              className={`text-sm text-gray-800 ${
+              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 pathname === "/about" ? "border-b-1 border-gray-800" : ""
               }`}
             >
@@ -27,7 +27,7 @@ export const Header = () => {
           <li>
             <a
               href="/work"
-              className={`text-sm text-gray-800 ${
+              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 pathname === "/work" ? "border-b-1 border-gray-800" : ""
               }`}
             >
@@ -37,7 +37,7 @@ export const Header = () => {
           <li>
             <a
               href="/contact"
-              className={`text-sm text-gray-800 ${
+              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 pathname === "/contact" ? "border-b-1 border-gray-800" : ""
               }`}
             >

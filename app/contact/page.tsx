@@ -10,7 +10,7 @@ import styles from "./styles.module.css";
 
 export default function Contact() {
   return (
-    <main className="pt-12">
+    <main className="py-6 sm:py-12">
       <h1 className="sr-only">Contact</h1>
       <div className="flex gap-2 flex-col sm:flex-row">
         <ContactCard

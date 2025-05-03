@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-import { FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
+import { FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
 
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiPostgresql } from "react-icons/si";
-import Map, { AttributionControl, Marker } from "react-map-gl/mapbox";
+import Map, { Marker } from "react-map-gl/mapbox";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -22,11 +22,9 @@ const _Map = () => {
     <Map
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
       mapStyle="mapbox://styles/mapbox/streets-v12"
-      initialViewState={{
-        longitude: long,
-        latitude: lat,
-        zoom: zoom,
-      }}
+      longitude={long}
+      latitude={lat}
+      zoom={zoom}
     >
       <Marker longitude={long} latitude={lat} style={{ width: 28, height: 28 }}>
         <PulseMarker />
@@ -37,95 +35,98 @@ const _Map = () => {
 
 export default function About() {
   return (
-    <main className="pt-12">
-      <div className="flex flex-col gap-12">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-bold text-gray-800 leading-snug tracking-tight">
-              Hello!
-            </h2>
-            <p className="text-gray-600 text-sm">
-              I’m a Full Stack Software Engineer with 12 years of experience. I
-              really enjoy working with fast-paced startups where I can ship
-              fast and deliver value.
-            </p>
+    <main className="py-6 sm:py-12">
+      <div className="flex flex-col gap-6 sm:gap-12 ">
+        <Image
+          src="/profile-2.jpg"
+          alt="Oliver Benns"
+          className="rounded-lg object-cover w-4/5 mx-auto"
+          width={1400}
+          height={933}
+        />
 
-            <p className="text-gray-600 text-sm">
-              I bring a no-nonsense, minimalist engineering approach with
-              versatile full-stack capabilities. My expertise in backend
-              systems, frontend development, and visual design allows me to
-              deliver complete solutions without unnecessary complexity -
-              exactly what fast-moving companies need.
-            </p>
-          </div>
-          <Image
-            src="/team-meeting.jpg"
-            alt="Team collaborating on web development project"
-            className="rounded-lg object-cover w-full h-full aspect-square"
-            width={400}
-            height={400}
-          />
+        <div className="flex flex-col gap-4 max-w-sm mx-auto">
+          <h2 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+            Hello
+          </h2>
+
+          <p className="text-gray-600">
+            I’m a Full Stack Software Engineer with 12 years of experience. I
+            really enjoy working with fast-paced startups where I can ship fast
+            and deliver value.
+          </p>
+
+          <p className="text-gray-600">
+            I bring a no-nonsense, minimalist engineering approach with
+            versatile full-stack capabilities. My expertise in backend systems,
+            frontend development, and visual design allows me to deliver
+            complete solutions without unnecessary complexity - exactly what
+            fast-moving companies need.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-square overflow-hidden">
-            <_Map />
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-bold text-gray-800 leading-snug tracking-tight">
-              Current Status
-            </h2>
-            <p className="text-gray-600 text-sm">
-              After years of building solutions for companies, I'm now
-              transitioning to freelance work and personal projects that allow
-              me to make a direct impact for clients worldwide.
-            </p>
-            <p className="text-gray-600 text-sm">
-              Currently based in London, I’ll be working from Bangkok in the
-              second half of 2025 using remote work as a core strength,
-              regardless of time zones.
-            </p>
-          </div>
+        <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-video overflow-hidden">
+          <_Map />
+        </div>
+        <div className="flex flex-col gap-4 max-w-sm mx-auto">
+          <h2 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+            Status
+          </h2>
+          <p className="text-gray-600">
+            After years of building solutions for companies, I'm now
+            transitioning to freelance work and personal projects that allow me
+            to make a direct impact for clients worldwide.
+          </p>
+          <p className="text-gray-600">
+            Currently based in London, I’ll be working from Bangkok in the
+            second half of 2025 using remote work as a core strength, regardless
+            of time zones.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-bold text-gray-800 leading-snug tracking-tight">
-              Technology
-            </h2>
+        <div className="flex flex-col gap-4 max-w-sm mx-auto">
+          <h2 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+            Tech Stack
+          </h2>
 
-            <p className="text-gray-600 text-sm">
-              My diverse background has taught me to be ruthlessly pragmatic -
-              selecting the right tool for the right job. Whilst I adapt quickly
-              to any tech stack, my go-to technologies include:
-            </p>
+          <p className="text-gray-600">
+            My diverse background has taught me to be ruthlessly pragmatic -
+            selecting the right tool for the right job. Whilst I adapt quickly
+            to any tech stack, my go-to technologies include:
+          </p>
 
-            <div className="flex flex-wrap gap-2 mt-2">
+          <ul className="flex flex-wrap gap-2 mt-2">
+            <li>
               <TechCard icon={<FaReact title="React" />} label="React" />
+            </li>
+            <li>
               <TechCard
                 icon={<BiLogoTypescript title="Typescript" />}
                 label="Typescript"
               />
+            </li>
+            <li>
               <TechCard
                 icon={<FaReact title="React Native" />}
                 label="React Native"
               />
-
+            </li>
+            <li>
+              <TechCard icon={<FaGolang title="Go" />} label="Go" />
+            </li>
+            <li>
               <TechCard icon={<FaNodeJs title="Node" />} label="Node" />
+            </li>
+            <li>
               <TechCard
                 icon={<SiPostgresql title="PostgreSQL" />}
                 label="PostgreSQL"
               />
-            </div>
-          </div>
-          <Image
-            src="/team-meeting.jpg"
-            alt="Team collaborating on web development project"
-            className="rounded-lg object-cover w-full h-full aspect-square"
-            width={400}
-            height={400}
-          />
+            </li>
+            <li>
+              <TechCard icon={<FaDocker title="Docker" />} label="Docker" />
+            </li>
+          </ul>
         </div>
       </div>
     </main>
