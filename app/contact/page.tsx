@@ -7,6 +7,12 @@ import {
 } from "react-icons/fa6";
 
 import styles from "./styles.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact - Oliver Benns",
+  description: "Full stack software engineer",
+};
 
 export default function Contact() {
   return (

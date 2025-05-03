@@ -1,7 +1,14 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ContactCard } from "../contact/page";
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import { ContactCard } from "../contact/page";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work - Oliver Benns",
+  description: "Full stack software engineer",
+};
+
 export default function Work() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">

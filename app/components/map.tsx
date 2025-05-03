@@ -1,0 +1,47 @@
+"use client";
+
+import MapboxMap, { Marker } from "react-map-gl/mapbox";
+
+import styles from "./map.module.css";
+
+import "mapbox-gl/dist/mapbox-gl.css";
+
+// Map coordinates for London
+const long = -0.11183162281793102;
+const lat = 51.51125954616958;
+const zoom = 12.1;
+
+export const Map = () => {
+  return (
+    <MapboxMap
+      mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
+      mapStyle="mapbox://styles/mapbox/streets-v12"
+      longitude={long}
+      latitude={lat}
+      zoom={zoom}
+    >
+      <Marker longitude={long} latitude={lat} style={{ width: 28, height: 28 }}>
+        <PulseMarker />
+      </Marker>
+    </MapboxMap>
+  );
+};
+
+const PulseMarker = () => {
+  return (
+    <div className="relative h-full w-full">
+      <div
+        className={`absolute left-1/2 top-1/2 rounded-full bg-[#679BFF] opacity-20 s-3 ${styles.markerPulse}`}
+      ></div>
+      <div
+        className={`relative flex h-full w-full items-center justify-center rounded-full bg-white ${styles.marker}`}
+      >
+        <div className="absolute inset-[3px] rounded-full bg-[#679BFF]"></div>
+        <div
+          className={`absolute inset-[3px] rounded-full ${styles.markerBorder}`}
+        ></div>
+        <div className="absolute inset-[5px] rounded-full bg-[#679BFF]"></div>
+      </div>
+    </div>
+  );
+};

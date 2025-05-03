@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-import { TechCard } from "@/app/components/TechCard";
+import { TechCard } from "@/app/components/tech-card";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Property Track - Oliver Benns",
+  description: "Full stack software engineer",
+};
 
 export default function PropertyTrack() {
   return (

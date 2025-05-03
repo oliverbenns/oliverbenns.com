@@ -1,5 +1,11 @@
-import { TechCard } from "@/app/components/TechCard";
+import { TechCard } from "@/app/components/tech-card";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "General Assembly - Oliver Benns",
+  description: "Full stack software engineer",
+};
 
 export default function GeneralAssembly() {
   return (
