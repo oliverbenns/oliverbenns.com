@@ -4,7 +4,7 @@ export default function Home() {
     <main className="py-24">
       <div className="flex flex-col gap-8">
         <h1 className="text-xl sm:text-4xl font-bold text-gray-800 sm:leading-12 tracking-tight text-pretty">
-          I'm a Full Stack Software Engineer for early stage startups. Let's
+          I'm a full stack software engineer for early stage startups. Let's
           build.
         </h1>
 

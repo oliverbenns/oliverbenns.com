@@ -63,7 +63,7 @@ type ContactCardProps = {
   description: string;
 };
 
-const ContactCard = ({
+export const ContactCard = ({
   href,
   icon,
   label,

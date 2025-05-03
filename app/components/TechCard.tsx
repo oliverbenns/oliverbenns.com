@@ -1,7 +1,13 @@
 import { FaAws, FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
 
 import { BiLogoTypescript } from "react-icons/bi";
-import { DiGoogleCloudPlatform, DiRedis, DiRubyRough } from "react-icons/di";
+import {
+  DiGoogleCloudPlatform,
+  DiRedis,
+  DiRubyRough,
+  DiHeroku,
+  DiMysql,
+} from "react-icons/di";
 import { SiPostgresql, SiPulumi, SiTerraform } from "react-icons/si";
 
 import { IconType } from "react-icons/lib";
@@ -63,6 +69,14 @@ const options: Record<string, Option> = {
   terraform: {
     label: "Terraform",
     icon: SiTerraform,
+  },
+  heroku: {
+    label: "Heroku",
+    icon: DiHeroku,
+  },
+  mysql: {
+    label: "MySQL",
+    icon: DiMysql,
   },
 };
 

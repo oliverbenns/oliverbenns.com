@@ -33,6 +33,7 @@ const _Map = () => {
 export default function About() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+      <h1 className="sr-only">About</h1>
       <Image
         src="/profile-2.jpg"
         alt="Oliver Benns"
@@ -47,9 +48,9 @@ export default function About() {
         </h2>
 
         <p className="text-gray-600">
-          I’m a Full Stack Software Engineer with 12 years of experience. I
-          really enjoy working with fast-paced startups where I can ship fast
-          and deliver value.
+          I'm a full stack software engineer with 12 years of experience. I
+          really enjoy working with fast-paced startups where I can ship with
+          speed and deliver value.
         </p>
 
         <p className="text-gray-600">

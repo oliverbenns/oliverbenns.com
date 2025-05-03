@@ -7,7 +7,7 @@ export default function Elwood() {
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
       <Image
         src="/elwood/banner.png"
-        alt="@TODO"
+        alt="Elwood Logo"
         className="rounded-lg mx-auto"
         width={1200}
         height={630}
@@ -37,7 +37,7 @@ export default function Elwood() {
 
       <Image
         src="/elwood/spreader.png"
-        alt="@TODO"
+        alt="Spreader Tool on Elwood"
         className="rounded-lg mx-auto"
         width={821}
         height={489}
@@ -65,7 +65,7 @@ export default function Elwood() {
       </div>
       <Image
         src="/elwood/ems.png"
-        alt="@TODO"
+        alt="Elwood EMS solution"
         className="rounded-lg mx-auto"
         width={1094}
         height={742}

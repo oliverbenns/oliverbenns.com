@@ -7,7 +7,7 @@ export default function PropertyTrack() {
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
       <Image
         src="/property-track/banner.png"
-        alt="@TODO"
+        alt="Property Track Logo"
         className="rounded-lg mx-auto"
         width={1200}
         height={630}
@@ -38,7 +38,7 @@ export default function PropertyTrack() {
 
       <Image
         src="/property-track/price-history.png"
-        alt="@TODO"
+        alt="Widget injected onto Rightmove page"
         className="rounded-lg mx-auto"
         width={1074}
         height={987}
@@ -59,7 +59,7 @@ export default function PropertyTrack() {
 
       <Image
         src="/property-track/selected-property.png"
-        alt="@TODO"
+        alt="Selected property on Property Track website"
         className="rounded-lg mx-auto"
         width={1094}
         height={742}
@@ -97,7 +97,7 @@ export default function PropertyTrack() {
 
       <Image
         src="/property-track/london-filters.png"
-        alt="@TODO"
+        alt="Filters on Property Track website"
         className="rounded-lg mx-auto"
         width={938}
         height={527}
@@ -132,7 +132,7 @@ export default function PropertyTrack() {
 
       <Image
         src="/property-track/london-many.png"
-        alt="@TODO"
+        alt="Map view of London properties on Property Track website"
         className="rounded-lg mx-auto"
         width={1752}
         height={1314}
