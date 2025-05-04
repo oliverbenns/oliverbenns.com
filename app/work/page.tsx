@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { ContactCard } from "../contact/page";
+import { ContactCard } from "@/app/components/contact-card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

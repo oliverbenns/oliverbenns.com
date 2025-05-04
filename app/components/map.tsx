@@ -29,7 +29,7 @@ export const Map = () => {
 
 const PulseMarker = () => {
   return (
-    <div className="relative h-full w-full">
+    <div className={`relative h-full w-full ${styles.map}`}>
       <div
         className={`absolute left-1/2 top-1/2 rounded-full bg-[#679BFF] opacity-20 s-3 ${styles.markerPulse}`}
       ></div>

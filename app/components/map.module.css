@@ -38,6 +38,8 @@
   );
 }
 
-:global(.mapboxgl-ctrl) {
-  display: none !important;
+.map {
+  :global(.mapboxgl-ctrl) {
+    display: none !important;
+  }
 }
