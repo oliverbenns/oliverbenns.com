@@ -25,8 +25,8 @@ export default function Elwood() {
         </h1>
 
         <p className="text-gray-600">
-          Elwood offers digital asset trading, portfolio and risk management
-          technology to institutional investors.
+          Elwood is a digital asset trading, portfolio and risk management
+          platform for institutional investors.
         </p>
 
         <div>

@@ -20,7 +20,7 @@ export const IconCard = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`p-3 sm:p-4 w-full flex flex-row sm:flex-col gap-4 sm:gap-6 border border-gray-200 rounded-2xl shadow-xs hover:bg-gray-50 items-center sm:items-start ${styles[id]} transition duration-300`}
+      className={`p-4 w-full flex flex-row sm:flex-col gap-4 border border-gray-200 rounded-2xl shadow-xs hover:bg-gray-50 items-center sm:items-start ${styles[id]} transition duration-300`}
     >
       <div
         className={`text-2xl w-[40px] h-[40px] flex items-center justify-center rounded-lg shadow-sm ${styles.icon}`}
