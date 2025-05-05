@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Not Found - Oliver Benns",
   description: "Full stack software engineer",
