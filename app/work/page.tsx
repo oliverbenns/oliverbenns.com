@@ -68,41 +68,39 @@ export default function Work() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-16">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8 w-full sm:w-sm mx-auto">
         {projects.map((project, idx) => (
           <div
-            className={`w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden items-center flex-col-reverse  ${
-              idx % 2 === 0 ? "sm:flex-row-reverse" : ""
-            }`}
+            className={`w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden items-center`}
             key={project.href}
           >
-            <div className="flex flex-col gap-1 w-full sm:w-1/2">
+            <Link href={project.href} className="w-full sm:w-1/3">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={project.imageWidth}
+                height={project.imageHeight}
+                className="rounded-lg aspect-square object-cover"
+              />
+            </Link>
+            <div className="flex flex-col gap-1 w-full sm:w-2/3">
               <h2 className="text-sm font-bold text-gray-800">
                 <Link href={project.href}>{project.title}</Link>
               </h2>
               <span className="text-xs text-gray-500">{project.date}</span>
-              <p className="text-gray-600 text-sm hidden sm:block">
+              <p className="text-gray-600 text-sm hidden sm:block text-xs">
                 {project.description}
               </p>
 
               <div>
                 <Link
                   href={project.href}
-                  className="text-gray-600 border-b-1 border-gray-800 text-sm"
+                  className="text-gray-600 border-b-1 border-gray-800 text-sm text-xs"
                 >
                   View
                 </Link>
               </div>
             </div>
-            <Link href={project.href} className="w-full sm:w-1/2">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={project.imageWidth}
-                height={project.imageHeight}
-                className="rounded-lg"
-              />
-            </Link>
           </div>
         ))}
       </div>
