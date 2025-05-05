@@ -10,8 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Oliver Benns",
-  description: "Full stack software engineer",
+  title: "Oliver Benns | Full Stack Software Engineer",
+  description:
+    "Oliver Benns is a full stack software engineer for early stage startups.",
 };
 
 export default function RootLayout({

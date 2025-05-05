@@ -1,12 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { IconCard } from "@/app/components/icon-card";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work - Oliver Benns",
-  description: "Full stack software engineer",
+  title: "Work - Oliver Benns | Full Stack Software Engineer",
+  description:
+    "Projects and work from Oliver Benns, a full stack software engineer for early stage startups.",
 };
 
 const projects = [

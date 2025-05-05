@@ -3,11 +3,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="py-24">
+      <h1 className="sr-only">Oliver Benns</h1>
       <div className="flex flex-col gap-8">
-        <h1 className="text-4xl font-bold text-gray-800 sm:leading-12 tracking-tight text-pretty">
-          I'm a freelance full stack software engineer for early stage startups.
-          Let's build.
-        </h1>
+        <p className="text-4xl font-bold text-gray-800 sm:leading-12 tracking-tight text-pretty">
+          I'm a full stack software engineer for early stage startups. Let’s
+          build.
+        </p>
 
         <div>
           <Link

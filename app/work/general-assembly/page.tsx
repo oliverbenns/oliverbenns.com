@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "General Assembly - Oliver Benns",
-  description: "Full stack software engineer",
+  title: "General Assembly - Oliver Benns | Full Stack Software Engineer",
+  description:
+    "Student platform enabling students to access coursework and complete assessments.",
 };
 
 export default function GeneralAssembly() {

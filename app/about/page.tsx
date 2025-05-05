@@ -6,8 +6,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About - Oliver Benns",
-  description: "Full stack software engineer",
+  title: "About - Oliver Benns | Full Stack Software Engineer",
+  description:
+    "About Oliver Benns, a full stack software engineer for early stage startups.",
 };
 
 export default function About() {

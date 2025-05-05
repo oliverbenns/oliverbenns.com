@@ -10,8 +10,9 @@ import type { Metadata } from "next";
 import { IconCard } from "../components/icon-card";
 
 export const metadata: Metadata = {
-  title: "Contact - Oliver Benns",
-  description: "Full stack software engineer",
+  title: "Contact - Oliver Benns | Full Stack Software Engineer",
+  description:
+    "Contact Oliver Benns, a full stack software engineer for early stage startups.",
 };
 
 export default function Contact() {

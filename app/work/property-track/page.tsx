@@ -4,8 +4,9 @@ import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Property Track - Oliver Benns",
-  description: "Full stack software engineer",
+  title: "Property Track - Oliver Benns | Full Stack Software Engineer",
+  description:
+    "Google Chrome extension for Rightmove, the UK's largest property platform.",
 };
 
 export default function PropertyTrack() {
