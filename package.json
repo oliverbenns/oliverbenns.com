@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "mapbox-gl": "^3.11.1",
     "next": "15.3.1",
