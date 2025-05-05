@@ -23,13 +23,12 @@ export default function Contact() {
         </h1>
 
         <p className="text-gray-600">
-          Good news! I'm currently transitioning into freelance work and
-          available for new projects.
+          Good news! I'm transitioning into freelance work and available for new
+          projects.
         </p>
 
         <p className="text-gray-600">
-          If you'd like to discuss how we can collaborate together, send me a
-          message at{" "}
+          If you'd like to discuss how we can collaborate together, email me at{" "}
           <a
             href="mailto:oliver@benns.co"
             className="text-gray-600 border-b-1 border-gray-800"

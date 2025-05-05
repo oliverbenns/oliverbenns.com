@@ -43,7 +43,7 @@ const projects = [
   {
     title: "General Assembly",
     description:
-      "Student platform enabling users to access coursework and complete assessments.",
+      "Student platform enabling students to access coursework and complete assessments.",
     date: "2018 - 2019",
     href: "/work/general-assembly",
     image: "/general-assembly/banner.png",
@@ -61,41 +61,53 @@ export default function Work() {
         </h1>
         <p className="text-gray-600">
           I've worked with a range of companies, from startups to established
-          companies across a variety of industries. With my recent transition to
-          freelancing, the work below represents projects from previous
-          employment.
+          organisations across a variety of industries.
+        </p>
+        <p className="text-gray-600">
+          With my transition to freelance being recent, the work below mostly
+          represents projects from previous employments.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-16">
         {projects.map((project, idx) => (
-          <Link
-            href={project.href}
-            className={`p-4 w-full flex flex-row gap-4 sm:gap-6 hover:bg-gray-50 border border-gray-200 rounded-2xl shadow-xs overflow-hidden items-center ${
-              idx % 2 === 1 ? "flex-row-reverse" : ""
+          <div
+            className={`w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden items-center flex-col-reverse  ${
+              idx % 2 === 0 ? "sm:flex-row-reverse" : ""
             }`}
             key={project.href}
           >
-            <div className="flex flex-col gap-1 w-1/2">
+            <div className="flex flex-col gap-1 w-full sm:w-1/2">
               <h2 className="text-sm font-bold text-gray-800">
-                {project.title}
+                <Link href={project.href}>{project.title}</Link>
               </h2>
               <span className="text-xs text-gray-500">{project.date}</span>
-              <p className="text-gray-600 text-xs hidden sm:block">
+              <p className="text-gray-600 text-sm hidden sm:block">
                 {project.description}
               </p>
+
+              <div>
+                <Link
+                  href={project.href}
+                  className="text-gray-600 border-b-1 border-gray-800 text-sm"
+                >
+                  View
+                </Link>
+              </div>
             </div>
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={project.imageWidth}
-              height={project.imageHeight}
-              className="rounded-lg w-1/2"
-            />
-          </Link>
+            <Link href={project.href} className="w-full sm:w-1/2">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={project.imageWidth}
+                height={project.imageHeight}
+                className="rounded-lg"
+              />
+            </Link>
+          </div>
         ))}
       </div>
-
+      {/* 
       <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
         <p className="text-gray-600">
           Here are some small open source projects I've worked on.
@@ -124,7 +136,7 @@ export default function Work() {
           id="github"
           description="oliverbenns"
         />
-      </div>
+      </div> */}
     </main>
   );
 }

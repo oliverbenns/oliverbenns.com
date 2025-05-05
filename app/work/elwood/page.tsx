@@ -51,9 +51,9 @@ export default function Elwood() {
 
       <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
         <p className="text-gray-600">
-          As a full stack engineer, I transformed our web application with
-          modern practices, implementing rapid component driven development at
-          the height of the crypto market.
+          As a full stack engineer, I had our web application adopt modern
+          practices, implementing rapid component driven development at the
+          height of the crypto market.
         </p>
         <p className="text-gray-600">
           Following FTX's collapse, market volatility decreased. During this
@@ -81,9 +81,8 @@ export default function Elwood() {
         <p className="text-gray-600">
           With executions on the market picking up, we needed to improve our
           database performance to keep up with the demand. I optimised our
-          datbase by implementing intelligent indexing and data partitioning to
-          ensure timely throughput, dramatically improving response times for
-          our most heavy users.
+          database by implementing intelligent indexing and data partitioning.
+          This dramatically improved response times for our most heavy users.
         </p>
         <p className="text-gray-600">
           Finally, with being one of the only full stack engineers, I delivered

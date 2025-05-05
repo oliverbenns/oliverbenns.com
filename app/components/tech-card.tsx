@@ -1,4 +1,11 @@
-import { FaAws, FaDocker, FaGolang, FaNodeJs, FaReact } from "react-icons/fa6";
+import {
+  FaAws,
+  FaDocker,
+  FaGolang,
+  FaNodeJs,
+  FaReact,
+  FaDigitalOcean,
+} from "react-icons/fa6";
 
 import { BiLogoTypescript } from "react-icons/bi";
 import {
@@ -77,6 +84,10 @@ const options: Record<string, Option> = {
   mysql: {
     label: "MySQL",
     icon: DiMysql,
+  },
+  digitalocean: {
+    label: "Digital Ocean",
+    icon: FaDigitalOcean,
   },
 };
 

@@ -52,8 +52,7 @@ export default function GeneralAssembly() {
         <p className="text-gray-600">
           As a frontend engineer, I developed MyGA, General Assembly's
           comprehensive student portal that enabled users to access coursework,
-          complete assessments, and track achievements. The platform was built
-          to support our students outside of the classroom.
+          complete assessments, and track achievements.
         </p>
 
         <p className="text-gray-600">

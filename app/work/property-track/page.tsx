@@ -76,13 +76,9 @@ export default function PropertyTrack() {
           London
         </h2>
         <p className="text-gray-600">
-          My property search concentrated on central London and continued to be
-          a painful experience.
-        </p>
-        <p className="text-gray-600">
-          The city primarily offers apartments. This was challenging due to
-          potentially high service charges, ground rent, and often limited
-          living space.
+          My property search concentrated on central London apartments and was a
+          painful experience due to potentially high service charges, ground
+          rent, and often limited living space.
         </p>
 
         <p className="text-gray-600">
@@ -117,7 +113,7 @@ export default function PropertyTrack() {
         <p className="text-gray-600">
           The prototype displays results in a map view with additional
           information such as price per square foot, parking and whether a
-          garden exists, without the user having to open each listing.
+          garden exists without the user having to open each listing.
         </p>
         <p className="text-gray-600">
           Since this project, Rightmove have responded to these user complains
@@ -169,6 +165,9 @@ export default function PropertyTrack() {
         </li>
         <li>
           <TechCard id="docker" />
+        </li>
+        <li>
+          <TechCard id="digitalocean" />
         </li>
       </ul>
     </main>

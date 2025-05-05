@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Map } from "@/app/components/map";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About - Oliver Benns",
@@ -27,18 +28,25 @@ export default function About() {
         </h2>
 
         <p className="text-gray-600">
-          I'm a full stack software engineer with 12 years of experience. I
-          really enjoy working with fast-paced startups where I can ship with
-          speed and deliver value.
+          I'm a freelance full stack software engineer with 12 years of
+          experience. I really enjoy working with fast-paced startups where I
+          can ship with speed and deliver value.
         </p>
 
         <p className="text-gray-600">
-          I bring a no-nonsense, minimalist engineering approach with versatile
-          full-stack capabilities. My expertise in backend systems, frontend
-          development, and visual design allows me to deliver complete solutions
-          without unnecessary complexity - exactly what fast-moving companies
-          need.
+          I bring a no-nonsense, minimalist engineering approach with full stack
+          capabilities. My expertise in backend systems, frontend development,
+          and visual design allows me to deliver complete solutions without
+          unnecessary complexity - exactly what fast-moving companies need.
         </p>
+        <div className="mt-2">
+          <Link
+            href="/contact"
+            className="px-4 py-2 rounded-md text-sm text-white bg-gray-800 hover:bg-gray-950 transition-colors"
+          >
+            Hire me
+          </Link>
+        </div>
       </div>
 
       <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-video overflow-hidden">
