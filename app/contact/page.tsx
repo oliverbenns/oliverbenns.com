@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 
 import type { Metadata } from "next";
-import { ContactCard } from "../components/contact-card";
+import { IconCard } from "../components/icon-card";
 
 export const metadata: Metadata = {
   title: "Contact - Oliver Benns",
@@ -19,14 +19,14 @@ export default function Contact() {
     <main className="py-6 sm:py-12">
       <h1 className="sr-only">Contact</h1>
       <div className="flex gap-2 flex-col sm:flex-row">
-        <ContactCard
+        <IconCard
           id="email"
           href="mailto:oliver@benns.co"
           icon={<FaRegEnvelope title="Email" />}
           label="Email"
           description="oliver@benns.co"
         />
-        <ContactCard
+        <IconCard
           id="linkedin"
           href="https://www.linkedin.com/in/oliverbenns/"
           icon={<FaLinkedinIn title="LinkedIn" />}
@@ -35,21 +35,21 @@ export default function Contact() {
         />
       </div>
       <div className="flex gap-2 mt-2 flex-col sm:flex-row">
-        <ContactCard
+        <IconCard
           id="github"
           href="https://github.com/oliverbenns"
           icon={<FaGithub title="GitHub" />}
           label="GitHub"
           description="oliverbenns"
         />
-        <ContactCard
+        <IconCard
           id="instagram"
           href="https://www.instagram.com/oliverbenns/"
           icon={<FaInstagram title="Instagram" />}
           label="Instagram"
           description="oliverbenns"
         />
-        <ContactCard
+        <IconCard
           id="x"
           href="https://x.com/oliverbenns"
           icon={<FaXTwitter title="X (Twitter)" />}

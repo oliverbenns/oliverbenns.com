@@ -1,6 +1,6 @@
-import styles from "./contact-card.module.css";
+import styles from "./icon-card.module.css";
 
-type ContactCardProps = {
+type IconCardProps = {
   href: string;
   icon: React.ReactNode;
   label: string;
@@ -8,13 +8,13 @@ type ContactCardProps = {
   description: string;
 };
 
-export const ContactCard = ({
+export const IconCard = ({
   href,
   icon,
   label,
   id,
   description,
-}: ContactCardProps) => {
+}: IconCardProps) => {
   return (
     <a
       href={href}

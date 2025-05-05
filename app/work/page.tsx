@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { ContactCard } from "@/app/components/contact-card";
+import { IconCard } from "@/app/components/icon-card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function Work() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-2">
         <Link
           href="/work/property-track"
           className={`w-full flex flex-row sm:flex-col gap-4 sm:gap-6 border border-gray-200 rounded-2xl shadow-xs overflow-hidden`}
@@ -73,21 +73,21 @@ export default function Work() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <ContactCard
+        <IconCard
           href="https://oliverbenns.github.io/joy-theme-creator"
           icon={<FaGithub />}
           label="Joy Theme Creator"
           id="github"
           description="oliverbenns"
         />
-        <ContactCard
+        <IconCard
           href="https://oliverbenns.github.io/uk-housing-developments"
           icon={<FaGithub />}
           label="UK Developments"
           id="github"
           description="oliverbenns"
         />
-        <ContactCard
+        <IconCard
           href="https://github.com/oliverbenns/whatsapp-chatgpt"
           icon={<FaGithub />}
           label="WhatsApp ChatGPT"
