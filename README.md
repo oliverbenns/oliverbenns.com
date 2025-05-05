@@ -1,6 +1,10 @@
 # oliverbenns.com
 
-Personal website
+Portfolio website
+
+## Self built?
+
+If you are here and expecting a self-built website with Go,, the last commit can be accessed [here](https://github.com/oliverbenns/oliverbenns.com/tree/0213794b960712379edee80928c81f147d6aa792).
 
 ## Gatsby?
 
