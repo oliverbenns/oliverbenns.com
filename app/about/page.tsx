@@ -14,7 +14,7 @@ export default function About() {
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
       <h1 className="sr-only">About</h1>
       <Image
-        src="/profile-2.jpg"
+        src="/profile.jpg"
         alt="Oliver Benns"
         className="rounded-lg w-full sm:w-4/5 mx-auto"
         width={1400}
