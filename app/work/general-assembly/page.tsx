@@ -97,7 +97,7 @@ export default function GeneralAssembly() {
       </div>
 
       <Image
-        src="/general-assembly/cog-intro-2.png"
+        src="/general-assembly/cog-intro.png"
         alt="Cog intro page"
         className="rounded-lg mx-auto"
         width={2102}
