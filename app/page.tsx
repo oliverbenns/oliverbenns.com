@@ -10,12 +10,18 @@ export default function Home() {
           build.
         </p>
 
-        <div>
+        <div className="flex gap-2">
           <Link
             href="/contact"
             className="px-4 py-2 rounded-md text-sm text-white bg-gray-800 hover:bg-gray-950 transition-colors"
           >
-            Hire me
+            I'm ready
+          </Link>
+          <Link
+            href="/about"
+            className="px-4 py-2 rounded-md text-sm text-gray-800 bg-white border border-gray-300 hover:bg-gray-100 transition-colors"
+          >
+            Learn more
           </Link>
         </div>
       </div>
