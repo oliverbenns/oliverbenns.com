@@ -13,6 +13,8 @@
     "@types/mapbox-gl": "^3.4.1",
     "mapbox-gl": "^3.11.1",
     "next": "15.3.1",
+    "posthog-js": "^1.258.3",
+    "posthog-node": "^5.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
