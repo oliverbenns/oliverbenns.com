@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Countingup - Oliver Benns | Full Stack Software Engineer",
+  title: "Countingup",
   description:
     "Business current account app with integrated accounting and tax capabilities.",
 };

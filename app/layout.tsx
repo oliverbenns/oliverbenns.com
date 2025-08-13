@@ -9,9 +9,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Oliver Benns | Full Stack Software Engineer",
+  metadataBase: new URL("https://www.oliverbenns.com"),
+  title: {
+    default: "Oliver Benns - Full Stack Software Engineer",
+    template: "%s - Oliver Benns | Full Stack Software Engineer",
+  },
   description:
-    "Oliver Benns is a full stack software engineer for early stage startups.",
+    "Oliver Benns is a Full Stack Software Engineer for early stage startups.",
+  twitter: {
+    card: "summary_large_image",
+    site: "@oliverbenns",
+    creator: "@oliverbenns",
+  },
 };
 
 export default function RootLayout({

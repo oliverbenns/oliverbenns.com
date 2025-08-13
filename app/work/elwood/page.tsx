@@ -4,7 +4,7 @@ import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Elwood - Oliver Benns | Full Stack Software Engineer",
+  title: "Elwood",
   description:
     "Digital asset trading, portfolio and risk management platform for institutional investors.",
 };

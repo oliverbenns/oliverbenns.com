@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Work - Oliver Benns | Full Stack Software Engineer",
+  title: "Work",
   description:
     "Projects and work from Oliver Benns, a full stack software engineer for early stage startups.",
 };
