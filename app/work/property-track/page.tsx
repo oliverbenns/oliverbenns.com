@@ -125,7 +125,6 @@ export default function PropertyTrack() {
             href="https://propertytrack.co/london"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
-            rel="noopener noreferrer"
           >
             View site
           </a>
