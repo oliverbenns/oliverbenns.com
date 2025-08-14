@@ -38,7 +38,6 @@ export default function HedgeUI() {
             href="https://www.hedgeui.com"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
-            rel="noopener noreferrer"
           >
             View
           </a>
