@@ -10,6 +10,16 @@ export const metadata: Metadata = {
 
 const projects = [
   {
+    title: "Hedge UI",
+    description:
+      "React starter kit for building high-quality, customisable trading apps.",
+    date: "2025 - Present",
+    href: "/work/hedge-ui",
+    image: "/hedge-ui/banner.png",
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
+  {
     title: "Property Track",
     description:
       "Google Chrome extension for Rightmove, the UK's largest property platform.",
