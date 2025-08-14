@@ -102,6 +102,21 @@ export default function HedgeUI() {
         <li>
           <TechCard id="typescript" />
         </li>
+        <li>
+          <TechCard id="nextjs" />
+        </li>
+        <li>
+          <TechCard id="go" />
+        </li>
+        <li>
+          <TechCard id="postgresql" />
+        </li>
+        <li>
+          <TechCard id="docker" />
+        </li>
+        <li>
+          <TechCard id="digitalocean" />
+        </li>
       </ul>
     </main>
   );

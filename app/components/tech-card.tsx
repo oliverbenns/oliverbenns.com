@@ -15,7 +15,12 @@ import {
   DiHeroku,
   DiMysql,
 } from "react-icons/di";
-import { SiPostgresql, SiPulumi, SiTerraform } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiPostgresql,
+  SiPulumi,
+  SiTerraform,
+} from "react-icons/si";
 
 import { IconType } from "react-icons/lib";
 
@@ -88,6 +93,10 @@ const options: Record<string, Option> = {
   digitalocean: {
     label: "Digital Ocean",
     icon: FaDigitalOcean,
+  },
+  nextjs: {
+    label: "Next.js",
+    icon: SiNextdotjs,
   },
 };
 

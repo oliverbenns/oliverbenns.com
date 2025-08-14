@@ -156,7 +156,13 @@ export default function PropertyTrack() {
 
       <ul className="flex flex-wrap gap-2 w-full sm:w-sm mx-auto">
         <li>
+          <TechCard id="react" />
+        </li>
+        <li>
           <TechCard id="typescript" />
+        </li>
+        <li>
+          <TechCard id="nextjs" />
         </li>
         <li>
           <TechCard id="go" />
