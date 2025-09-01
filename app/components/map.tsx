@@ -6,12 +6,13 @@ import styles from "./map.module.css";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
-// Map coordinates for London
-const long = -0.11183162281793102;
-const lat = 51.51125954616958;
-const zoom = 12.1;
+type MapProps = {
+  long: number;
+  lat: number;
+  zoom: number;
+};
 
-export const Map = () => {
+export const Map = ({ long, lat, zoom }: MapProps) => {
   return (
     <div className={`relative w-full h-full ${styles.map}`}>
       <MapboxMap

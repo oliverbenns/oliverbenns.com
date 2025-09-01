@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     "About Oliver Benns, a full stack software engineer for early stage startups.",
 };
 
+// Map coordinates for Bangkok
+const long = 100.534544;
+const lat = 13.745597;
+const zoom = 11.75;
+
 export default function About() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
@@ -51,21 +56,20 @@ export default function About() {
       </div>
 
       <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-video overflow-hidden">
-        <Map />
+        <Map long={long} lat={lat} zoom={zoom} />
       </div>
       <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
         <h2 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
           Status
         </h2>
         <p className="text-gray-600">
-          After years of building solutions for companies, I'm now transitioning
-          to freelance work and personal projects that allow me to make a direct
-          impact for clients worldwide.
+          After years of building solutions for companies in employment, I've
+          recently transitioned to freelance work and personal projects where I
+          can use my expertise directly and drive impact fast.
         </p>
         <p className="text-gray-600">
-          Currently based in London, I’ll be working from Bangkok in the second
-          half of 2025 using remote work as a core strength, regardless of time
-          zones.
+          I'm currently based in Bangkok and work remotely for clients
+          worldwide.
         </p>
       </div>
 
