@@ -12,7 +12,7 @@
     "@next/third-parties": "^15.3.1",
     "@types/mapbox-gl": "^3.4.1",
     "mapbox-gl": "^3.11.1",
-    "next": "15.3.1",
+    "next": "^15.3.6",
     "posthog-js": "^1.258.3",
     "posthog-node": "^5.6.0",
     "react": "^19.0.0",
