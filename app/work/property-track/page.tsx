@@ -73,7 +73,7 @@ export default function PropertyTrack() {
 
       <div className="flex flex-col gap-4 w-full">
         <h2 className="text-lg font-bold text-gray-800 tracking-tight">
-          London
+          London Map
         </h2>
         <p className="text-gray-600 text-lg">
           My property search concentrated on central London apartments and was a
@@ -122,11 +122,11 @@ export default function PropertyTrack() {
 
         <div>
           <a
-            href="https://propertytrack.co/london"
+            href="https://propertytrack.co/london/map"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
           >
-            View site
+            View London map
           </a>
         </div>
       </div>
@@ -137,6 +137,41 @@ export default function PropertyTrack() {
         className="rounded-lg mx-auto"
         width={1752}
         height={1314}
+      />
+
+      <div className="flex flex-col gap-4 w-full">
+        <h2 className="text-lg font-bold text-gray-800 tracking-tight">
+          AI Search
+        </h2>
+        <p className="text-gray-600 text-lg">
+          Building on the London site, I added an AI search as an experiment
+          with natural language processing. Users can type queries like "2 bed
+          flat in Bermondsey less than 750k" and get matching listings back,
+          without having to think about filters or syntax.
+        </p>
+        <p className="text-gray-600 text-lg">
+          The feature was a chance to explore how far a language model could
+          replace a traditional search UI, and to ship something end to end
+          using Claude Code.
+        </p>
+
+        <div>
+          <a
+            href="https://propertytrack.co/london/ai-search"
+            className="text-gray-600 border-b-1 border-gray-800"
+            target="_blank"
+          >
+            View AI search
+          </a>
+        </div>
+      </div>
+
+      <Image
+        src="/property-track/ai-search.png"
+        alt="AI search on Property Track returning listings for a natural language query"
+        className="rounded-lg mx-auto"
+        width={1524}
+        height={1228}
       />
 
       <div className="flex flex-col gap-4 w-full">
