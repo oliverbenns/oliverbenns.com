@@ -100,7 +100,7 @@ export default function Work() {
               />
             </Link>
             <div className="flex flex-col gap-1 w-full sm:w-3/5">
-              <h2 className="text-lg font-bold text-gray-800">
+              <h2 className="text-xl font-bold text-gray-800 tracking-tight">
                 <Link href={project.href}>{project.title}</Link>
               </h2>
               <span className="text-base text-gray-500">{project.date}</span>

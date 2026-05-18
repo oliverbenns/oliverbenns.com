@@ -63,7 +63,7 @@ export default function About() {
       </div>
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
           Working with me
         </h2>
         <p className="text-gray-600 text-lg">
@@ -84,7 +84,7 @@ export default function About() {
       </div>
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
           Bangkok-based, clients worldwide
         </h2>
         <p className="text-gray-600 text-lg">
@@ -97,7 +97,7 @@ export default function About() {
       </div>
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
           Tech Stack
         </h2>
 

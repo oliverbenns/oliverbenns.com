@@ -72,7 +72,7 @@ export default function PropertyTrack() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-lg font-bold text-gray-800 tracking-tight">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
           London Map
         </h2>
         <p className="text-gray-600 text-lg">
@@ -140,7 +140,7 @@ export default function PropertyTrack() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-lg font-bold text-gray-800 tracking-tight">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
           AI Search
         </h2>
         <p className="text-gray-600 text-lg">
