@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s - Oliver Benns | Full Stack Software Engineer",
   },
   description:
-    "Oliver Benns is a Full Stack Software Engineer for early stage startups.",
+    "Oliver Benns is a full stack engineer with twelve years across fintech, banking and crypto. I take products from idea to production, solo or with a team.",
   twitter: {
     card: "summary_large_image",
     site: "@oliverbenns",
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <div className="max-w-xl mx-auto px-4 flex flex-col min-h-screen">
+        <div className="w-full max-w-xl mx-auto px-4 flex flex-col min-h-screen">
           <Header />
 
           {children}
