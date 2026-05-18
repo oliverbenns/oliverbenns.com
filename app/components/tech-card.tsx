@@ -21,6 +21,8 @@ import {
   SiPulumi,
   SiTerraform,
 } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 
 import { IconType } from "react-icons/lib";
 
@@ -98,6 +100,14 @@ const options: Record<string, Option> = {
     label: "Next.js",
     icon: SiNextdotjs,
   },
+  csharp: {
+    label: "C#",
+    icon: TbBrandCSharp,
+  },
+  azure: {
+    label: "Azure",
+    icon: VscAzure,
+  },
 };
 
 type TechCardProps = {
@@ -108,12 +118,12 @@ export const TechCard = ({ id }: TechCardProps) => {
   const option = options[id];
 
   return (
-    <div className="py-1 px-2 flex gap-2 border border-gray-200 rounded-sm items-center">
-      <div className="text-2xl w-[12px] h-[12px] flex items-center justify-center">
+    <div className="py-1.5 px-2.5 flex gap-2 border border-gray-200 rounded-sm items-center">
+      <div className="text-3xl w-[18px] h-[18px] flex items-center justify-center">
         <option.icon title={option.label} />
       </div>
       <div className="flex flex-col">
-        <span className="text-xs">{option.label}</span>
+        <span className="text-sm">{option.label}</span>
       </div>
     </div>
   );
