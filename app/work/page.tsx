@@ -66,14 +66,21 @@ export default function Work() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
       <h1 className="sr-only">Work</h1>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4">
         <p className="text-gray-600 text-lg">
-          I've worked with a range of companies, from startups to established
-          organisations across a variety of industries.
+          Twelve years across fintech, banking and crypto, working with startups
+          and established organisations. I take products from idea to production,
+          solo or with a team.
         </p>
         <p className="text-gray-600 text-lg">
-          With my transition to freelance being recent, the work below mostly
-          represents projects from previous employments.
+          Yours could be next -{" "}
+          <Link
+            href="/contact"
+            className="text-gray-600 border-b-1 border-gray-800"
+          >
+            get in touch
+          </Link>
+          .
         </p>
       </div>
 
