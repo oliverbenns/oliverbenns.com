@@ -51,7 +51,7 @@ export default function About() {
             href="/contact"
             className="px-5 py-2.5 rounded-md text-base text-white bg-gray-800 hover:bg-gray-950 transition-colors"
           >
-            Hire me
+            Get in touch
           </Link>
         </div>
       </div>
