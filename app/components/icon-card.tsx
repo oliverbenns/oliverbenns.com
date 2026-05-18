@@ -23,13 +23,13 @@ export const IconCard = ({
       className={`p-4 w-full flex flex-row sm:flex-col gap-4 border border-gray-200 rounded-2xl shadow-xs hover:bg-gray-50 items-center sm:items-start ${styles[id]} transition duration-300`}
     >
       <div
-        className={`text-2xl w-[40px] h-[40px] flex items-center justify-center rounded-lg shadow-sm ${styles.icon}`}
+        className={`text-3xl w-[44px] h-[44px] flex items-center justify-center rounded-lg shadow-sm ${styles.icon}`}
       >
         {icon}
       </div>
       <div className="flex flex-col">
-        <span className="text-sm text-gray-800">{label}</span>
-        <span className="text-xs text-gray-500">{description}</span>
+        <span className="text-base text-gray-800">{label}</span>
+        <span className="text-sm text-gray-500">{description}</span>
       </div>
     </a>
   );
