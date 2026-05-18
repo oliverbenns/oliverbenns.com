@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import { META_DESCRIPTION_BODY } from "../metadata";
 import { metadata as countingupMetadata } from "./countingup/page";
 import { metadata as elwoodMetadata } from "./elwood/page";
 import { metadata as generalAssemblyMetadata } from "./general-assembly/page";
@@ -10,8 +11,7 @@ import { metadata as propertyTrackMetadata } from "./property-track/page";
 
 export const metadata: Metadata = {
   title: "Work",
-  description:
-    "Projects and work from Oliver Benns, a full stack software engineer for early stage startups.",
+  description: `Work by Oliver Benns, ${META_DESCRIPTION_BODY}`,
 };
 
 const projects = [

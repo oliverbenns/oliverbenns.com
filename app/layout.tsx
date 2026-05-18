@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "./components/header";
+import { META_DESCRIPTION_BODY } from "./metadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,8 +15,7 @@ export const metadata: Metadata = {
     default: "Oliver Benns - Full Stack Software Engineer",
     template: "%s - Oliver Benns | Full Stack Software Engineer",
   },
-  description:
-    "Oliver Benns is a full stack engineer with twelve years across fintech, banking and crypto. I take products from idea to production, solo or with a team.",
+  description: `Oliver Benns - ${META_DESCRIPTION_BODY}`,
   twitter: {
     card: "summary_large_image",
     site: "@oliverbenns",

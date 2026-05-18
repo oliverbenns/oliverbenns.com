@@ -8,11 +8,11 @@ import {
 
 import type { Metadata } from "next";
 import { IconCard } from "../components/icon-card";
+import { META_DESCRIPTION_BODY } from "../metadata";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description:
-    "Contact Oliver Benns, a full stack software engineer for early stage startups.",
+  description: `Contact Oliver Benns, ${META_DESCRIPTION_BODY}`,
 };
 
 export default function Contact() {

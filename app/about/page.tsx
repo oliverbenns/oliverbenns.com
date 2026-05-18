@@ -2,13 +2,13 @@ import Image from "next/image";
 
 import { Map } from "@/app/components/map";
 import { TechCard } from "@/app/components/tech-card";
+import { META_DESCRIPTION_BODY } from "@/app/metadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "About Oliver Benns, a full stack software engineer for early stage startups.",
+  description: `About Oliver Benns, ${META_DESCRIPTION_BODY}`,
 };
 
 // Map coordinates for Bangkok
@@ -19,7 +19,6 @@ const zoom = 11.75;
 export default function About() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
-      <h1 className="sr-only">About</h1>
       <Image
         src="/profile.jpg"
         alt="Oliver Benns"
@@ -30,9 +29,9 @@ export default function About() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 tracking-tight text-pretty">
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 tracking-tight text-pretty">
           Hello
-        </h2>
+        </h1>
 
         <p className="text-gray-600 text-lg">
           I'm a freelance full stack software engineer with 12 years of
@@ -46,14 +45,20 @@ export default function About() {
           more in less time - the architecture, review and ownership stay with
           me.
         </p>
-        <p className="text-gray-600 text-lg">I'm available for new projects.</p>
-        <div className="my-4">
+        <div className="my-4 flex items-center gap-4">
           <Link
             href="/contact"
             className="px-5 py-2.5 rounded-md text-base text-white bg-gray-800 hover:bg-gray-950 transition-colors"
           >
             Get in touch
           </Link>
+          <span className="text-sm text-gray-500 flex items-center gap-2">
+            <span className="relative inline-flex w-2 h-2">
+              <span className="absolute inline-flex w-full h-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
+              <span className="relative inline-flex w-2 h-2 rounded-full bg-green-500"></span>
+            </span>
+            Available now
+          </span>
         </div>
       </div>
 
