@@ -18,25 +18,21 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h1 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
-          Contact
-        </h1>
-
-        <p className="text-gray-600">
-          Good news! I'm transitioning into freelance work and available for new
-          projects.
+      <h1 className="sr-only">Contact</h1>
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
+          I'm currently available for new projects.
         </p>
 
-        <p className="text-gray-600">
-          If you'd like to discuss how we can collaborate together, email me at{" "}
+        <p className="text-gray-600 text-lg">
+          If you'd like to work together,{" "}
           <a
             href="mailto:oliver@benns.co"
             className="text-gray-600 border-b-1 border-gray-800"
           >
-            oliver@benns.co
-          </a>
-          .
+            email me
+          </a>{" "}
+          a short note on what you're building and your rough timeline.
         </p>
       </div>
 
