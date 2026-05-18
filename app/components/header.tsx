@@ -12,7 +12,7 @@ export const Header = () => {
     <header className="flex justify-between items-center py-4 sm:py-12">
       <a
         href="/"
-        className="text-gray-800 font-bold leading-snug tracking-tight"
+        className="text-lg sm:text-xl text-gray-800 font-bold tracking-tight"
       >
         <span>Oliver Benns</span>
       </a>
@@ -21,7 +21,7 @@ export const Header = () => {
           <li>
             <a
               href="/about"
-              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
+              className={` text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 first === "about" ? "border-b-1 border-gray-800" : ""
               }`}
             >
@@ -31,7 +31,7 @@ export const Header = () => {
           <li>
             <a
               href="/work"
-              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
+              className={` text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 first === "work" ? "border-b-1 border-gray-800" : ""
               }`}
             >
@@ -41,7 +41,7 @@ export const Header = () => {
           <li>
             <a
               href="/contact"
-              className={`text-sm text-gray-800 hover:border-b-1 hover:border-gray-800 ${
+              className={` text-gray-800 hover:border-b-1 hover:border-gray-800 ${
                 first === "contact" ? "border-b-1 border-gray-800" : ""
               }`}
             >
