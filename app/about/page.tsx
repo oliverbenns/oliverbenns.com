@@ -36,17 +36,18 @@ export default function About() {
 
         <p className="text-gray-600 text-lg">
           I'm a freelance full stack software engineer with 12 years of
-          experience. I really enjoy working with fast-paced startups where I
-          can ship with speed and deliver value.
+          experience, working mostly with startups in fintech, banking and
+          crypto.
         </p>
 
         <p className="text-gray-600 text-lg">
-          I bring a no-nonsense, minimalist engineering approach with full stack
-          capabilities. My expertise in backend systems, frontend development,
-          and visual design allows me to deliver complete solutions without
-          unnecessary complexity - exactly what fast-moving companies need.
+          Across backend, frontend, infrastructure and the design that connects
+          them, I have a bias toward simple over clever. AI tooling lets me ship
+          more in less time - the architecture, review and ownership stay with
+          me.
         </p>
-        <div className="mt-2">
+        <p className="text-gray-600 text-lg">I'm available for new projects.</p>
+        <div className="my-4">
           <Link
             href="/contact"
             className="px-5 py-2.5 rounded-md text-base text-white bg-gray-800 hover:bg-gray-950 transition-colors"
@@ -56,21 +57,37 @@ export default function About() {
         </div>
       </div>
 
+      <div className="flex flex-col gap-4 w-full">
+        <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
+          Working with me
+        </h2>
+        <p className="text-gray-600 text-lg">
+          Most engagements start with a short scoping call to agree what we're
+          building. From there, frequent video calls and regular demos keep us
+          aligned - I work as a partner, not a contractor running on autopilot.
+        </p>
+        <p className="text-gray-600 text-lg">
+          I take on new builds, push prototypes to production, or step in
+          alongside existing teams when you need extra senior hands. Best fit is
+          early or growth-stage teams that want senior engineering without the
+          overhead of a full-time hire.
+        </p>
+      </div>
+
       <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-video overflow-hidden">
         <Map long={long} lat={lat} zoom={zoom} />
       </div>
+
       <div className="flex flex-col gap-4 w-full">
         <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
-          Status
+          Bangkok-based, clients worldwide
         </h2>
         <p className="text-gray-600 text-lg">
-          After years of building solutions for companies in employment, I've
-          recently transitioned to freelance work and personal projects where I
-          can use my expertise directly and drive impact fast.
-        </p>
-        <p className="text-gray-600 text-lg">
-          I'm currently based in Bangkok and work remotely for clients
-          worldwide.
+          I work remotely with clients across the UK, EU and US. My hours flex
+          to overlap with yours, so calls and collaboration happen on your
+          schedule. Outside those hours, progress continues - and someone has
+          eyes on the systems while your team is offline. Happy to fly out for
+          the moments that genuinely benefit from being in the room.
         </p>
       </div>
 
@@ -80,9 +97,7 @@ export default function About() {
         </h2>
 
         <p className="text-gray-600 text-lg">
-          My diverse background has taught me to be ruthlessly pragmatic -
-          selecting the right tool for the right job. Whilst I adapt quickly to
-          any tech stack, my go-to technologies include:
+          Tools I lean on most. I pick up new ones as projects demand.
         </p>
 
         <ul className="flex flex-wrap mt-2 gap-2 w-full">
