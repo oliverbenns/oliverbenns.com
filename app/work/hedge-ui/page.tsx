@@ -21,12 +21,12 @@ export default function HedgeUI() {
         height={630}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h1 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+      <div className="flex flex-col gap-4 w-full">
+        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
           Hedge UI
         </h1>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Hedge UI is a React starter kit for building high-quality,
           customisable trading apps. It provides a set of components and
           utilities that can be used to build trading apps quickly and
@@ -51,8 +51,8 @@ export default function HedgeUI() {
         height={1768}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           After working at{" "}
           <Link href="/work/elwood" className="border-b-1 border-gray-800">
             Elwood
@@ -61,7 +61,7 @@ export default function HedgeUI() {
           similar needs for the trading applications they interact with, whether
           it be crypto, equities, derivatives, or other asset classes.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Despite this, it seems that institutions are often building their own
           inhouse solutions, all of which with similar base features to their
           competitiors. This is wasteful as we are all reinventing the wheel and
@@ -77,8 +77,8 @@ export default function HedgeUI() {
         aria-label="Layout in Hedge UI"
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           With this in mind, I built a framework that allows institutions to get
           started with building their own trading applications quickly and
           efficiently. It is built with React and Typescript and is designed to
@@ -94,7 +94,7 @@ export default function HedgeUI() {
         height={816}
       />
 
-      <ul className="flex flex-wrap gap-2 w-full sm:w-sm mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>

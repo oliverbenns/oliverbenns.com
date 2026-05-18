@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Elwood",
   description:
-    "Digital asset trading, portfolio and risk management platform for institutional investors.",
+    "Digital asset trading, portfolio and risk platform for institutional investors.",
 };
 
 export default function Elwood() {
@@ -20,12 +20,12 @@ export default function Elwood() {
         height={630}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h1 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+      <div className="flex flex-col gap-4 w-full">
+        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
           Elwood
         </h1>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Elwood is a digital asset trading, portfolio and risk management
           platform for institutional investors.
         </p>
@@ -50,19 +50,19 @@ export default function Elwood() {
         height={489}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           As a full stack engineer, I had our web application adopt modern
           practices, implementing rapid component driven development at the
           height of the crypto market.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Following FTX's collapse, market volatility decreased. During this
           time, I guided our team to embrace testing frameworks, static type
           checking, and continuous integration to create a more reliable product
           experience.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           With my standards of software being recognised, I transitioned to the
           market data team. Here, I lead the development of live pricing streams
           for thousands of instruments. The product delivered real-time ticks,
@@ -78,20 +78,20 @@ export default function Elwood() {
         height={742}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           With executions on the market picking up, we needed to improve our
           database performance to keep up with the demand. I optimised our
           database by implementing intelligent indexing and data partitioning.
           This dramatically improved response times for our most heavy users.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Finally, with being one of the only full stack engineers, I delivered
           comprehensive end-to-end functionality on a variety of features across
           the stack.
         </p>
       </div>
-      <ul className="flex flex-wrap gap-2 w-full sm:w-sm mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>

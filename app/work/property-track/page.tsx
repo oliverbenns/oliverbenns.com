@@ -20,12 +20,12 @@ export default function PropertyTrack() {
         height={630}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h1 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+      <div className="flex flex-col gap-4 w-full">
+        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
           Property Track
         </h1>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Property Track is a Google Chrome extension for Rightmove, the UK's
           largest property platform that hosts ~90% of all properties across
           England, Scotland, and Wales.
@@ -50,13 +50,13 @@ export default function PropertyTrack() {
         height={987}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           The project began with my own house search experience, where I found
           myself frustrated with the lack of transparency on the pricing of
           listings.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           So I built a solution that keeps track of asking price changes. The
           extension injects this data into Rightmove pages as a user browses for
           properties. It has over 1250 monthly active users.
@@ -71,17 +71,17 @@ export default function PropertyTrack() {
         height={742}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h2 className="text-lg font-bold text-gray-800 leading-snug tracking-tight">
+      <div className="flex flex-col gap-4 w-full">
+        <h2 className="text-lg font-bold text-gray-800 tracking-tight">
           London
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           My property search concentrated on central London apartments and was a
           painful experience due to potentially high service charges, ground
           rent, and often limited living space.
         </p>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Rightmove's basic filters forced me to open each listing to check if
           it met my criteria. When{" "}
           <a
@@ -104,18 +104,18 @@ export default function PropertyTrack() {
         width={938}
         height={527}
       />
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           With this frustration, I built a website that extends these filters.
           It adds options for service charge, ground rent, floor size and
           tenure, while eliminating auction properties.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           The prototype displays results in a map view with additional
           information such as price per square foot, parking and whether a
           garden exists without the user having to open each listing.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           Since this project, Rightmove have responded to these user complains
           and added some of these filters mentioned above.
         </p>
@@ -139,20 +139,20 @@ export default function PropertyTrack() {
         height={1314}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           Since October 2023, Property Track has tracked over 4.5m listings and
           2m price changes.
         </p>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           The project has led to serving market data for a commercial real
           estate agent, allowing them to understand market conditions as well as
           provide opportunities for lead generation.
         </p>
       </div>
 
-      <ul className="flex flex-wrap gap-2 w-full sm:w-sm mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>

@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "General Assembly",
   description:
-    "Student platform enabling students to access coursework and complete assessments.",
+    "Student platform enabling access to coursework, assessments and awards.",
 };
 
 export default function GeneralAssembly() {
@@ -18,12 +18,12 @@ export default function GeneralAssembly() {
         width={1200}
         height={630}
       />
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <h1 className="text-xl font-bold text-gray-800 leading-snug tracking-tight">
+      <div className="flex flex-col gap-4 w-full">
+        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
           General Assembly
         </h1>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           General Assembly provides bootcamps and courses in technical skills
           like web development, data science, and UX/UI design with campuses
           worldwide.
@@ -49,14 +49,14 @@ export default function GeneralAssembly() {
         height={1777}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           As a frontend engineer, I developed MyGA, General Assembly's
           comprehensive student portal that enabled users to access coursework,
           complete assessments, and track achievements.
         </p>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           The student portal featured diverse interactive learning modules
           including code assessments, multiple-choice questions, ordering
           quizzes, videos and word matching exercises. Thousands of employees
@@ -81,15 +81,15 @@ export default function GeneralAssembly() {
         height={916}
       />
 
-      <div className="flex flex-col gap-4 w-full sm:w-sm mx-auto">
-        <p className="text-gray-600">
+      <div className="flex flex-col gap-4 w-full">
+        <p className="text-gray-600 text-lg">
           Whilst building out MyGA, we found that we lacked some consistency in
           our design approach and branding. Working closely with the design
           team, I built Cog, a component library that created a consistent brand
           and direction for the look and feel of our software.
         </p>
 
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-lg">
           This design system was adopted across many of General Assembly’s
           stack, establishing cohesive visual identity and improving development
           efficiency.
@@ -112,7 +112,7 @@ export default function GeneralAssembly() {
         height={1756}
       />
 
-      <ul className="flex flex-wrap  gap-2 w-full sm:w-sm mx-auto">
+      <ul className="flex flex-wrap  gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>
