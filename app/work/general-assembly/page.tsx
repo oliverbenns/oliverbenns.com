@@ -59,9 +59,9 @@ export default function GeneralAssembly() {
         <p className="text-gray-600 text-lg">
           The student portal featured diverse interactive learning modules
           including code assessments, multiple-choice questions, ordering
-          quizzes, videos and word matching exercises. Thousands of employees
-          from startups to Fortune 500s used the online learning platform to
-          upskill their teams.
+          quizzes, videos and word matching exercises. At the time, the platform
+          served students across 20+ campuses in 6 countries, along with 300+
+          Fortune 500 clients using it to upskill their teams.
         </p>
       </div>
 

@@ -81,6 +81,10 @@ export default function Countingup() {
           get paid by creating an easy to use payment experience for our
           customers' end clients.
         </p>
+        <p className="text-gray-600 text-lg">
+          By the end of 2021, the platform was serving over 40,000 UK small
+          and medium businesses.
+        </p>
       </div>
 
       <ul className="flex flex-wrap  gap-2 w-full">

@@ -65,7 +65,8 @@ export default function Elwood() {
         <p className="text-gray-600 text-lg">
           With my standards of software being recognised, I transitioned to the
           market data team. Here, I lead the development of live pricing streams
-          for thousands of instruments. The product delivered real-time ticks,
+          for thousands of instruments across spot and derivatives markets,
+          including options and futures. The product delivered real-time ticks,
           trades, and order book data to allow our customers to make informed
           decisions in their execution strategies.
         </p>
@@ -82,8 +83,8 @@ export default function Elwood() {
         <p className="text-gray-600 text-lg">
           With executions on the market picking up, we needed to improve our
           database performance to keep up with the demand. I optimised our
-          database by implementing intelligent indexing and data partitioning.
-          This dramatically improved response times for our most heavy users.
+          database by implementing intelligent indexing and data partitioning,
+          taking our most problematic queries from minutes to seconds.
         </p>
         <p className="text-gray-600 text-lg">
           Finally, with being one of the only full stack engineers, I delivered

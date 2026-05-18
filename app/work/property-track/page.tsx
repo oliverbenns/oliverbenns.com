@@ -141,8 +141,8 @@ export default function PropertyTrack() {
 
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
-          Since October 2023, Property Track has tracked over 4.5m listings and
-          2m price changes.
+          Since October 2023, Property Track has tracked over 8m listings and
+          2.4m price changes.
         </p>
 
         <p className="text-gray-600 text-lg">
