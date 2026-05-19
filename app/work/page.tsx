@@ -69,8 +69,8 @@ export default function Work() {
       <div className="flex flex-col gap-4">
         <p className="text-gray-600 text-lg">
           Twelve years across fintech, banking and crypto, working with startups
-          and established organisations. I take products from idea to production,
-          solo or with a team.
+          and established organisations. I take products from idea to
+          production, solo or with a team.
         </p>
         <p className="text-gray-600 text-lg">
           Yours could be next -{" "}
@@ -84,13 +84,13 @@ export default function Work() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8 w-full">
+      <div className="grid grid-cols-1 gap-4 sm:gap-8 w-full">
         {projects.map((project, idx) => (
           <div
-            className={`w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden items-center`}
+            className={`w-full flex flex-row gap-4 sm:gap-6 overflow-hidden items-center`}
             key={project.href}
           >
-            <Link href={project.href} className="w-full sm:w-2/5">
+            <Link href={project.href} className="w-2/5 shrink-0">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -99,8 +99,8 @@ export default function Work() {
                 className="rounded-lg aspect-[4/3] object-cover"
               />
             </Link>
-            <div className="flex flex-col gap-1 w-full sm:w-3/5">
-              <h2 className="text-xl font-bold text-gray-800 tracking-tight">
+            <div className="flex flex-col gap-1 w-3/5">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-800 tracking-tight">
                 <Link href={project.href}>{project.title}</Link>
               </h2>
               <span className="text-base text-gray-500">{project.date}</span>
@@ -120,36 +120,6 @@ export default function Work() {
           </div>
         ))}
       </div>
-      {/* 
-      <div className="flex flex-col gap-4 w-full">
-        <p className="text-gray-600">
-          Here are some small open source projects I've worked on.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <IconCard
-          href="https://oliverbenns.github.io/joy-theme-creator"
-          icon={<FaGithub />}
-          label="Joy Theme Creator"
-          id="github"
-          description="oliverbenns"
-        />
-        <IconCard
-          href="https://oliverbenns.github.io/uk-housing-developments"
-          icon={<FaGithub />}
-          label="UK Developments"
-          id="github"
-          description="oliverbenns"
-        />
-        <IconCard
-          href="https://github.com/oliverbenns/whatsapp-chatgpt"
-          icon={<FaGithub />}
-          label="WhatsApp ChatGPT"
-          id="github"
-          description="oliverbenns"
-        />
-      </div> */}
     </main>
   );
 }
