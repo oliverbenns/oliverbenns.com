@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { META_DESCRIPTION_BODY } from "../metadata";
+import { metadata as bermudaCommercialBankMetadata } from "./bermuda-commercial-bank/page";
 import { metadata as countingupMetadata } from "./countingup/page";
 import { metadata as elwoodMetadata } from "./elwood/page";
 import { metadata as generalAssemblyMetadata } from "./general-assembly/page";
@@ -15,6 +16,15 @@ export const metadata: Metadata = {
 };
 
 const projects = [
+  {
+    title: "Bermuda Commercial Bank",
+    description: bermudaCommercialBankMetadata.description,
+    date: "2025 - 2026",
+    href: "/work/bermuda-commercial-bank",
+    image: "/bermuda-commercial-bank/banner.png",
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
   {
     title: "Hedge UI",
     description: hedgeUIMetadata.description,
