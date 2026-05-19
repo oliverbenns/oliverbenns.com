@@ -59,7 +59,7 @@ export default function PropertyTrack() {
         <p className="text-gray-600 text-lg">
           So I built a solution that keeps track of asking price changes. The
           extension injects this data into Rightmove pages as a user browses for
-          properties. It has over 1250 monthly active users.
+          properties. It has over 2000 monthly active users.
         </p>
       </div>
 
