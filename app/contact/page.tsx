@@ -8,7 +8,7 @@ import {
 
 import type { Metadata } from "next";
 import { IconCard } from "../components/icon-card";
-import { META_DESCRIPTION_BODY } from "../metadata";
+import { META_DESCRIPTION_BODY, SOCIAL_LINKS } from "../metadata";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -47,7 +47,7 @@ export default function Contact() {
           />
           <IconCard
             id="linkedin"
-            href="https://www.linkedin.com/in/oliverbenns/"
+            href={SOCIAL_LINKS.linkedin}
             icon={<FaLinkedinIn title="LinkedIn" />}
             label="LinkedIn"
             description="oliverbenns"
@@ -56,21 +56,21 @@ export default function Contact() {
         <div className="flex gap-2 mt-2 flex-col sm:flex-row">
           <IconCard
             id="github"
-            href="https://github.com/oliverbenns"
+            href={SOCIAL_LINKS.github}
             icon={<FaGithub title="GitHub" />}
             label="GitHub"
             description="oliverbenns"
           />
           <IconCard
             id="instagram"
-            href="https://www.instagram.com/oliverbenns/"
+            href={SOCIAL_LINKS.instagram}
             icon={<FaInstagram title="Instagram" />}
             label="Instagram"
             description="oliverbenns"
           />
           <IconCard
             id="x"
-            href="https://x.com/oliverbenns"
+            href={SOCIAL_LINKS.x}
             icon={<FaXTwitter title="X (Twitter)" />}
             label="X (Twitter)"
             description="oliverbenns"
