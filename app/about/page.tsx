@@ -29,7 +29,7 @@ export default function About() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 tracking-tight text-pretty">
+        <h1 className="text-2xl font-bold text-gray-800 tracking-tight text-pretty">
           Hello
         </h1>
 
