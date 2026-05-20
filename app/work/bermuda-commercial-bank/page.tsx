@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   description: "Corporate banking app for institutional and business clients.",
 };
 
+function MockDataCaption() {
+  return (
+    <figcaption className="text-xs text-gray-400 mt-4 text-center">
+      Mock data - for demonstration purposes only.
+    </figcaption>
+  );
+}
+
 export default function BermudaCommercialBank() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
@@ -35,13 +43,16 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <Image
-        src="/bermuda-commercial-bank/transactions.png"
-        alt="Bermuda Commercial Bank transactions"
-        className="rounded-lg mx-auto border-1 border-gray-200"
-        width={3020}
-        height={1683}
-      />
+      <figure>
+        <Image
+          src="/bermuda-commercial-bank/transactions.png"
+          alt="Bermuda Commercial Bank transactions"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={3020}
+          height={1683}
+        />
+        <MockDataCaption />
+      </figure>
 
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
@@ -58,13 +69,16 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <Image
-        src="/bermuda-commercial-bank/virtual-accounts.png"
-        alt="Bermuda Commercial Bank virtual accounts"
-        className="rounded-lg mx-auto border-1 border-gray-200"
-        width={3022}
-        height={1607}
-      />
+      <figure>
+        <Image
+          src="/bermuda-commercial-bank/virtual-accounts.png"
+          alt="Bermuda Commercial Bank virtual accounts"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={3022}
+          height={1607}
+        />
+        <MockDataCaption />
+      </figure>
 
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
@@ -80,13 +94,16 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <Image
-        src="/bermuda-commercial-bank/profile-edit.png"
-        alt="Bermuda Commercial Bank admin tool"
-        className="rounded-lg mx-auto border-1 border-gray-200"
-        width={2042}
-        height={1492}
-      />
+      <figure>
+        <Image
+          src="/bermuda-commercial-bank/profile-edit.png"
+          alt="Bermuda Commercial Bank admin tool"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={2042}
+          height={1492}
+        />
+        <MockDataCaption />
+      </figure>
 
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
@@ -96,13 +113,16 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <Image
-        src="/bermuda-commercial-bank/color-theme.png"
-        alt="Bermuda Commercial Bank colour theming"
-        className="rounded-lg mx-auto border-1 border-gray-200"
-        width={2993}
-        height={1676}
-      />
+      <figure>
+        <Image
+          src="/bermuda-commercial-bank/color-theme.png"
+          alt="Bermuda Commercial Bank colour theming"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={2993}
+          height={1676}
+        />
+        <MockDataCaption />
+      </figure>
 
       <ul className="flex flex-wrap gap-2 w-full">
         <li>
