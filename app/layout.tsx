@@ -75,7 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <div className="w-full max-w-xl mx-auto px-4 flex flex-col min-h-screen">
+        <div className="w-full mx-auto flex flex-col min-h-screen">
           <Header />
 
           {children}

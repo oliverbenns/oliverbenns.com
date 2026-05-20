@@ -74,7 +74,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
       <h1 className="sr-only">Work</h1>
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
@@ -94,22 +94,22 @@ export default function Work() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:gap-8 w-full">
+      <div className="flex flex-col gap-8 w-full">
         {projects.map((project, idx) => (
           <div
-            className={`w-full flex flex-row gap-4 sm:gap-6 overflow-hidden items-center`}
+            className={`w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-hidden items-center`}
             key={project.href}
           >
-            <Link href={project.href} className="w-2/5 shrink-0">
+            <Link href={project.href} className="w-full sm:w-2/5 shrink-0">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={project.imageWidth}
                 height={project.imageHeight}
-                className="rounded-lg aspect-[4/3] object-cover"
+                className="rounded-lg sm:aspect-[4/3] object-cover"
               />
             </Link>
-            <div className="flex flex-col gap-1 w-3/5">
+            <div className="flex flex-col gap-1 w-full w:w-3/5">
               <h2 className="text-lg font-bold text-gray-800 tracking-tight">
                 <Link href={project.href}>{project.title}</Link>
               </h2>

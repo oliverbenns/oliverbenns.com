@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function GeneralAssembly() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full px-4">
       <Image
         src="/general-assembly/banner.png"
         alt="General Assembly Logo"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto max-w-xl w-full"
         width={1200}
         height={630}
       />
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           General Assembly
         </h1>
@@ -49,7 +49,7 @@ export default function GeneralAssembly() {
         height={1777}
       />
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
           As a frontend engineer, I developed MyGA, General Assembly's
           comprehensive student portal that enabled users to access coursework,
@@ -81,7 +81,7 @@ export default function GeneralAssembly() {
         height={916}
       />
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
           Whilst building out MyGA, we found that we lacked some consistency in
           our design approach and branding. Working closely with the design
@@ -112,7 +112,7 @@ export default function GeneralAssembly() {
         height={1756}
       />
 
-      <ul className="flex flex-wrap gap-2 w-full">
+      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
         <li>
           <TechCard id="react" />
         </li>

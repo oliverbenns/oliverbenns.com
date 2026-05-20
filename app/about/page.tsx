@@ -18,7 +18,7 @@ const zoom = 11.75;
 
 export default function About() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
       <Image
         src="/profile.jpg"
         alt="Oliver Benns"

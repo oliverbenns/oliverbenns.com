@@ -12,16 +12,16 @@ export const metadata: Metadata = {
 
 export default function HedgeUI() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full px-4">
       <Image
         src="/hedge-ui/banner.png"
         alt="Hedge UI Logo"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto max-w-xl w-full"
         width={1200}
         height={630}
       />
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           Hedge UI
         </h1>
@@ -51,7 +51,7 @@ export default function HedgeUI() {
         height={1768}
       />
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
           After working at{" "}
           <Link href="/work/elwood" className="border-b-1 border-gray-800">
@@ -77,7 +77,7 @@ export default function HedgeUI() {
         aria-label="Layout in Hedge UI"
       />
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
           With this in mind, I built a framework that allows institutions to get
           started with building their own trading applications quickly and
@@ -94,7 +94,7 @@ export default function HedgeUI() {
         height={816}
       />
 
-      <ul className="flex flex-wrap gap-2 w-full">
+      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
         <li>
           <TechCard id="react" />
         </li>

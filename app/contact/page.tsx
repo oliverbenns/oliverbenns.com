@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
       <h1 className="sr-only">Contact</h1>
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
