@@ -65,6 +65,7 @@ export default function PropertyTrack() {
           className="rounded-lg w-full"
           width={1200}
           height={630}
+          priority
         />
       </div>
 

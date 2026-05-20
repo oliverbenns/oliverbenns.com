@@ -64,6 +64,7 @@ export default function GeneralAssembly() {
           className="rounded-lg w-full"
           width={1200}
           height={630}
+          priority
         />
       </div>
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">

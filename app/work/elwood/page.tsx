@@ -66,6 +66,7 @@ export default function Elwood() {
           className="rounded-lg w-full"
           width={1200}
           height={630}
+          priority
         />
       </div>
 
