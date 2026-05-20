@@ -21,7 +21,7 @@ export default function PropertyTrack() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
+        <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           Property Track
         </h1>
 

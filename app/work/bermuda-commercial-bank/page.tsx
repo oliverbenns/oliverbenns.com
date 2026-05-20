@@ -28,7 +28,7 @@ export default function BermudaCommercialBank() {
       />
 
       <div className="flex flex-col gap-4 w-full">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
+        <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           Bermuda Commercial Bank
         </h1>
 
