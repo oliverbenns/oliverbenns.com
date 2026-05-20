@@ -45,7 +45,7 @@ export default function About() {
           more in less time - the architecture, review and ownership stay with
           me.
         </p>
-        <div className="my-4 flex items-center gap-4">
+        <div className="flex items-center gap-4 my-4">
           <Link
             href="/contact"
             className="px-5 py-2.5 rounded-md text-base text-white bg-gray-800 hover:bg-gray-950 transition-colors"

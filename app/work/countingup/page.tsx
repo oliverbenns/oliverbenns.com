@@ -87,7 +87,7 @@ export default function Countingup() {
         </p>
       </div>
 
-      <ul className="flex flex-wrap  gap-2 w-full">
+      <ul className="flex flex-wrap gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>

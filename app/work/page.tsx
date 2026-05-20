@@ -76,7 +76,7 @@ export default function Work() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12">
       <h1 className="sr-only">Work</h1>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
           Twelve years across fintech, banking and crypto, working with startups
           and established organisations. I take products from idea to

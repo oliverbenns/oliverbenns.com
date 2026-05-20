@@ -112,7 +112,7 @@ export default function GeneralAssembly() {
         height={1756}
       />
 
-      <ul className="flex flex-wrap  gap-2 w-full">
+      <ul className="flex flex-wrap gap-2 w-full">
         <li>
           <TechCard id="react" />
         </li>
