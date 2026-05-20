@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa6";
 
 import type { Metadata } from "next";
+import type { BreadcrumbList, WithContext } from "schema-dts";
+import { BASE_URL } from "@/app/metadata";
 import { IconCard } from "../components/icon-card";
 import { META_DESCRIPTION_BODY, SOCIAL_LINKS } from "../metadata";
 
@@ -15,9 +17,34 @@ export const metadata: Metadata = {
   description: `Contact Oliver Benns, ${META_DESCRIPTION_BODY}`,
 };
 
+const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: BASE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contact",
+      item: `${BASE_URL}/contact`,
+    },
+  ],
+};
+
 export default function Contact() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <h1 className="sr-only">Contact</h1>
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">

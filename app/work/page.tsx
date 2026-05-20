@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { BreadcrumbList, WithContext } from "schema-dts";
+import { BASE_URL, WORK_TITLE } from "@/app/metadata";
 import { META_DESCRIPTION_BODY } from "../metadata";
 import { metadata as bermudaCommercialBankMetadata } from "./bermuda-commercial-bank/page";
 import { metadata as countingupMetadata } from "./countingup/page";
@@ -11,7 +13,7 @@ import { metadata as hedgeUIMetadata } from "./hedge-ui/page";
 import { metadata as propertyTrackMetadata } from "./property-track/page";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: WORK_TITLE,
   description: `Work by Oliver Benns, ${META_DESCRIPTION_BODY}`,
 };
 
@@ -72,9 +74,34 @@ const projects = [
   },
 ];
 
+const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: BASE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: WORK_TITLE,
+      item: `${BASE_URL}/work`,
+    },
+  ],
+};
+
 export default function Work() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <h1 className="sr-only">Work</h1>
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">

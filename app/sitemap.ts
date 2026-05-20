@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.oliverbenns.com";
+import { BASE_URL } from "./metadata";
 const buildTime = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {

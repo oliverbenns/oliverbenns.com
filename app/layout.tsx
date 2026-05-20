@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { Person, WebSite, WithContext } from "schema-dts";
 import { Header } from "./components/header";
-import { META_DESCRIPTION_BODY, SOCIAL_LINKS } from "./metadata";
+import { BASE_URL, META_DESCRIPTION_BODY, SOCIAL_LINKS } from "./metadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.oliverbenns.com"),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Oliver Benns - Full Stack Software Engineer",
     template: "%s - Oliver Benns | Full Stack Software Engineer",
@@ -31,8 +31,8 @@ const personJsonLd: WithContext<Person> = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Oliver Benns",
-  url: "https://www.oliverbenns.com",
-  image: "https://www.oliverbenns.com/profile.jpg",
+  url: BASE_URL,
+  image: `${BASE_URL}/profile.jpg`,
   jobTitle: "Full Stack Software Engineer",
   description:
     "Freelance full stack software engineer with 12 years of experience across fintech, banking and crypto.",
@@ -50,7 +50,7 @@ const websiteJsonLd: WithContext<WebSite> = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Oliver Benns",
-  url: "https://www.oliverbenns.com",
+  url: BASE_URL,
 };
 
 export default function RootLayout({

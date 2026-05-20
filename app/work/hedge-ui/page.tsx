@@ -4,16 +4,61 @@ import { ExpandableImage } from "@/app/components/expandable-image";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { BreadcrumbList, CreativeWork, WithContext } from "schema-dts";
+import { AUTHOR_JSON_LD, BASE_URL, WORK_TITLE } from "@/app/metadata";
 
-export const metadata: Metadata = {
-  title: "Hedge UI",
-  description:
-    "React starter kit for building high-quality, customisable trading apps.",
+const title = "Hedge UI";
+const description =
+  "React starter kit for building high-quality, customisable trading apps.";
+const slug = "hedge-ui";
+
+export const metadata: Metadata = { title, description };
+
+const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: WORK_TITLE,
+      item: `${BASE_URL}/work`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: title,
+      item: `${BASE_URL}/work/${slug}`,
+    },
+  ],
+};
+
+const creativeWorkJsonLd: WithContext<CreativeWork> = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: title,
+  description,
+  url: `${BASE_URL}/work/${slug}`,
+  image: `${BASE_URL}/${slug}/banner.png`,
+  author: AUTHOR_JSON_LD,
 };
 
 export default function HedgeUI() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(creativeWorkJsonLd),
+        }}
+      />
       <div className="px-4 max-w-xl mx-auto w-full">
         <Image
           src="/hedge-ui/banner.png"
@@ -41,6 +86,7 @@ export default function HedgeUI() {
             href="https://www.hedgeui.com"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
+            rel="noopener noreferrer"
           >
             View
           </a>

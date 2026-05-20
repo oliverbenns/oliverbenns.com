@@ -5,6 +5,8 @@ import { TechCard } from "@/app/components/tech-card";
 import { META_DESCRIPTION_BODY } from "@/app/metadata";
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { BreadcrumbList, WithContext } from "schema-dts";
+import { BASE_URL } from "@/app/metadata";
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,9 +18,34 @@ const long = 100.534544;
 const lat = 13.745597;
 const zoom = 11.75;
 
+const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: BASE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About",
+      item: `${BASE_URL}/about`,
+    },
+  ],
+};
+
 export default function About() {
   return (
     <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-xl mx-auto w-full px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <Image
         src="/profile.jpg"
         alt="Oliver Benns"
