@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="py-24 flex-1 flex flex-col justify-center max-w-xl mx-auto w-full px-4">
       <div className="flex flex-col gap-8">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 tracking-tight text-pretty -mt-24">
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 tracking-tight text-pretty -mt-12">
           Built well. Shipped fast.
         </h1>
 

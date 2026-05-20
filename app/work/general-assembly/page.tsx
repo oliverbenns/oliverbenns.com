@@ -11,15 +11,17 @@ export const metadata: Metadata = {
 
 export default function GeneralAssembly() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full px-4">
-      <Image
-        src="/general-assembly/banner.png"
-        alt="General Assembly Logo"
-        className="rounded-lg mx-auto max-w-xl w-full"
-        width={1200}
-        height={630}
-      />
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full">
+      <div className="px-4 max-w-xl mx-auto w-full">
+        <Image
+          src="/general-assembly/banner.png"
+          alt="General Assembly Logo"
+          className="rounded-lg w-full"
+          width={1200}
+          height={630}
+        />
+      </div>
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           General Assembly
         </h1>
@@ -45,12 +47,12 @@ export default function GeneralAssembly() {
       <ExpandableImage
         src="/general-assembly/all.jpg"
         alt="Overview of General Assembly UI"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={1920}
         height={1777}
       />
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           As a frontend engineer, I developed MyGA, General Assembly's
           comprehensive student portal that enabled users to access coursework,
@@ -69,7 +71,7 @@ export default function GeneralAssembly() {
       <ExpandableImage
         src="/general-assembly/course-intro.png"
         alt="Course intro page on MyGA"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={2096}
         height={1394}
       />
@@ -77,12 +79,12 @@ export default function GeneralAssembly() {
       <ExpandableImage
         src="/general-assembly/course.png"
         alt="Course page on MyGA"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={1680}
         height={916}
       />
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           Whilst building out MyGA, we found that we lacked some consistency in
           our design approach and branding. Working closely with the design
@@ -100,7 +102,7 @@ export default function GeneralAssembly() {
       <ExpandableImage
         src="/general-assembly/cog-intro.png"
         alt="Cog intro page"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={2102}
         height={1396}
       />
@@ -108,12 +110,12 @@ export default function GeneralAssembly() {
       <ExpandableImage
         src="/general-assembly/cog-feedback.png"
         alt="Cog component library"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={1600}
         height={1756}
       />
 
-      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto px-4">
         <li>
           <TechCard id="react" />
         </li>

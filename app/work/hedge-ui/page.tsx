@@ -13,16 +13,18 @@ export const metadata: Metadata = {
 
 export default function HedgeUI() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full px-4">
-      <Image
-        src="/hedge-ui/banner.png"
-        alt="Hedge UI Logo"
-        className="rounded-lg mx-auto max-w-xl w-full"
-        width={1200}
-        height={630}
-      />
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full">
+      <div className="px-4 max-w-xl mx-auto w-full">
+        <Image
+          src="/hedge-ui/banner.png"
+          alt="Hedge UI Logo"
+          className="rounded-lg w-full"
+          width={1200}
+          height={630}
+        />
+      </div>
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           Hedge UI
         </h1>
@@ -47,12 +49,12 @@ export default function HedgeUI() {
       <ExpandableImage
         src="/hedge-ui/main.png"
         alt="Hedge UI overview"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto px-4"
         width={2828}
         height={1768}
       />
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           After working at{" "}
           <Link href="/work/elwood" className="border-b-1 border-gray-800">
@@ -74,11 +76,11 @@ export default function HedgeUI() {
         autoPlay
         loop
         muted
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto px-4"
         aria-label="Layout in Hedge UI"
       />
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           With this in mind, I built a framework that allows institutions to get
           started with building their own trading applications quickly and
@@ -90,12 +92,12 @@ export default function HedgeUI() {
       <ExpandableImage
         src="/hedge-ui/color-theme.png"
         alt="Hedge UI color theme"
-        className="rounded-lg mx-auto border-1 border-gray-200"
+        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
         width={1224}
         height={816}
       />
 
-      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto px-4">
         <li>
           <TechCard id="react" />
         </li>

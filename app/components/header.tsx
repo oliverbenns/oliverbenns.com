@@ -9,7 +9,7 @@ export const Header = () => {
   const first = chunks[1];
 
   return (
-    <header className="flex justify-between items-center py-4 sm:py-12 max-w-xl mx-auto w-full px-4">
+    <header className="flex justify-between items-center py-4 sm:py-8 max-w-xl mx-auto w-full px-4">
       <a
         href="/"
         className="text-lg sm:text-xl text-gray-800 font-bold tracking-tight"

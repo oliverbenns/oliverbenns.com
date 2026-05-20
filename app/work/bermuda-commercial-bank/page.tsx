@@ -12,16 +12,18 @@ export const metadata: Metadata = {
 
 export default function BermudaCommercialBank() {
   return (
-    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full px-4">
-      <Image
-        src="/bermuda-commercial-bank/banner.png"
-        alt="Bermuda Commercial Bank"
-        className="rounded-lg mx-auto max-w-xl w-full"
-        width={1200}
-        height={630}
-      />
+    <main className="py-6 sm:py-12 flex flex-col gap-6 sm:gap-12 max-w-3xl mx-auto w-full">
+      <div className="px-4 max-w-xl mx-auto w-full">
+        <Image
+          src="/bermuda-commercial-bank/banner.png"
+          alt="Bermuda Commercial Bank"
+          className="rounded-lg w-full"
+          width={1200}
+          height={630}
+        />
+      </div>
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
           Bermuda Commercial Bank
         </h1>
@@ -37,7 +39,7 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <figure>
+      <figure className="px-4">
         <ExpandableImage
           src="/bermuda-commercial-bank/transactions.png"
           alt="Bermuda Commercial Bank transactions"
@@ -48,7 +50,7 @@ export default function BermudaCommercialBank() {
         <MockDataCaption />
       </figure>
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           The application replaced and simplified their existing legacy system,
           covering transaction history, reporting, moving money, requesting
@@ -63,7 +65,7 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <figure>
+      <figure className="px-4">
         <ExpandableImage
           src="/bermuda-commercial-bank/virtual-accounts.png"
           alt="Bermuda Commercial Bank virtual accounts"
@@ -74,7 +76,7 @@ export default function BermudaCommercialBank() {
         <MockDataCaption />
       </figure>
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           A significant part of the work was migrating users off the legacy
           authentication system and APIs onto new ones. I took a pragmatic
@@ -88,7 +90,7 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <figure>
+      <figure className="px-4">
         <ExpandableImage
           src="/bermuda-commercial-bank/profile-edit.png"
           alt="Bermuda Commercial Bank admin tool"
@@ -99,7 +101,7 @@ export default function BermudaCommercialBank() {
         <MockDataCaption />
       </figure>
 
-      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           Both applications were built with localisation and colour theming from
           the start, allowing the bank to adapt the experience for different
@@ -107,7 +109,7 @@ export default function BermudaCommercialBank() {
         </p>
       </div>
 
-      <figure>
+      <figure className="px-4">
         <ExpandableImage
           src="/bermuda-commercial-bank/color-theme.png"
           alt="Bermuda Commercial Bank colour theming"
@@ -118,7 +120,7 @@ export default function BermudaCommercialBank() {
         <MockDataCaption />
       </figure>
 
-      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
+      <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto px-4">
         <li>
           <TechCard id="react" />
         </li>
