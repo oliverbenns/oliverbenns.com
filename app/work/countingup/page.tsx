@@ -1,3 +1,4 @@
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default function Countingup() {
         </div>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/countingup/app-tax.png"
         alt="Countingup app showing tax features"
         className="rounded-lg mx-auto"
@@ -64,7 +65,7 @@ export default function Countingup() {
           customers.
         </p>
       </div>
-      <Image
+      <ExpandableImage
         src="/countingup/app-payment.png"
         alt="Countingup app showing payment options"
         className="rounded-lg mx-auto"

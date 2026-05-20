@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 
@@ -42,7 +43,7 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/property-track/price-history.png"
         alt="Widget injected onto Rightmove page"
         className="rounded-lg mx-auto"
@@ -63,7 +64,7 @@ export default function PropertyTrack() {
         </p>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/property-track/selected-property.png"
         alt="Selected property on Property Track website"
         className="rounded-lg mx-auto"
@@ -97,7 +98,7 @@ export default function PropertyTrack() {
         </p>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/property-track/london-filters.png"
         alt="Filters on Property Track website"
         className="rounded-lg mx-auto"
@@ -131,7 +132,7 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/property-track/london-many.png"
         alt="Map view of London properties on Property Track website"
         className="rounded-lg mx-auto"
@@ -166,7 +167,7 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/property-track/ai-search.png"
         alt="AI search on Property Track returning listings for a natural language query"
         className="rounded-lg mx-auto"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { MockDataCaption } from "@/app/components/mock-data-caption";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
@@ -44,7 +45,7 @@ export default function Elwood() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/elwood/overview.png"
           alt="Elwood platform overview"
           className="rounded-lg mx-auto"
@@ -69,7 +70,7 @@ export default function Elwood() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/elwood/order-book.png"
           alt="Elwood order book"
           className="rounded-lg mx-auto max-w-xl w-full"
@@ -91,7 +92,7 @@ export default function Elwood() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/elwood/options-table.png"
           alt="Elwood options table"
           className="rounded-lg mx-auto"

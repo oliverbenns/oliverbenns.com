@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -43,7 +44,7 @@ export default function HedgeUI() {
           </a>
         </div>
       </div>
-      <Image
+      <ExpandableImage
         src="/hedge-ui/main.png"
         alt="Hedge UI overview"
         className="rounded-lg mx-auto"
@@ -86,7 +87,7 @@ export default function HedgeUI() {
         </p>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/hedge-ui/color-theme.png"
         alt="Hedge UI color theme"
         className="rounded-lg mx-auto border-1 border-gray-200"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { MockDataCaption } from "@/app/components/mock-data-caption";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
@@ -37,7 +38,7 @@ export default function BermudaCommercialBank() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/bermuda-commercial-bank/transactions.png"
           alt="Bermuda Commercial Bank transactions"
           className="rounded-lg mx-auto border-1 border-gray-200"
@@ -63,7 +64,7 @@ export default function BermudaCommercialBank() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/bermuda-commercial-bank/virtual-accounts.png"
           alt="Bermuda Commercial Bank virtual accounts"
           className="rounded-lg mx-auto border-1 border-gray-200"
@@ -88,7 +89,7 @@ export default function BermudaCommercialBank() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/bermuda-commercial-bank/profile-edit.png"
           alt="Bermuda Commercial Bank admin tool"
           className="rounded-lg mx-auto border-1 border-gray-200"
@@ -107,7 +108,7 @@ export default function BermudaCommercialBank() {
       </div>
 
       <figure>
-        <Image
+        <ExpandableImage
           src="/bermuda-commercial-bank/color-theme.png"
           alt="Bermuda Commercial Bank colour theming"
           className="rounded-lg mx-auto border-1 border-gray-200"

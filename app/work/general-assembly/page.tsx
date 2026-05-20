@@ -1,3 +1,4 @@
+import { ExpandableImage } from "@/app/components/expandable-image";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -41,10 +42,10 @@ export default function GeneralAssembly() {
         </div>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/general-assembly/all.jpg"
         alt="Overview of General Assembly UI"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto border-1 border-gray-200"
         width={1920}
         height={1777}
       />
@@ -65,18 +66,18 @@ export default function GeneralAssembly() {
         </p>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/general-assembly/course-intro.png"
         alt="Course intro page on MyGA"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto border-1 border-gray-200"
         width={2096}
         height={1394}
       />
 
-      <Image
+      <ExpandableImage
         src="/general-assembly/course.png"
         alt="Course page on MyGA"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto border-1 border-gray-200"
         width={1680}
         height={916}
       />
@@ -96,18 +97,18 @@ export default function GeneralAssembly() {
         </p>
       </div>
 
-      <Image
+      <ExpandableImage
         src="/general-assembly/cog-intro.png"
         alt="Cog intro page"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto border-1 border-gray-200"
         width={2102}
         height={1396}
       />
 
-      <Image
+      <ExpandableImage
         src="/general-assembly/cog-feedback.png"
         alt="Cog component library"
-        className="rounded-lg mx-auto"
+        className="rounded-lg mx-auto border-1 border-gray-200"
         width={1600}
         height={1756}
       />
