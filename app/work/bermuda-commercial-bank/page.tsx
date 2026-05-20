@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { MockDataCaption } from "@/app/components/mock-data-caption";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 
@@ -7,14 +8,6 @@ export const metadata: Metadata = {
   title: "Bermuda Commercial Bank",
   description: "Corporate banking app for institutional and business clients.",
 };
-
-function MockDataCaption() {
-  return (
-    <figcaption className="text-xs text-gray-400 mt-4 text-center">
-      Mock data - for demonstration purposes only.
-    </figcaption>
-  );
-}
 
 export default function BermudaCommercialBank() {
   return (

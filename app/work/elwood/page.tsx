@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { MockDataCaption } from "@/app/components/mock-data-caption";
 import { TechCard } from "@/app/components/tech-card";
 import type { Metadata } from "next";
 
@@ -42,13 +43,16 @@ export default function Elwood() {
         </div>
       </div>
 
-      <Image
-        src="/elwood/spreader.png"
-        alt="Spreader Tool on Elwood"
-        className="rounded-lg mx-auto"
-        width={821}
-        height={489}
-      />
+      <figure>
+        <Image
+          src="/elwood/overview.png"
+          alt="Elwood platform overview"
+          className="rounded-lg mx-auto"
+          width={3048}
+          height={1973}
+        />
+        <MockDataCaption />
+      </figure>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
@@ -62,6 +66,20 @@ export default function Elwood() {
           checking, and continuous integration to create a more reliable product
           experience.
         </p>
+      </div>
+
+      <figure>
+        <Image
+          src="/elwood/order-book.png"
+          alt="Elwood order book"
+          className="rounded-lg mx-auto max-w-xl w-full"
+          width={1020}
+          height={920}
+        />
+        <MockDataCaption />
+      </figure>
+
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
           With my standards of software being recognised, I transitioned to the
           market data team. Here, I lead the development of live pricing streams
@@ -71,13 +89,17 @@ export default function Elwood() {
           decisions in their execution strategies.
         </p>
       </div>
-      <Image
-        src="/elwood/ems.png"
-        alt="Elwood EMS solution"
-        className="rounded-lg mx-auto"
-        width={1094}
-        height={742}
-      />
+
+      <figure>
+        <Image
+          src="/elwood/options-table.png"
+          alt="Elwood options table"
+          className="rounded-lg mx-auto"
+          width={2820}
+          height={1420}
+        />
+        <MockDataCaption />
+      </figure>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto">
         <p className="text-gray-600 text-lg">
@@ -92,6 +114,7 @@ export default function Elwood() {
           the stack.
         </p>
       </div>
+
       <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto">
         <li>
           <TechCard id="react" />
