@@ -79,7 +79,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="w-full border border-gray-200 rounded-4xl shadow-xs aspect-video overflow-hidden">
+      <div className="w-full border border-gray-200 rounded-lg shadow-xs aspect-video overflow-hidden">
         <Map long={long} lat={lat} zoom={zoom} />
       </div>
 
