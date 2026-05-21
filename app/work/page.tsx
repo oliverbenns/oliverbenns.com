@@ -5,12 +5,6 @@ import Link from "next/link";
 import type { BreadcrumbList, WithContext } from "schema-dts";
 import { BASE_URL, WORK_TITLE } from "@/app/metadata";
 import { META_DESCRIPTION_BODY } from "../metadata";
-import { metadata as bermudaCommercialBankMetadata } from "./bermuda-commercial-bank/page";
-import { metadata as countingupMetadata } from "./countingup/page";
-import { metadata as elwoodMetadata } from "./elwood/page";
-import { metadata as generalAssemblyMetadata } from "./general-assembly/page";
-import { metadata as hedgeUIMetadata } from "./hedge-ui/page";
-import { metadata as propertyTrackMetadata } from "./property-track/page";
 
 export const metadata: Metadata = {
   title: WORK_TITLE,
@@ -20,7 +14,8 @@ export const metadata: Metadata = {
 const projects = [
   {
     title: "Bermuda Commercial Bank",
-    description: bermudaCommercialBankMetadata.description,
+    description:
+      "Corporate banking app for institutional and business clients.",
     date: "2025 - 2026",
     href: "/work/bermuda-commercial-bank",
     image: "/bermuda-commercial-bank/banner.png",
@@ -29,7 +24,8 @@ const projects = [
   },
   {
     title: "Hedge UI",
-    description: hedgeUIMetadata.description,
+    description:
+      "React starter kit for building high-quality, customisable trading apps.",
     date: "2025 - Present",
     href: "/work/hedge-ui",
     image: "/hedge-ui/banner.png",
@@ -38,7 +34,8 @@ const projects = [
   },
   {
     title: "Property Track",
-    description: propertyTrackMetadata.description,
+    description:
+      "Google Chrome extension for Rightmove, the UK's largest property platform.",
     date: "2023 - Present",
     href: "/work/property-track",
     image: "/property-track/banner.png",
@@ -47,7 +44,8 @@ const projects = [
   },
   {
     title: "Elwood",
-    description: elwoodMetadata.description,
+    description:
+      "Digital asset trading, portfolio and risk platform for institutional investors.",
     date: "2022 - 2025",
     href: "/work/elwood",
     image: "/elwood/banner.png",
@@ -56,7 +54,8 @@ const projects = [
   },
   {
     title: "Countingup",
-    description: countingupMetadata.description,
+    description:
+      "Business account app with integrated accounting and tax capabilities.",
     date: "2020 - 2021",
     href: "/work/countingup",
     image: "/countingup/banner.png",
@@ -65,7 +64,8 @@ const projects = [
   },
   {
     title: "General Assembly",
-    description: generalAssemblyMetadata.description,
+    description:
+      "Student platform enabling access to coursework, assessments and awards.",
     date: "2018 - 2019",
     href: "/work/general-assembly",
     image: "/general-assembly/banner.png",

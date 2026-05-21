@@ -5,12 +5,13 @@ import Image from "next/image";
 import type { BreadcrumbList, CreativeWork, WithContext } from "schema-dts";
 import { AUTHOR_JSON_LD, BASE_URL, WORK_TITLE } from "@/app/metadata";
 
-const title = "Countingup";
-const description =
-  "Business account app with integrated accounting and tax capabilities.";
 const slug = "countingup";
 
-export const metadata: Metadata = { title, description };
+export const metadata = {
+  title: "Countingup",
+  description:
+    "Business current account with integrated accounting and tax for UK small businesses - automated bookkeeping and hmrc integration.",
+} satisfies Metadata;
 
 const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
   "@context": "https://schema.org",
@@ -26,7 +27,7 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
     {
       "@type": "ListItem",
       position: 3,
-      name: title,
+      name: metadata.title,
       item: `${BASE_URL}/work/${slug}`,
     },
   ],
@@ -35,8 +36,8 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
 const creativeWorkJsonLd: WithContext<CreativeWork> = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  name: title,
-  description,
+  name: metadata.title,
+  description: metadata.description,
   url: `${BASE_URL}/work/${slug}`,
   image: `${BASE_URL}/${slug}/banner.png`,
   author: AUTHOR_JSON_LD,
@@ -131,8 +132,8 @@ export default function Countingup() {
           customers' end clients.
         </p>
         <p className="text-gray-600 text-lg">
-          By the end of 2021, the platform was serving over 40,000 UK small
-          and medium businesses.
+          By the end of 2021, the platform was serving over 40,000 UK small and
+          medium businesses.
         </p>
       </div>
 

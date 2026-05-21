@@ -5,12 +5,13 @@ import Image from "next/image";
 import type { BreadcrumbList, CreativeWork, WithContext } from "schema-dts";
 import { AUTHOR_JSON_LD, BASE_URL, WORK_TITLE } from "@/app/metadata";
 
-const title = "General Assembly";
-const description =
-  "Student platform enabling access to coursework, assessments and awards.";
 const slug = "general-assembly";
 
-export const metadata: Metadata = { title, description };
+export const metadata = {
+  title: "General Assembly",
+  description:
+    "Student portal for General Assembly's bootcamps and courses - coursework, assessments and achievements with interactive learning modules across web, data and design.",
+} satisfies Metadata;
 
 const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
   "@context": "https://schema.org",
@@ -26,7 +27,7 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
     {
       "@type": "ListItem",
       position: 3,
-      name: title,
+      name: metadata.title,
       item: `${BASE_URL}/work/${slug}`,
     },
   ],
@@ -35,8 +36,8 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
 const creativeWorkJsonLd: WithContext<CreativeWork> = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  name: title,
-  description,
+  name: metadata.title,
+  description: metadata.description,
   url: `${BASE_URL}/work/${slug}`,
   image: `${BASE_URL}/${slug}/banner.png`,
   author: AUTHOR_JSON_LD,

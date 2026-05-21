@@ -7,12 +7,13 @@ import type { Metadata } from "next";
 import type { BreadcrumbList, CreativeWork, WithContext } from "schema-dts";
 import { AUTHOR_JSON_LD, BASE_URL, WORK_TITLE } from "@/app/metadata";
 
-const title = "Bermuda Commercial Bank";
-const description =
-  "Corporate banking app for institutional and business clients.";
 const slug = "bermuda-commercial-bank";
 
-export const metadata: Metadata = { title, description };
+export const metadata = {
+  title: "Bermuda Commercial Bank",
+  description:
+    "Corporate banking web app for institutional and business clients - transactions, reporting, multi-currency virtual accounts, transfers and an internal admin tool.",
+} satisfies Metadata;
 
 const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
   "@context": "https://schema.org",
@@ -28,7 +29,7 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
     {
       "@type": "ListItem",
       position: 3,
-      name: title,
+      name: metadata.title,
       item: `${BASE_URL}/work/${slug}`,
     },
   ],
@@ -37,8 +38,8 @@ const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
 const creativeWorkJsonLd: WithContext<CreativeWork> = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  name: title,
-  description,
+  name: metadata.title,
+  description: metadata.description,
   url: `${BASE_URL}/work/${slug}`,
   image: `${BASE_URL}/${slug}/banner.png`,
   author: AUTHOR_JSON_LD,
