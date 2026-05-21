@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.oliverbenns.com)",
+      "Bash(curl -sI https://www.oliverbenns.com)",
+      "Bash(curl -s https://www.oliverbenns.com)",
+      "Bash(curl -s https://www.oliverbenns.com/about)",
+      "Bash(curl -s https://www.oliverbenns.com/work/bermuda-commercial-bank)",
+      "Bash(curl -s https://www.oliverbenns.com/work/hedge-ui)",
+      "Bash(curl -sI https://www.oliverbenns.com/opengraph-image.png)",
+      "Bash(curl -s https://oliverbenns.com -o /dev/null -w \"HTTP %{http_code} -> %{redirect_url}\")",
+      "Bash(curl -s https://www.oliverbenns.com/work/__TRACKED_VAR__)",
+      "Bash(curl -s https://www.oliverbenns.com/work/elwood)"
+    ]
+  }
+}

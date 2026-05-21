@@ -83,7 +83,7 @@ export default function PropertyTrack() {
 
         <div>
           <a
-            href="https://propertytrack.co"
+            href="https://www.propertytrack.co"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
             rel="noopener noreferrer"
@@ -179,7 +179,7 @@ export default function PropertyTrack() {
 
         <div>
           <a
-            href="https://propertytrack.co/london/map"
+            href="https://www.propertytrack.co/london/map"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
             rel="noopener noreferrer"
@@ -217,7 +217,7 @@ export default function PropertyTrack() {
 
         <div>
           <a
-            href="https://propertytrack.co/london/ai-search"
+            href="https://www.propertytrack.co/london/ai-search"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
             rel="noopener noreferrer"
