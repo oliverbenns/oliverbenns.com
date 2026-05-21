@@ -83,7 +83,7 @@ export default function Elwood() {
 
         <div>
           <a
-            href="https://elwood.io"
+            href="https://www.elwood.io"
             className="text-gray-600 border-b-1 border-gray-800"
             target="_blank"
             rel="noopener noreferrer"
