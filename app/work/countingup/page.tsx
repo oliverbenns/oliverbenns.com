@@ -91,13 +91,15 @@ export default function Countingup() {
         </div>
       </div>
 
-      <ExpandableImage
-        src="/countingup/app-tax.png"
-        alt="Countingup app showing tax features"
-        className="rounded-lg mx-auto px-4"
-        width={823}
-        height={617}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/countingup/app-tax.png"
+          alt="Countingup app showing tax features"
+          className="rounded-lg mx-auto"
+          width={823}
+          height={617}
+        />
+      </div>
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           As a full stack engineer, I was responsible for the development of the
@@ -114,13 +116,15 @@ export default function Countingup() {
           customers.
         </p>
       </div>
-      <ExpandableImage
-        src="/countingup/app-payment.png"
-        alt="Countingup app showing payment options"
-        className="rounded-lg mx-auto px-4"
-        width={823}
-        height={617}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/countingup/app-payment.png"
+          alt="Countingup app showing payment options"
+          className="rounded-lg mx-auto"
+          width={823}
+          height={617}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">

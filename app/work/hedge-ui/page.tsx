@@ -94,13 +94,15 @@ export default function HedgeUI() {
           </a>
         </div>
       </div>
-      <ExpandableImage
-        src="/hedge-ui/main.png"
-        alt="Hedge UI overview"
-        className="rounded-lg mx-auto px-4"
-        width={2828}
-        height={1768}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/hedge-ui/main.png"
+          alt="Hedge UI overview"
+          className="rounded-lg mx-auto"
+          width={2828}
+          height={1768}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
@@ -119,14 +121,16 @@ export default function HedgeUI() {
           is becoming more apparent as more crypto companies enter the space.
         </p>
       </div>
-      <video
-        src="/hedge-ui/layout.mp4"
-        autoPlay
-        loop
-        muted
-        className="rounded-lg mx-auto px-4"
-        aria-label="Layout in Hedge UI"
-      />
+      <div className="px-4">
+        <video
+          src="/hedge-ui/layout.mp4"
+          autoPlay
+          loop
+          muted
+          className="rounded-lg mx-auto"
+          aria-label="Layout in Hedge UI"
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
@@ -137,13 +141,15 @@ export default function HedgeUI() {
         </p>
       </div>
 
-      <ExpandableImage
-        src="/hedge-ui/color-theme.png"
-        alt="Hedge UI color theme"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={1224}
-        height={816}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/hedge-ui/color-theme.png"
+          alt="Hedge UI color theme"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={1224}
+          height={816}
+        />
+      </div>
 
       <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto px-4">
         <li>

@@ -93,13 +93,15 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <ExpandableImage
-        src="/property-track/price-history.png"
-        alt="Widget injected onto Rightmove page"
-        className="rounded-lg mx-auto px-4"
-        width={1074}
-        height={987}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/price-history.png"
+          alt="Widget injected onto Rightmove page"
+          className="rounded-lg mx-auto"
+          width={1074}
+          height={987}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
@@ -114,13 +116,15 @@ export default function PropertyTrack() {
         </p>
       </div>
 
-      <ExpandableImage
-        src="/property-track/selected-property.png"
-        alt="Selected property on Property Track website"
-        className="rounded-lg mx-auto px-4"
-        width={1094}
-        height={742}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/selected-property.png"
+          alt="Selected property on Property Track website"
+          className="rounded-lg mx-auto"
+          width={1094}
+          height={742}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h2 className="text-xl font-bold text-gray-800 tracking-tight">
@@ -148,13 +152,15 @@ export default function PropertyTrack() {
         </p>
       </div>
 
-      <ExpandableImage
-        src="/property-track/london-filters.png"
-        alt="Filters on Property Track website"
-        className="rounded-lg mx-auto px-4"
-        width={938}
-        height={527}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/london-filters.png"
+          alt="Filters on Property Track website"
+          className="rounded-lg mx-auto"
+          width={938}
+          height={527}
+        />
+      </div>
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
           With this frustration, I built a website that extends these filters.
@@ -183,13 +189,15 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <ExpandableImage
-        src="/property-track/london-many.png"
-        alt="Map view of London properties on Property Track website"
-        className="rounded-lg mx-auto px-4"
-        width={1752}
-        height={1314}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/london-many.png"
+          alt="Map view of London properties on Property Track website"
+          className="rounded-lg mx-auto"
+          width={1752}
+          height={1314}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h2 className="text-xl font-bold text-gray-800 tracking-tight">
@@ -219,13 +227,15 @@ export default function PropertyTrack() {
         </div>
       </div>
 
-      <ExpandableImage
-        src="/property-track/ai-search.png"
-        alt="AI search on Property Track returning listings for a natural language query"
-        className="rounded-lg mx-auto px-4"
-        width={1524}
-        height={1228}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/ai-search.png"
+          alt="AI search on Property Track returning listings for a natural language query"
+          className="rounded-lg mx-auto"
+          width={1524}
+          height={1228}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">

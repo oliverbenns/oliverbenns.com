@@ -91,13 +91,15 @@ export default function GeneralAssembly() {
         </div>
       </div>
 
-      <ExpandableImage
-        src="/general-assembly/all.jpg"
-        alt="Overview of General Assembly UI"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={1920}
-        height={1777}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/general-assembly/all.jpg"
+          alt="Overview of General Assembly UI"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={1920}
+          height={1777}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
@@ -115,21 +117,25 @@ export default function GeneralAssembly() {
         </p>
       </div>
 
-      <ExpandableImage
-        src="/general-assembly/course-intro.png"
-        alt="Course intro page on MyGA"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={2096}
-        height={1394}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/general-assembly/course-intro.png"
+          alt="Course intro page on MyGA"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={2096}
+          height={1394}
+        />
+      </div>
 
-      <ExpandableImage
-        src="/general-assembly/course.png"
-        alt="Course page on MyGA"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={1680}
-        height={916}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/general-assembly/course.png"
+          alt="Course page on MyGA"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={1680}
+          height={916}
+        />
+      </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
@@ -146,21 +152,25 @@ export default function GeneralAssembly() {
         </p>
       </div>
 
-      <ExpandableImage
-        src="/general-assembly/cog-intro.png"
-        alt="Cog intro page"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={2102}
-        height={1396}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/general-assembly/cog-intro.png"
+          alt="Cog intro page"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={2102}
+          height={1396}
+        />
+      </div>
 
-      <ExpandableImage
-        src="/general-assembly/cog-feedback.png"
-        alt="Cog component library"
-        className="rounded-lg mx-auto border-1 border-gray-200 px-4"
-        width={1600}
-        height={1756}
-      />
+      <div className="px-4">
+        <ExpandableImage
+          src="/general-assembly/cog-feedback.png"
+          alt="Cog component library"
+          className="rounded-lg mx-auto border-1 border-gray-200"
+          width={1600}
+          height={1756}
+        />
+      </div>
 
       <ul className="flex flex-wrap gap-2 w-full max-w-xl mx-auto px-4">
         <li>
