@@ -57,7 +57,7 @@ export default function About() {
 
       <div className="flex flex-col gap-4 w-full">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight text-pretty">
-          Hello
+          Hello, I'm Oliver
         </h1>
 
         <p className="text-gray-600 text-lg">
