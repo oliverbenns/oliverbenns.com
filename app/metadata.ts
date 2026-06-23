@@ -9,7 +9,7 @@ export const AUTHOR_JSON_LD = {
 export const WORK_TITLE = "Work";
 
 export const META_DESCRIPTION_BODY =
-  "a full stack engineer with twelve years across fintech, banking and crypto. I take products from idea to production, solo or with a team.";
+  "a full stack engineer with twelve years across fintech, banking and trading platforms. I take products from idea to production, solo or with a team.";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/oliverbenns",

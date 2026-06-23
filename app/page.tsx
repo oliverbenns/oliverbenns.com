@@ -10,7 +10,8 @@ export default function Home() {
 
         <p className="text-lg sm:text-xl text-gray-600 leading-normal text-pretty">
           A full stack engineer with twelve years across fintech, banking and
-          crypto. I take products from idea to production, solo or with a team.
+          trading platforms. I take products from idea to production, solo or
+          with a team.
         </p>
 
         <div className="flex gap-2">

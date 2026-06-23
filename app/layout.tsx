@@ -35,7 +35,7 @@ const personJsonLd: WithContext<Person> = {
   image: `${BASE_URL}/profile.jpg`,
   jobTitle: "Full Stack Software Engineer",
   description:
-    "Freelance full stack software engineer with 12 years of experience across fintech, banking and crypto.",
+    "Freelance full stack software engineer with 12 years of experience across fintech, banking and trading platforms.",
   knowsAbout: [
     "Full Stack Development",
     "Software Architecture",

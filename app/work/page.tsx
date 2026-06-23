@@ -105,9 +105,9 @@ export default function Work() {
       <h1 className="sr-only">Work</h1>
       <div className="flex flex-col gap-4 w-full">
         <p className="text-gray-600 text-lg">
-          Twelve years across fintech, banking and crypto, working with startups
-          and established organisations. I take products from idea to
-          production, solo or with a team.
+          Twelve years across across fintech, banking and trading platforms,
+          working with startups and established organisations. I take products
+          from idea to production, solo or with a team.
         </p>
         <p className="text-gray-600 text-lg">
           Yours could be next -{" "}

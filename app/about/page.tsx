@@ -62,8 +62,8 @@ export default function About() {
 
         <p className="text-gray-600 text-lg">
           I'm a freelance full stack software engineer with 12 years of
-          experience, working mostly with startups in fintech, banking and
-          crypto.
+          experience, working mostly with startups across fintech, banking and
+          trading platforms.
         </p>
 
         <p className="text-gray-600 text-lg">
