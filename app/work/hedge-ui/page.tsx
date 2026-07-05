@@ -168,6 +168,9 @@ export default function HedgeUI() {
           <TechCard id="postgresql" />
         </li>
         <li>
+          <TechCard id="stripe" />
+        </li>
+        <li>
           <TechCard id="docker" />
         </li>
         <li>
