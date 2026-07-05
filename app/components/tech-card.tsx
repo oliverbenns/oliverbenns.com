@@ -5,6 +5,7 @@ import {
   FaNodeJs,
   FaReact,
   FaDigitalOcean,
+  FaStripe,
 } from "react-icons/fa6";
 
 import { BiLogoTypescript } from "react-icons/bi";
@@ -103,6 +104,10 @@ const options: Record<string, Option> = {
   csharp: {
     label: "C#",
     icon: TbBrandCSharp,
+  },
+  stripe: {
+    label: "Stripe",
+    icon: FaStripe,
   },
   azure: {
     label: "Azure",

@@ -13,6 +13,16 @@ export const metadata: Metadata = {
 
 const projects = [
   {
+    title: "Mock Chats",
+    description:
+      "Web app for creating realistic chat videos for social media.",
+    date: "2026 - Present",
+    href: "/work/mockchats",
+    image: "/mockchats/banner.png",
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
+  {
     title: "Bermuda Commercial Bank",
     description:
       "Corporate banking app for institutional and business clients.",
