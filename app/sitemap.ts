@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/work`, lastModified: buildTime },
     { url: `${BASE_URL}/contact`, lastModified: buildTime },
     {
-      url: `${BASE_URL}/work/mock-chats`,
+      url: `${BASE_URL}/work/mockchats`,
       lastModified: buildTime,
     },
     {

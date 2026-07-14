@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: "Mock Chats",
+    title: "MockChats",
     description:
       "Web app for creating realistic chat videos for social media.",
     date: "2026 - Present",
