@@ -177,7 +177,7 @@ export default function MockChats() {
           alt="MockChats pricing plans"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2560}
-          height={1464}
+          height={1408}
         />
       </div>
 
