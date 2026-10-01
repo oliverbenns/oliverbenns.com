@@ -176,6 +176,9 @@ export default function BermudaCommercialBank() {
           <TechCard id="typescript" />
         </li>
         <li>
+          <TechCard id="tanstack" />
+        </li>
+        <li>
           <TechCard id="node" />
         </li>
         <li>

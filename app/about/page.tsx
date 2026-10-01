@@ -140,6 +140,9 @@ export default function About() {
             <TechCard id="typescript" />
           </li>
           <li>
+            <TechCard id="tanstack" />
+          </li>
+          <li>
             <TechCard id="reactNative" />
           </li>
           <li>

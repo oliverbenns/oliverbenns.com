@@ -20,6 +20,7 @@ import {
   SiNextdotjs,
   SiPostgresql,
   SiPulumi,
+  SiTanstack,
   SiTerraform,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -40,6 +41,10 @@ const options: Record<string, Option> = {
   typescript: {
     label: "Typescript",
     icon: BiLogoTypescript,
+  },
+  tanstack: {
+    label: "Tanstack",
+    icon: SiTanstack,
   },
   reactNative: {
     label: "React Native",

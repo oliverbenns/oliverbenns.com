@@ -197,6 +197,9 @@ export default function MockChats() {
           <TechCard id="typescript" />
         </li>
         <li>
+          <TechCard id="tanstack" />
+        </li>
+        <li>
           <TechCard id="node" />
         </li>
         <li>
