@@ -45,7 +45,7 @@ const projects = [
   {
     title: "Property Track",
     description:
-      "Google Chrome extension for Rightmove, the UK's largest property platform.",
+      "Browser extension for Rightmove, the UK's largest property platform.",
     date: "2023 - Present",
     href: "/work/property-track",
     image: "/property-track/banner.png",

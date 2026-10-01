@@ -11,7 +11,7 @@ const slug = "property-track";
 export const metadata = {
   title: "Property Track",
   description:
-    "Chrome extension for Rightmove tracking asking price changes, plus a London map with extended filters and an AI search for natural language property queries.",
+    "Browser extension that adds asking price history to Rightmove listings, with Plus for comparables, recent sales and trends, and a London map and AI search.",
 } satisfies Metadata;
 
 const breadcrumbJsonLd: WithContext<BreadcrumbList> = {
@@ -76,9 +76,9 @@ export default function PropertyTrack() {
         </h1>
 
         <p className="text-gray-600 text-lg">
-          Property Track is a Google Chrome extension for Rightmove, the UK's
-          largest property platform that hosts ~90% of all properties across
-          England, Scotland, and Wales.
+          Property Track is a browser extension for Rightmove, the UK's largest
+          property platform that hosts ~90% of all listings across England,
+          Scotland, and Wales.
         </p>
 
         <div>
@@ -112,7 +112,18 @@ export default function PropertyTrack() {
         <p className="text-gray-600 text-lg">
           So I built a solution that keeps track of asking price changes. The
           extension injects this data into Rightmove pages as a user browses for
-          properties. It has over 2000 monthly active users.
+          properties.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
+          London Map
+        </h2>
+        <p className="text-gray-600 text-lg">
+          My property search concentrated on central London apartments and was a
+          painful experience due to potentially high service charges, ground
+          rent, and often limited living space.
         </p>
       </div>
 
@@ -127,15 +138,6 @@ export default function PropertyTrack() {
       </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
-        <h2 className="text-xl font-bold text-gray-800 tracking-tight">
-          London Map
-        </h2>
-        <p className="text-gray-600 text-lg">
-          My property search concentrated on central London apartments and was a
-          painful experience due to potentially high service charges, ground
-          rent, and often limited living space.
-        </p>
-
         <p className="text-gray-600 text-lg">
           Rightmove's basic filters forced me to open each listing to check if
           it met my criteria. When{" "}
@@ -163,9 +165,9 @@ export default function PropertyTrack() {
       </div>
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
-          With this frustration, I built a website that extends these filters.
-          It adds options for service charge, ground rent, floor size and
-          tenure, while eliminating auction properties.
+          So I added a London map to the Property Track website that extends
+          these filters. It adds options for service charge, ground rent, floor
+          size and tenure, while eliminating auction properties.
         </p>
         <p className="text-gray-600 text-lg">
           The prototype displays results in a map view with additional
@@ -173,8 +175,8 @@ export default function PropertyTrack() {
           garden exists without the user having to open each listing.
         </p>
         <p className="text-gray-600 text-lg">
-          Since this project, Rightmove have responded to these user complains
-          and added some of these filters mentioned above.
+          Rightmove has since responded to these complaints and added some of
+          these filters.
         </p>
 
         <div>
@@ -238,15 +240,64 @@ export default function PropertyTrack() {
       </div>
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
+        <h2 className="text-xl font-bold text-gray-800 tracking-tight">Plus</h2>
         <p className="text-gray-600 text-lg">
-          Since October 2023, Property Track has tracked over 8m listings and
-          2.4m price changes.
+          I assumed the data was the most valuable part of Property Track. But
+          when I spoke to potential acquirers, every conversation went straight
+          to the user base.
+        </p>
+        <p className="text-gray-600 text-lg">
+          No deal was made, but it changed how I saw the project. If an engaged
+          user base is what people value, it makes sense to build on it. So I
+          added Plus, an optional subscription that helps a buyer judge whether
+          a home is fairly priced, right on the listing.
+        </p>
+      </div>
+
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/plus-recent-sales-map.png"
+          alt="Recent sales tab on a Rightmove listing showing sold prices nearby on a map"
+          className="rounded-lg mx-auto"
+          width={1522}
+          height={1158}
+        />
+      </div>
+
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
+        <p className="text-gray-600 text-lg">
+          It adds three tabs beside the price history. Comparables shows similar
+          homes for sale or to rent nearby. Recent sales shows what homes nearby
+          actually sold for, from HM Land Registry. Trends shows sold prices and
+          the number of sales in the area over time. Price history stays free.
         </p>
 
+        <div>
+          <a
+            href="https://www.propertytrack.co/pricing"
+            className="text-gray-600 border-b-1 border-gray-800"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Plus
+          </a>
+        </div>
+      </div>
+
+      <div className="px-4">
+        <ExpandableImage
+          src="/property-track/plus-recent-sales-list.png"
+          alt="Recent sales tab on a Rightmove listing listing each nearby sale with its date, type, floor area and price"
+          className="rounded-lg mx-auto"
+          width={1522}
+          height={1110}
+        />
+      </div>
+
+      <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <p className="text-gray-600 text-lg">
-          The project has led to serving market data for a commercial real
-          estate agent, allowing them to understand market conditions as well as
-          provide opportunities for lead generation.
+          Since October 2023, Property Track has tracked over 9m listings and 4m
+          price changes. It has over 2,000 monthly active users.
         </p>
       </div>
 
@@ -271,6 +322,9 @@ export default function PropertyTrack() {
         </li>
         <li>
           <TechCard id="digitalocean" />
+        </li>
+        <li>
+          <TechCard id="stripe" />
         </li>
       </ul>
     </main>

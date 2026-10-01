@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2026-08-03",
     },
     { url: `${BASE_URL}/work/hedge-ui`, lastModified: "2026-08-03" },
-    { url: `${BASE_URL}/work/property-track`, lastModified: "2026-08-06" },
+    { url: `${BASE_URL}/work/property-track`, lastModified: "2026-10-01" },
     { url: `${BASE_URL}/work/elwood`, lastModified: "2026-08-03" },
     { url: `${BASE_URL}/work/countingup`, lastModified: "2026-08-03" },
     { url: `${BASE_URL}/work/general-assembly`, lastModified: "2026-08-03" },
