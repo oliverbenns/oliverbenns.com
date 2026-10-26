@@ -13,6 +13,16 @@ export const metadata: Metadata = {
 
 const projects = [
   {
+    title: "Job Puffin",
+    description:
+      "Web app and Chrome extension that uses AI to rate LinkedIn job posts against your CV.",
+    date: "2026 - Present",
+    href: "/work/job-puffin",
+    image: "/job-puffin/banner.png",
+    imageWidth: 1200,
+    imageHeight: 630,
+  },
+  {
     title: "Mock Chats",
     description:
       "Web app for creating realistic chat videos for social media.",
