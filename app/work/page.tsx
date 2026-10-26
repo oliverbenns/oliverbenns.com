@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: "MockChats",
+    title: "Mock Chats",
     description:
       "Web app for creating realistic chat videos for social media.",
     date: "2026 - Present",
-    href: "/work/mockchats",
-    image: "/mockchats/banner.png",
+    href: "/work/mock-chats",
+    image: "/mock-chats/banner.png",
     imageWidth: 1200,
     imageHeight: 630,
   },

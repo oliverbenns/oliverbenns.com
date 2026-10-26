@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/work/mockchats",
+        destination: "/work/mock-chats",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

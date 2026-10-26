@@ -6,10 +6,10 @@ import type { Metadata } from "next";
 import type { BreadcrumbList, CreativeWork, WithContext } from "schema-dts";
 import { AUTHOR_JSON_LD, BASE_URL, WORK_TITLE } from "@/app/metadata";
 
-const slug = "mockchats";
+const slug = "mock-chats";
 
 export const metadata = {
-  title: "MockChats",
+  title: "Mock Chats",
   description:
     "Web app for creating realistic chat videos. Script a conversation, style it like a real messaging thread and export a vertical video for TikTok, Instagram Reels and YouTube Shorts.",
 } satisfies Metadata;
@@ -61,8 +61,8 @@ export default function MockChats() {
       />
       <div className="px-4 max-w-xl mx-auto w-full">
         <Image
-          src="/mockchats/banner.png"
-          alt="MockChats Logo"
+          src="/mock-chats/banner.png"
+          alt="Mock Chats Logo"
           className="rounded-lg w-full"
           width={1200}
           height={630}
@@ -72,11 +72,11 @@ export default function MockChats() {
 
       <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
-          MockChats
+          Mock Chats
         </h1>
 
         <p className="text-gray-600 text-lg">
-          MockChats is a web app for creating realistic chat videos. Creators
+          Mock Chats is a web app for creating realistic chat videos. Creators
           script a conversation, style it like a real messaging thread, and
           export a vertical video ready for TikTok, Instagram Reels and YouTube
           Shorts.
@@ -96,8 +96,8 @@ export default function MockChats() {
 
       <div className="px-4">
         <ExpandableImage
-          src="/mockchats/home.png"
-          alt="MockChats homepage with a chat video preview"
+          src="/mock-chats/home.png"
+          alt="Mock Chats homepage with a chat video preview"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2880}
           height={1566}
@@ -116,15 +116,15 @@ export default function MockChats() {
           passed with viewers. Audiences recognise a real messaging app
           instantly, from the wallpaper to the read receipts, and a familiar
           conversation feels far more genuine than an invented interface. So
-          MockChats replicates the real thing closely, down to typing
+          Mock Chats replicates the real thing closely, down to typing
           indicators, voice notes and reactions.
         </p>
       </div>
 
       <div className="px-4">
         <ExpandableImage
-          src="/mockchats/editor.png"
-          alt="MockChats editor with message list and live phone preview"
+          src="/mock-chats/editor.png"
+          alt="Mock Chats editor with message list and live phone preview"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2880}
           height={1800}
@@ -150,8 +150,8 @@ export default function MockChats() {
 
       <div className="px-4">
         <ExpandableImage
-          src="/mockchats/exports.png"
-          alt="MockChats exports page with a rendered chat video"
+          src="/mock-chats/exports.png"
+          alt="Mock Chats exports page with a rendered chat video"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2880}
           height={1800}
@@ -173,8 +173,8 @@ export default function MockChats() {
 
       <div className="px-4">
         <ExpandableImage
-          src="/mockchats/pricing.png"
-          alt="MockChats pricing plans"
+          src="/mock-chats/pricing.png"
+          alt="Mock Chats pricing plans"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2560}
           height={1408}
