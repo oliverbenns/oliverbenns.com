@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, lastModified: "2026-08-03" },
     {
       url: `${BASE_URL}/work/job-puffin`,
-      lastModified: "2026-10-26",
+      lastModified: "2026-10-27",
     },
     {
       url: `${BASE_URL}/work/mock-chats`,

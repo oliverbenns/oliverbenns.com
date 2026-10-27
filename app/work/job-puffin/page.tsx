@@ -98,10 +98,10 @@ export default function JobPuffin() {
       <div className="px-4">
         <ExpandableImage
           src="/job-puffin/home.png"
-          alt="Job Puffin homepage with an example job assessment"
+          alt="Job Puffin homepage with LinkedIn jobs ranked by score"
           className="rounded-lg mx-auto border-1 border-gray-200"
           width={2880}
-          height={1484}
+          height={1300}
         />
       </div>
 
